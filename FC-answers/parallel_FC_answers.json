@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "parallel_0",
+    "ground_truth": [
+      {
+        "calculate_em_force": {
+          "b_field": [5],
+          "area": [2],
+          "d_time": [4],
+          "unit": ["units", ""],
+          "result": [2.5]
+        }
+      },
+      {
+        "calculate_em_force": {
+          "b_field": [5],
+          "area": [2],
+          "d_time": [10],
+          "unit": ["units", ""],
+          "result": [1.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_1",
+    "ground_truth": [
+      {
+        "loan.calculate_monthly_payment": {
+          "principal": [100000],
+          "interest_rate": [5],
+          "years": [15],
+          "unit": ["units", ""],
+          "result": [790.79]
+        }
+      },
+      {
+        "loan.calculate_monthly_payment": {
+          "principal": [100000],
+          "interest_rate": [5],
+          "years": [30],
+          "unit": ["units", ""],
+          "result": [536.82]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_2",
+    "ground_truth": [
+      {
+        "nutrition.get_calories": {
+          "food_item": ["almonds"],
+          "quantity": [100],
+          "unit": ["units", ""],
+          "result": [579.0]
+        }
+      },
+      {
+        "nutrition.get_calories": {
+          "food_item": ["almonds"],
+          "quantity": [50],
+          "unit": ["units", ""],
+          "result": [289.5]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_3",
+    "ground_truth": [
+      {
+        "chemistry.calculate_molarity": {
+          "moles": [0.5],
+          "volume": [2],
+          "unit": ["units", ""],
+          "result": [0.25]
+        }
+      },
+      {
+        "chemistry.calculate_molarity": {
+          "moles": [0.5],
+          "volume": [1],
+          "unit": ["units", ""],
+          "result": [0.5]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_4",
+    "ground_truth": [
+      {
+        "geometry.calculate_rectangle_area": {
+          "length": [10],
+          "width": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      },
+      {
+        "geometry.calculate_rectangle_area": {
+          "length": [10],
+          "width": [8],
+          "unit": ["units", ""],
+          "result": [80.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_5",
+    "ground_truth": [
+      {
+        "finance.convert_currency": {
+          "amount": [100],
+          "from_currency": ["USD"],
+          "to_currency": ["EUR"],
+          "unit": ["units", ""],
+          "result": [85.0]
+        }
+      },
+      {
+        "finance.convert_currency": {
+          "amount": [200],
+          "from_currency": ["USD"],
+          "to_currency": ["EUR"],
+          "unit": ["units", ""],
+          "result": [170.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_6",
+    "ground_truth": [
+      {
+        "earthquake.calculate_magnitude": {
+          "energy": [1e10],
+          "unit": ["units", ""],
+          "result": [4.0]
+        }
+      },
+      {
+        "earthquake.calculate_magnitude": {
+          "energy": [1e12],
+          "unit": ["units", ""],
+          "result": [5.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_7",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_8",
+    "ground_truth": [
+      {
+        "fitness.estimate_calories_burned": {
+          "activity": ["running"],
+          "duration": [30],
+          "unit": ["units", ""],
+          "result": [300.0]
+        }
+      },
+      {
+        "fitness.estimate_calories_burned": {
+          "activity": ["running"],
+          "duration": [60],
+          "unit": ["units", ""],
+          "result": [600.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_9",
+    "ground_truth": [
+      {
+        "network.calculate_download_time": {
+          "file_size_mb": [500],
+          "speed_mbps": [100],
+          "unit": ["units", ""],
+          "result": [40.0]
+        }
+      },
+      {
+        "network.calculate_download_time": {
+          "file_size_mb": [500],
+          "speed_mbps": [50],
+          "unit": ["units", ""],
+          "result": [80.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_10",
+    "ground_truth": [
+      {
+        "nutrition.get_calories": {
+          "food_item": ["almonds"],
+          "quantity": [100],
+          "unit": ["units", ""],
+          "result": [579.0]
+        }
+      },
+      {
+        "nutrition.get_calories": {
+          "food_item": ["almonds"],
+          "quantity": [50],
+          "unit": ["units", ""],
+          "result": [289.5]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_11",
+    "ground_truth": [
+      {
+        "chemistry.calculate_molarity": {
+          "moles": [0.5],
+          "volume": [2],
+          "unit": ["units", ""],
+          "result": [0.25]
+        }
+      },
+      {
+        "chemistry.calculate_molarity": {
+          "moles": [0.5],
+          "volume": [1],
+          "unit": ["units", ""],
+          "result": [0.5]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_12",
+    "ground_truth": [
+      {
+        "geometry.calculate_rectangle_area": {
+          "length": [10],
+          "width": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      },
+      {
+        "geometry.calculate_rectangle_area": {
+          "length": [10],
+          "width": [8],
+          "unit": ["units", ""],
+          "result": [80.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_13",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_14",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_15",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_16",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_17",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_18",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_19",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_20",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_21",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_22",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_23",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_24",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_25",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_26",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_27",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_28",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_29",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_30",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_31",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_32",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_33",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_34",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_35",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_36",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_37",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_38",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_39",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_40",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_41",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_42",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_43",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_44",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_45",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_46",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_47",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_48",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_49",
+    "ground_truth": [
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [2],
+          "unit": ["units", ""],
+          "result": [20.0]
+        }
+      },
+      {
+        "physics.calculate_force": {
+          "mass": [10],
+          "acceleration": [5],
+          "unit": ["units", ""],
+          "result": [50.0]
+        }
+      }
+    ]
+  }
+] 

@@ -14,7 +14,7 @@
           "name": "calculate_em_force",
           "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "b_field": {
                 "type": "integer",
@@ -53,7 +53,7 @@
           "name": "loan.calculate_monthly_payment",
           "description": "Calculate monthly loan payments given principal, interest rate, and duration.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "principal": {
                 "type": "float",
@@ -92,7 +92,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -126,7 +126,7 @@
           "name": "chemistry.calculate_molarity",
           "description": "Calculate molarity given moles of solute and volume of solution in liters.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "moles": {
                 "type": "float",
@@ -160,7 +160,7 @@
           "name": "geometry.calculate_rectangle_area",
           "description": "Calculate the area of a rectangle.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "length": {
                 "type": "float",
@@ -194,7 +194,7 @@
           "name": "finance.convert_currency",
           "description": "Convert amount from one currency to another given the exchange rate.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "amount": {
                 "type": "float",
@@ -233,7 +233,7 @@
           "name": "earthquake.calculate_magnitude",
           "description": "Calculate Richter scale magnitude from seismic energy.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "energy": {
                 "type": "float",
@@ -262,7 +262,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -296,7 +296,7 @@
           "name": "fitness.estimate_calories_burned",
           "description": "Estimate calories burned during exercise.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "activity": {
                 "type": "string",
@@ -330,7 +330,7 @@
           "name": "network.calculate_download_time",
           "description": "Calculate time to download a file based on file size and internet speed.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "file_size_mb": {
                 "type": "float",
@@ -364,7 +364,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -398,7 +398,7 @@
           "name": "chemistry.calculate_molarity",
           "description": "Calculate molarity given moles of solute and volume of solution in liters.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "moles": {
                 "type": "float",
@@ -432,7 +432,7 @@
           "name": "geometry.calculate_rectangle_area",
           "description": "Calculate the area of a rectangle.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "length": {
                 "type": "float",
@@ -466,7 +466,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -500,7 +500,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -534,7 +534,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -568,7 +568,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -602,7 +602,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -636,7 +636,7 @@
           "name": "network.calculate_download_time",
           "description": "Calculate time to download a file based on file size and internet speed.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "file_size_mb": {
                 "type": "float",
@@ -670,7 +670,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -704,7 +704,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -738,7 +738,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -772,7 +772,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -806,7 +806,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -840,7 +840,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -874,7 +874,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -908,7 +908,7 @@
           "name": "chemistry.calculate_molarity",
           "description": "Calculate molarity given moles of solute and volume of solution in liters.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "moles": {
                 "type": "float",
@@ -942,7 +942,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -976,7 +976,7 @@
           "name": "geometry.calculate_rectangle_area",
           "description": "Calculate the area of a rectangle.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "length": {
                 "type": "float",
@@ -1010,7 +1010,7 @@
           "name": "chemistry.calculate_molarity",
           "description": "Calculate molarity given moles of solute and volume of solution in liters.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "moles": {
                 "type": "float",
@@ -1044,7 +1044,7 @@
           "name": "earthquake.calculate_magnitude",
           "description": "Calculate Richter scale magnitude from seismic energy.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "energy": {
                 "type": "float",
@@ -1073,7 +1073,7 @@
           "name": "calculate_em_force",
           "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "b_field": {
                 "type": "integer",
@@ -1112,7 +1112,7 @@
           "name": "earthquake.calculate_magnitude",
           "description": "Calculate Richter scale magnitude from seismic energy.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "energy": {
                 "type": "float",
@@ -1141,7 +1141,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -1175,7 +1175,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -1209,7 +1209,7 @@
           "name": "chemistry.calculate_molarity",
           "description": "Calculate molarity given moles of solute and volume of solution in liters.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "moles": {
                 "type": "float",
@@ -1243,7 +1243,7 @@
           "name": "earthquake.calculate_magnitude",
           "description": "Calculate Richter scale magnitude from seismic energy.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "energy": {
                 "type": "float",
@@ -1272,7 +1272,7 @@
           "name": "chemistry.calculate_molarity",
           "description": "Calculate molarity given moles of solute and volume of solution in liters.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "moles": {
                 "type": "float",
@@ -1306,7 +1306,7 @@
           "name": "calculate_em_force",
           "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "b_field": {
                 "type": "integer",
@@ -1345,7 +1345,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -1379,7 +1379,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -1413,7 +1413,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -1447,7 +1447,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -1481,7 +1481,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -1515,7 +1515,7 @@
           "name": "nutrition.get_calories",
           "description": "Get calorie information for a food item based on quantity.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "food_item": {
                 "type": "string",
@@ -1549,7 +1549,7 @@
           "name": "physics.calculate_force",
           "description": "Calculate force given mass and acceleration (F=ma).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "mass": {
                 "type": "float",
@@ -1583,7 +1583,7 @@
           "name": "geometry.calculate_rectangle_area",
           "description": "Calculate the area of a rectangle.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "length": {
                 "type": "float",
@@ -1617,7 +1617,7 @@
           "name": "calculate_em_force",
           "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "b_field": {
                 "type": "integer",
@@ -1656,7 +1656,7 @@
           "name": "geometry.calculate_rectangle_area",
           "description": "Calculate the area of a rectangle.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "length": {
                 "type": "float",
@@ -1690,7 +1690,7 @@
           "name": "earthquake.calculate_magnitude",
           "description": "Calculate Richter scale magnitude from seismic energy.",
           "parameters": {
-            "type": "dict",
+            "type": "object",
             "properties": {
               "energy": {
                 "type": "float",

@@ -1,0 +1,865 @@
+[
+  {
+    "id": "simple_0",
+    "ground_truth": [
+      {
+        "calculate_hypotenuse": {
+          "side_a": [
+            3
+          ],
+          "side_b": [
+            4
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            5.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_1",
+    "ground_truth": [
+      {
+        "convert_temperature": {
+          "celsius": [
+            25
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            77.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_2",
+    "ground_truth": [
+      {
+        "calculate_bmi": {
+          "weight": [
+            70
+          ],
+          "height": [
+            1.75
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            22.86
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_3",
+    "ground_truth": [
+      {
+        "loan_interest": {
+          "principal": [
+            5000
+          ],
+          "rate": [
+            5
+          ],
+          "time": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            500.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_4",
+    "ground_truth": [
+      {
+        "calculate_rectangle_area": {
+          "length": [
+            8
+          ],
+          "width": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            24.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_5",
+    "ground_truth": [
+      {
+        "calculate_velocity": {
+          "distance": [
+            100
+          ],
+          "time": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            20.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_6",
+    "ground_truth": [
+      {
+        "calculate_molarity": {
+          "moles": [
+            0.5
+          ],
+          "volume": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            0.25
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_7",
+    "ground_truth": [
+      {
+        "calories_in_food": {
+          "food": [
+            "cooked rice"
+          ],
+          "grams": [
+            150
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            195.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_8",
+    "ground_truth": [
+      {
+        "calculate_gpa": {
+          "grade_points": [
+            45
+          ],
+          "credit_hours": [
+            15
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            3.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_9",
+    "ground_truth": [
+      {
+        "convert_usd_to_eur": {
+          "usd": [
+            120
+          ],
+          "rate": [
+            0.85
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            102.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_10",
+    "ground_truth": [
+      {
+        "recommend_music": {
+          "genre": [
+            "classical"
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            "Beethoven Symphony No. 6, Mozart Piano Concerto No. 21, Debussy Clair de Lune"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_11",
+    "ground_truth": [
+      {
+        "calculate_escape_velocity": {
+          "mass": [
+            6e+24
+          ],
+          "radius": [
+            6400000.0
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            11180.34
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_12",
+    "ground_truth": [
+      {
+        "calculate_batting_average": {
+          "hits": [
+            30
+          ],
+          "at_bats": [
+            100
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            0.3
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_14",
+    "ground_truth": [
+      {
+        "calculate_sphere_volume": {
+          "radius": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            523.6
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_15",
+    "ground_truth": [
+      {
+        "calculate_compound_interest": {
+          "principal": [
+            2000
+          ],
+          "rate": [
+            0.04
+          ],
+          "time": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            249.73
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_16",
+    "ground_truth": [
+      {
+        "calculate_kinetic_energy": {
+          "mass": [
+            2
+          ],
+          "velocity": [
+            10
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            100.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_17",
+    "ground_truth": [
+      {
+        "calculate_density": {
+          "mass": [
+            500
+          ],
+          "volume": [
+            250
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            2.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_18",
+    "ground_truth": [
+      {
+        "calculate_rectangle_perimeter": {
+          "length": [
+            12
+          ],
+          "width": [
+            8
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            40.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_19",
+    "ground_truth": [
+      {
+        "calculate_power_consumption": {
+          "power_watts": [
+            100
+          ],
+          "hours": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            0.5
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_20",
+    "ground_truth": [
+      {
+        "calculate_cube_surface_area": {
+          "side_length": [
+            6
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            216.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_21",
+    "ground_truth": [
+      {
+        "calculate_acceleration": {
+          "initial_velocity": [
+            20
+          ],
+          "final_velocity": [
+            50
+          ],
+          "time": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            10.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_22",
+    "ground_truth": [
+      {
+        "calculate_circle_area": {
+          "radius": [
+            7
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            153.94
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_23",
+    "ground_truth": [
+      {
+        "calculate_work": {
+          "force": [
+            50
+          ],
+          "distance": [
+            10
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            500.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_24",
+    "ground_truth": [
+      {
+        "calculate_pressure": {
+          "force": [
+            1000
+          ],
+          "area": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            500.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_25",
+    "ground_truth": [
+      {
+        "calculate_frequency": {
+          "wavelength": [
+            0.5
+          ],
+          "speed": [
+            340
+          ],
+          "unit": [
+            "units",
+            ""
+          ],
+          "result": [
+            680.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_26",
+    "ground_truth": [
+      {
+        "calculate_gravitational_force": {
+          "mass1": [10],
+          "mass2": [5],
+          "distance": [2],
+          "unit": ["newtons", "N"],
+          "result": [8.34e-9]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_27",
+    "ground_truth": [
+      {
+        "find_median": {
+          "numbers": [[3, 7, 9, 15, 21]],
+          "unit": ["units", ""],
+          "result": [9]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_28",
+    "ground_truth": [
+      {
+        "convert_kph_to_mps": {
+          "kph": [120],
+          "unit": ["meters per second", "m/s"],
+          "result": [33.33]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_29",
+    "ground_truth": [
+      {
+        "calculate_molarity": {
+          "moles": [0.5],
+          "volume_liters": [2],
+          "unit": ["moles per liter", "M"],
+          "result": [0.25]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_30",
+    "ground_truth": [
+      {
+        "calculate_triangle_perimeter": {
+          "side1": [5],
+          "side2": [7],
+          "side3": [9],
+          "unit": ["units", ""],
+          "result": [21]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_31",
+    "ground_truth": [
+      {
+        "calculate_mean_arterial_pressure": {
+          "systolic": [120],
+          "diastolic": [80],
+          "unit": ["mmHg", ""],
+          "result": [93.33]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_32",
+    "ground_truth": [
+      {
+        "convert_feet_inches_to_cm": {
+          "feet": [5],
+          "inches": [8],
+          "unit": ["centimeters", "cm"],
+          "result": [172.72]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_33",
+    "ground_truth": [
+      {
+        "calculate_trapezoid_area": {
+          "base1": [10],
+          "base2": [14],
+          "height": [6],
+          "unit": ["square units", ""],
+          "result": [72]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_34",
+    "ground_truth": [
+      {
+        "calculate_bmi_v2": {
+          "weight_kg": [60],
+          "height_m": [1.6],
+          "unit": ["units", ""],
+          "result": [23.44]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_35",
+    "ground_truth": [
+      {
+        "calculate_permutations": {
+          "n": [5],
+          "r": [3],
+          "unit": ["ways", ""],
+          "result": [60]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_36",
+    "ground_truth": [
+      {
+        "convert_gallons_to_liters": {
+          "gallons": [2],
+          "unit": ["liters", "L"],
+          "result": [7.57]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_37",
+    "ground_truth": [
+      {
+        "calculate_future_value": {
+          "principal": [1000],
+          "rate": [0.06],
+          "years": [5],
+          "unit": ["units", ""],
+          "result": [1338.23]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_38",
+    "ground_truth": [
+      {
+        "calculate_standard_deviation": {
+          "numbers": [[2, 4, 4, 4, 5, 5, 7, 9]],
+          "unit": ["units", ""],
+          "result": [2.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_39",
+    "ground_truth": [
+      {
+        "kelvin_to_celsius": {
+          "kelvin": [300],
+          "unit": ["celsius", "°C"],
+          "result": [26.85]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_40",
+    "ground_truth": [
+      {
+        "calculate_ellipse_area": {
+          "major_axis": [10],
+          "minor_axis": [6],
+          "unit": ["square units", ""],
+          "result": [188.5]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_41",
+    "ground_truth": [
+      {
+        "calculate_monthly_loan_payment": {
+          "principal": [20000],
+          "annual_rate": [0.03],
+          "years": [5],
+          "unit": ["units", ""],
+          "result": [359.37]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_42",
+    "ground_truth": [
+      {
+        "convert_miles_to_kilometers": {
+          "miles": [50],
+          "unit": ["kilometers", "km"],
+          "result": [80.47]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_43",
+    "ground_truth": [
+      {
+        "binomial_probability": {
+          "trials": [5],
+          "successes": [2],
+          "probability": [0.5],
+          "unit": ["probability", ""],
+          "result": [0.3125]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_44",
+    "ground_truth": [
+      {
+        "calculate_series_resistance": {
+          "resistors": [[2, 4, 6]],
+          "unit": ["ohms", "Ω"],
+          "result": [12]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_45",
+    "ground_truth": [
+      {
+        "convert_ml_to_cups": {
+          "ml": [400],
+          "unit": ["cups", ""],
+          "result": [1.69]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_46",
+    "ground_truth": [
+      {
+        "calculate_circumference": {
+          "diameter": [12],
+          "unit": ["units", ""],
+          "result": [37.7]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_47",
+    "ground_truth": [
+      {
+        "calculate_speed_of_sound": {
+          "temperature_c": [25],
+          "unit": ["meters per second", "m/s"],
+          "result": [346]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_48",
+    "ground_truth": [
+      {
+        "calculate_ph": {
+          "hydrogen_concentration": [1e-5],
+          "unit": ["pH", ""],
+          "result": [5.0]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_49",
+    "ground_truth": [
+      {
+        "convert_yen_to_usd": {
+          "yen": [1000],
+          "exchange_rate": [0.0091],
+          "unit": ["US dollars", "USD"],
+          "result": [9.1]
+        }
+      }
+    ]
+  },
+  {
+    "id": "simple_50",
+    "ground_truth": [
+      {
+        "calculate_light_travel_time": {
+          "distance_km": [1500000],
+          "unit": ["seconds", "s"],
+          "result": [5.0]
+        }
+      }
+    ]
+  }
+]
