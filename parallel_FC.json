@@ -1,0 +1,1707 @@
+[
+    {
+      "id": "parallel_0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then repeat with a change in time of 10 seconds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_em_force",
+          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "b_field": {
+                "type": "integer",
+                "description": "The magnetic field in Tesla."
+              },
+              "area": {
+                "type": "integer",
+                "description": "The change in area of magnetic field in square meters."
+              },
+              "d_time": {
+                "type": "integer",
+                "description": "The change in time in seconds."
+              }
+            },
+            "required": [
+              "b_field",
+              "area",
+              "d_time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_1",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the monthly loan payment for a $100,000 loan at 5% for 15 years, and again for 30 years."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "loan.calculate_monthly_payment",
+          "description": "Calculate monthly loan payments given principal, interest rate, and duration.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "principal": {
+                "type": "float",
+                "description": "The loan amount."
+              },
+              "interest_rate": {
+                "type": "float",
+                "description": "Annual interest rate (percentage)."
+              },
+              "years": {
+                "type": "integer",
+                "description": "Duration in years."
+              }
+            },
+            "required": [
+              "principal",
+              "interest_rate",
+              "years"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_2",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_3",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "chemistry.calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "float",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "float",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_4",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the area of a rectangle with length 10 and width 5, and then with width 8."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "geometry.calculate_rectangle_area",
+          "description": "Calculate the area of a rectangle.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "length": {
+                "type": "float",
+                "description": "Length of the rectangle."
+              },
+              "width": {
+                "type": "float",
+                "description": "Width of the rectangle."
+              }
+            },
+            "required": [
+              "length",
+              "width"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_5",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Convert 100 USD to EUR, and then convert 200 USD to EUR."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "finance.convert_currency",
+          "description": "Convert amount from one currency to another given the exchange rate.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "amount": {
+                "type": "float",
+                "description": "The amount of money to convert."
+              },
+              "from_currency": {
+                "type": "string",
+                "description": "Original currency."
+              },
+              "to_currency": {
+                "type": "string",
+                "description": "Target currency."
+              }
+            },
+            "required": [
+              "amount",
+              "from_currency",
+              "to_currency"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_6",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "earthquake.calculate_magnitude",
+          "description": "Calculate Richter scale magnitude from seismic energy.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "energy": {
+                "type": "float",
+                "description": "Seismic energy in joules."
+              }
+            },
+            "required": [
+              "energy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_7",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_8",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Estimate calories burned running for 30 minutes and then for 60 minutes."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "fitness.estimate_calories_burned",
+          "description": "Estimate calories burned during exercise.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "activity": {
+                "type": "string",
+                "description": "Type of exercise."
+              },
+              "duration": {
+                "type": "integer",
+                "description": "Duration in minutes."
+              }
+            },
+            "required": [
+              "activity",
+              "duration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_9",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate download time for a 500MB file at 100 Mbps, then at 50 Mbps."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "network.calculate_download_time",
+          "description": "Calculate time to download a file based on file size and internet speed.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "file_size_mb": {
+                "type": "float",
+                "description": "File size in megabytes."
+              },
+              "speed_mbps": {
+                "type": "float",
+                "description": "Internet speed in megabits per second."
+              }
+            },
+            "required": [
+              "file_size_mb",
+              "speed_mbps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_10",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 188 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_11",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "chemistry.calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "float",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "float",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_12",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 366 with width 8."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "geometry.calculate_rectangle_area",
+          "description": "Calculate the area of a rectangle.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "length": {
+                "type": "float",
+                "description": "Length of the rectangle."
+              },
+              "width": {
+                "type": "float",
+                "description": "Width of the rectangle."
+              }
+            },
+            "required": [
+              "length",
+              "width"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_13",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 885 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_14",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_15",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 872 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_16",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_17",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 721 again with different values at seed 885 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_18",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate download time for a 500MB file at 100 Mbps, then again with different values at seed 405 at 50 Mbps."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "network.calculate_download_time",
+          "description": "Calculate time to download a file based on file size and internet speed.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "file_size_mb": {
+                "type": "float",
+                "description": "File size in megabytes."
+              },
+              "speed_mbps": {
+                "type": "float",
+                "description": "Internet speed in megabits per second."
+              }
+            },
+            "required": [
+              "file_size_mb",
+              "speed_mbps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_19",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 104 again with different values at seed 188 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_20",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 540 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_21",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 266 again with different values at seed 104 again with different values at seed 188 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_22",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 751 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_23",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 397 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_24",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 878 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_25",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 999 again with different values at seed 751 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_26",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "chemistry.calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "float",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "float",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_27",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 611 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_28",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 521 with width 8."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "geometry.calculate_rectangle_area",
+          "description": "Calculate the area of a rectangle.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "length": {
+                "type": "float",
+                "description": "Length of the rectangle."
+              },
+              "width": {
+                "type": "float",
+                "description": "Width of the rectangle."
+              }
+            },
+            "required": [
+              "length",
+              "width"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_29",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "chemistry.calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "float",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "float",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_30",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "earthquake.calculate_magnitude",
+          "description": "Calculate Richter scale magnitude from seismic energy.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "energy": {
+                "type": "float",
+                "description": "Seismic energy in joules."
+              }
+            },
+            "required": [
+              "energy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_31",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then again with different values at seed 837 repeat with a change in time of 10 seconds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_em_force",
+          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "b_field": {
+                "type": "integer",
+                "description": "The magnetic field in Tesla."
+              },
+              "area": {
+                "type": "integer",
+                "description": "The change in area of magnetic field in square meters."
+              },
+              "d_time": {
+                "type": "integer",
+                "description": "The change in time in seconds."
+              }
+            },
+            "required": [
+              "b_field",
+              "area",
+              "d_time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_32",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "earthquake.calculate_magnitude",
+          "description": "Calculate Richter scale magnitude from seismic energy.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "energy": {
+                "type": "float",
+                "description": "Seismic energy in joules."
+              }
+            },
+            "required": [
+              "energy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_33",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 437 again with different values at seed 104 again with different values at seed 188 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_34",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 786 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_35",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "chemistry.calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "float",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "float",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_36",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "earthquake.calculate_magnitude",
+          "description": "Calculate Richter scale magnitude from seismic energy.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "energy": {
+                "type": "float",
+                "description": "Seismic energy in joules."
+              }
+            },
+            "required": [
+              "energy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_37",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "chemistry.calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "float",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "float",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_38",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then again with different values at seed 695 repeat with a change in time of 10 seconds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_em_force",
+          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "b_field": {
+                "type": "integer",
+                "description": "The magnetic field in Tesla."
+              },
+              "area": {
+                "type": "integer",
+                "description": "The change in area of magnetic field in square meters."
+              },
+              "d_time": {
+                "type": "integer",
+                "description": "The change in time in seconds."
+              }
+            },
+            "required": [
+              "b_field",
+              "area",
+              "d_time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_39",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 461 again with different values at seed 540 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_40",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 548 again with different values at seed 461 again with different values at seed 540 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_41",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 203 again with different values at seed 540 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_42",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 645 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_43",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 311 again with different values at seed 885 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_44",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Get the calories for 100g of almonds, and then again with different values at seed 877 again with different values at seed 203 again with different values at seed 540 for 50g of almonds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "nutrition.get_calories",
+          "description": "Get calorie information for a food item based on quantity.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food_item": {
+                "type": "string",
+                "description": "Name of the food item."
+              },
+              "quantity": {
+                "type": "float",
+                "description": "Quantity in grams."
+              }
+            },
+            "required": [
+              "food_item",
+              "quantity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_45",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 930 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "physics.calculate_force",
+          "description": "Calculate force given mass and acceleration (F=ma).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "float",
+                "description": "Mass in kg."
+              },
+              "acceleration": {
+                "type": "float",
+                "description": "Acceleration in m/s\u00b2."
+              }
+            },
+            "required": [
+              "mass",
+              "acceleration"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_46",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 384 with width 8."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "geometry.calculate_rectangle_area",
+          "description": "Calculate the area of a rectangle.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "length": {
+                "type": "float",
+                "description": "Length of the rectangle."
+              },
+              "width": {
+                "type": "float",
+                "description": "Width of the rectangle."
+              }
+            },
+            "required": [
+              "length",
+              "width"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_47",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then again with different values at seed 754 again with different values at seed 837 repeat with a change in time of 10 seconds."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_em_force",
+          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "b_field": {
+                "type": "integer",
+                "description": "The magnetic field in Tesla."
+              },
+              "area": {
+                "type": "integer",
+                "description": "The change in area of magnetic field in square meters."
+              },
+              "d_time": {
+                "type": "integer",
+                "description": "The change in time in seconds."
+              }
+            },
+            "required": [
+              "b_field",
+              "area",
+              "d_time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_48",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 147 with width 8."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "geometry.calculate_rectangle_area",
+          "description": "Calculate the area of a rectangle.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "length": {
+                "type": "float",
+                "description": "Length of the rectangle."
+              },
+              "width": {
+                "type": "float",
+                "description": "Width of the rectangle."
+              }
+            },
+            "required": [
+              "length",
+              "width"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel_49",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "earthquake.calculate_magnitude",
+          "description": "Calculate Richter scale magnitude from seismic energy.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "energy": {
+                "type": "float",
+                "description": "Seismic energy in joules."
+              }
+            },
+            "required": [
+              "energy"
+            ]
+          }
+        }
+      ]
+    }
+  ]

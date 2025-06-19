@@ -1,0 +1,1512 @@
+[
+    {
+      "id": "simple_0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Find the hypotenuse of a triangle with sides 3 and 4."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_hypotenuse",
+          "description": "Calculate the hypotenuse of a right triangle given the other two sides.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "side_a": {
+                "type": "number",
+                "description": "Length of side a."
+              },
+              "side_b": {
+                "type": "number",
+                "description": "Length of side b."
+              }
+            },
+            "required": [
+              "side_a",
+              "side_b"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_1",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Convert 25 degrees Celsius to Fahrenheit."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "convert_temperature",
+          "description": "Convert temperature from Celsius to Fahrenheit.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "celsius": {
+                "type": "number",
+                "description": "Temperature in Celsius."
+              }
+            },
+            "required": [
+              "celsius"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_2",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the BMI for someone who is 70 kg and 1.75 meters tall."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_bmi",
+          "description": "Calculate Body Mass Index given weight and height.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "weight": {
+                "type": "number",
+                "description": "Weight in kilograms."
+              },
+              "height": {
+                "type": "number",
+                "description": "Height in meters."
+              }
+            },
+            "required": [
+              "weight",
+              "height"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_3",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Find the interest on a $5000 loan at 5% annual interest over 2 years."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "loan_interest",
+          "description": "Calculate interest on a loan.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "principal": {
+                "type": "number",
+                "description": "Loan amount."
+              },
+              "rate": {
+                "type": "number",
+                "description": "Annual interest rate."
+              },
+              "time": {
+                "type": "number",
+                "description": "Time in years."
+              }
+            },
+            "required": [
+              "principal",
+              "rate",
+              "time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_4",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the area of a rectangle with length 8 and width 3."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_rectangle_area",
+          "description": "Calculate the area of a rectangle.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "length": {
+                "type": "number",
+                "description": "Length of the rectangle."
+              },
+              "width": {
+                "type": "number",
+                "description": "Width of the rectangle."
+              }
+            },
+            "required": [
+              "length",
+              "width"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_5",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "What is the velocity if a car travels 100 meters in 5 seconds?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_velocity",
+          "description": "Calculate velocity using distance and time.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "distance": {
+                "type": "number",
+                "description": "Distance traveled in meters."
+              },
+              "time": {
+                "type": "number",
+                "description": "Time in seconds."
+              }
+            },
+            "required": [
+              "distance",
+              "time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_6",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Find the molarity of a solution with 0.5 moles of solute in 2 liters of solution."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_molarity",
+          "description": "Calculate molarity given moles of solute and volume of solution.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "moles": {
+                "type": "number",
+                "description": "Moles of solute."
+              },
+              "volume": {
+                "type": "number",
+                "description": "Volume of solution in liters."
+              }
+            },
+            "required": [
+              "moles",
+              "volume"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_7",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "How many calories are in 150 grams of cooked rice?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calories_in_food",
+          "description": "Calculate total calories based on food item and weight.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "food": {
+                "type": "string",
+                "description": "Type of food."
+              },
+              "grams": {
+                "type": "number",
+                "description": "Weight of food in grams."
+              }
+            },
+            "required": [
+              "food",
+              "grams"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_8",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate GPA for 45 grade points over 15 credit hours."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_gpa",
+          "description": "Calculate GPA based on total grade points and credit hours.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "grade_points": {
+                "type": "number",
+                "description": "Total grade points earned."
+              },
+              "credit_hours": {
+                "type": "number",
+                "description": "Total credit hours taken."
+              }
+            },
+            "required": [
+              "grade_points",
+              "credit_hours"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_9",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Convert 120 USD to EUR at an exchange rate of 0.85."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "convert_usd_to_eur",
+          "description": "Convert USD to EUR based on exchange rate.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "usd": {
+                "type": "number",
+                "description": "Amount in USD."
+              },
+              "rate": {
+                "type": "number",
+                "description": "Exchange rate to EUR."
+              }
+            },
+            "required": [
+              "usd",
+              "rate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_10",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Recommend some relaxing classical music."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "recommend_music",
+          "description": "Get music recommendations by genre.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "genre": {
+                "type": "string",
+                "description": "Recommend some relaxing classical music."
+              }
+            },
+            "required": [
+              "genre"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_11",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "What is the escape velocity for a planet with mass 6e24 kg and radius 6.4e6 m?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_escape_velocity",
+          "description": "Calculate escape velocity from a celestial body.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "mass": {
+                "type": "number",
+                "description": "Mass of the body in kg."
+              },
+              "radius": {
+                "type": "number",
+                "description": "Radius of the body in meters."
+              }
+            },
+            "required": [
+              "mass",
+              "radius"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_12",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Find the batting average for 30 hits in 100 at-bats."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "calculate_batting_average",
+          "description": "Calculate batting average in baseball.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "hits": {
+                "type": "integer",
+                "description": "Number of hits."
+              },
+              "at_bats": {
+                "type": "integer",
+                "description": "Number of at-bats."
+              }
+            },
+            "required": [
+              "hits",
+              "at_bats"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_13",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Convert 77 degrees Fahrenheit to Celsius."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "convert_fahrenheit_to_celsius",
+          "description": "Convert Fahrenheit temperature to Celsius.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "fahrenheit": {
+                "type": "number",
+                "description": "Convert 77 degrees Fahrenheit to Celsius."
+              }
+            },
+            "required": [
+              "fahrenheit"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_14",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 35.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_14",
+          "description": "Run a calculation in domain 14.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_15",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 37.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_15",
+          "description": "Run a calculation in domain 15.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_16",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 40.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_16",
+          "description": "Run a calculation in domain 16.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_17",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 42.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_17",
+          "description": "Run a calculation in domain 17.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_18",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 45.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_18",
+          "description": "Run a calculation in domain 18.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_19",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 47.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_19",
+          "description": "Run a calculation in domain 19.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_20",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 50.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_20",
+          "description": "Run a calculation in domain 20.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_21",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 52.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_21",
+          "description": "Run a calculation in domain 21.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_22",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 55.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_22",
+          "description": "Run a calculation in domain 22.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_23",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 57.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_23",
+          "description": "Run a calculation in domain 23.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_24",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 60.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_24",
+          "description": "Run a calculation in domain 24.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_25",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 62.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_25",
+          "description": "Run a calculation in domain 25.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_26",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 65.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_26",
+          "description": "Run a calculation in domain 26.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_27",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 67.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_27",
+          "description": "Run a calculation in domain 27.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_28",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 70.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_28",
+          "description": "Run a calculation in domain 28.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_29",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 72.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_29",
+          "description": "Run a calculation in domain 29.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_30",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 75.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_30",
+          "description": "Run a calculation in domain 30.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_31",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 77.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_31",
+          "description": "Run a calculation in domain 31.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_32",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 80.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_32",
+          "description": "Run a calculation in domain 32.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_33",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 82.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_33",
+          "description": "Run a calculation in domain 33.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_34",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 85.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_34",
+          "description": "Run a calculation in domain 34.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_35",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 87.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_35",
+          "description": "Run a calculation in domain 35.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_36",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 90.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_36",
+          "description": "Run a calculation in domain 36.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_37",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 92.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_37",
+          "description": "Run a calculation in domain 37.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_38",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 95.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_38",
+          "description": "Run a calculation in domain 38.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_39",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 97.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_39",
+          "description": "Run a calculation in domain 39.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_40",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 100.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_40",
+          "description": "Run a calculation in domain 40.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_41",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 102.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_41",
+          "description": "Run a calculation in domain 41.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_42",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 105.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_42",
+          "description": "Run a calculation in domain 42.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_43",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 107.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_43",
+          "description": "Run a calculation in domain 43.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_44",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 110.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_44",
+          "description": "Run a calculation in domain 44.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_45",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 112.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_45",
+          "description": "Run a calculation in domain 45.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_46",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 115.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_46",
+          "description": "Run a calculation in domain 46.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_47",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 117.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_47",
+          "description": "Run a calculation in domain 47.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_48",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 120.0."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_48",
+          "description": "Run a calculation in domain 48.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "simple_49",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Run a domain-specific calculation using value 122.5."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "domain_specific_func_49",
+          "description": "Run a calculation in domain 49.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "A numeric input value for domain calculation."
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    }
+  ]
