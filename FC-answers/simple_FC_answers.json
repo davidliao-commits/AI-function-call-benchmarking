@@ -9,10 +9,6 @@
           ],
           "side_b": [
             4
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -25,10 +21,6 @@
         "convert_temperature": {
           "celsius": [
             25
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -44,10 +36,6 @@
           ],
           "height": [
             1.75
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -66,10 +54,6 @@
           ],
           "time": [
             2
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -85,10 +69,6 @@
           ],
           "width": [
             3
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -104,10 +84,6 @@
           ],
           "time": [
             5
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -123,10 +99,6 @@
           ],
           "volume": [
             2
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -142,10 +114,6 @@
           ],
           "grams": [
             150
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -161,10 +129,6 @@
           ],
           "credit_hours": [
             15
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -180,10 +144,6 @@
           ],
           "rate": [
             0.85
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -196,10 +156,6 @@
         "recommend_music": {
           "genre": [
             "classical"
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -215,10 +171,6 @@
           ],
           "radius": [
             6400000.0
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -234,10 +186,6 @@
           ],
           "at_bats": [
             100
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -250,10 +198,6 @@
         "calculate_sphere_volume": {
           "radius": [
             5
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -272,10 +216,6 @@
           ],
           "time": [
             3
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -291,10 +231,6 @@
           ],
           "velocity": [
             10
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -310,10 +246,6 @@
           ],
           "volume": [
             250
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -329,10 +261,6 @@
           ],
           "width": [
             8
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -348,10 +276,6 @@
           ],
           "hours": [
             5
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -364,10 +288,6 @@
         "calculate_cube_surface_area": {
           "side_length": [
             6
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -386,10 +306,6 @@
           ],
           "time": [
             3
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -402,10 +318,6 @@
         "calculate_circle_area": {
           "radius": [
             7
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -421,10 +333,6 @@
           ],
           "distance": [
             10
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -440,10 +348,6 @@
           ],
           "area": [
             2
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -459,10 +363,6 @@
           ],
           "speed": [
             340
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -481,10 +381,6 @@
           ],
           "distance": [
             2
-          ],
-          "unit": [
-            "newtons",
-            "N"
           ]
         }
       }
@@ -503,10 +399,6 @@
               15,
               21
             ]
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -519,10 +411,6 @@
         "convert_kph_to_mps": {
           "kph": [
             120
-          ],
-          "unit": [
-            "meters per second",
-            "m/s"
           ]
         }
       }
@@ -538,10 +426,6 @@
           ],
           "volume_liters": [
             2
-          ],
-          "unit": [
-            "moles per liter",
-            "M"
           ]
         }
       }
@@ -560,10 +444,6 @@
           ],
           "side3": [
             9
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -579,10 +459,6 @@
           ],
           "diastolic": [
             80
-          ],
-          "unit": [
-            "mmHg",
-            ""
           ]
         }
       }
@@ -598,10 +474,6 @@
           ],
           "inches": [
             8
-          ],
-          "unit": [
-            "centimeters",
-            "cm"
           ]
         }
       }
@@ -620,10 +492,6 @@
           ],
           "height": [
             6
-          ],
-          "unit": [
-            "square units",
-            ""
           ]
         }
       }
@@ -639,10 +507,6 @@
           ],
           "height_m": [
             1.6
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -658,10 +522,6 @@
           ],
           "r": [
             3
-          ],
-          "unit": [
-            "ways",
-            ""
           ]
         }
       }
@@ -674,10 +534,6 @@
         "convert_gallons_to_liters": {
           "gallons": [
             2
-          ],
-          "unit": [
-            "liters",
-            "L"
           ]
         }
       }
@@ -696,10 +552,6 @@
           ],
           "years": [
             5
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -721,10 +573,6 @@
               7,
               9
             ]
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -737,10 +585,6 @@
         "kelvin_to_celsius": {
           "kelvin": [
             300
-          ],
-          "unit": [
-            "celsius",
-            "\u00b0C"
           ]
         }
       }
@@ -756,10 +600,6 @@
           ],
           "minor_axis": [
             6
-          ],
-          "unit": [
-            "square units",
-            ""
           ]
         }
       }
@@ -778,10 +618,6 @@
           ],
           "years": [
             5
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -794,10 +630,6 @@
         "convert_miles_to_kilometers": {
           "miles": [
             50
-          ],
-          "unit": [
-            "kilometers",
-            "km"
           ]
         }
       }
@@ -816,10 +648,6 @@
           ],
           "probability": [
             0.5
-          ],
-          "unit": [
-            "probability",
-            ""
           ]
         }
       }
@@ -836,10 +664,6 @@
               4,
               6
             ]
-          ],
-          "unit": [
-            "ohms",
-            "\u03a9"
           ]
         }
       }
@@ -852,10 +676,6 @@
         "convert_ml_to_cups": {
           "ml": [
             400
-          ],
-          "unit": [
-            "cups",
-            ""
           ]
         }
       }
@@ -868,10 +688,6 @@
         "calculate_circumference": {
           "diameter": [
             12
-          ],
-          "unit": [
-            "units",
-            ""
           ]
         }
       }
@@ -884,10 +700,6 @@
         "calculate_speed_of_sound": {
           "temperature_c": [
             25
-          ],
-          "unit": [
-            "meters per second",
-            "m/s"
           ]
         }
       }
@@ -900,10 +712,6 @@
         "calculate_ph": {
           "hydrogen_concentration": [
             1e-05
-          ],
-          "unit": [
-            "pH",
-            ""
           ]
         }
       }
@@ -919,10 +727,6 @@
           ],
           "exchange_rate": [
             0.0091
-          ],
-          "unit": [
-            "US dollars",
-            "USD"
           ]
         }
       }
@@ -935,10 +739,6 @@
         "calculate_light_travel_time": {
           "distance_km": [
             1500000
-          ],
-          "unit": [
-            "seconds",
-            "s"
           ]
         }
       }
