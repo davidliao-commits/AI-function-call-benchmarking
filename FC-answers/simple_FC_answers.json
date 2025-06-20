@@ -13,9 +13,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            5.0
           ]
         }
       }
@@ -32,9 +29,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            77.0
           ]
         }
       }
@@ -54,9 +48,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            22.86
           ]
         }
       }
@@ -79,9 +70,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            500.0
           ]
         }
       }
@@ -101,9 +89,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            24.0
           ]
         }
       }
@@ -123,9 +108,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            20.0
           ]
         }
       }
@@ -145,9 +127,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            0.25
           ]
         }
       }
@@ -167,9 +146,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            195.0
           ]
         }
       }
@@ -189,9 +165,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            3.0
           ]
         }
       }
@@ -211,9 +184,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            102.0
           ]
         }
       }
@@ -230,9 +200,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            "Beethoven Symphony No. 6, Mozart Piano Concerto No. 21, Debussy Clair de Lune"
           ]
         }
       }
@@ -252,9 +219,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            11180.34
           ]
         }
       }
@@ -274,9 +238,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            0.3
           ]
         }
       }
@@ -293,9 +254,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            523.6
           ]
         }
       }
@@ -318,9 +276,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            249.73
           ]
         }
       }
@@ -340,9 +295,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            100.0
           ]
         }
       }
@@ -362,9 +314,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            2.0
           ]
         }
       }
@@ -384,9 +333,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            40.0
           ]
         }
       }
@@ -406,9 +352,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            0.5
           ]
         }
       }
@@ -425,9 +368,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            216.0
           ]
         }
       }
@@ -450,9 +390,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            10.0
           ]
         }
       }
@@ -469,9 +406,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            153.94
           ]
         }
       }
@@ -491,9 +425,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            500.0
           ]
         }
       }
@@ -513,9 +444,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            500.0
           ]
         }
       }
@@ -535,9 +463,6 @@
           "unit": [
             "units",
             ""
-          ],
-          "result": [
-            680.0
           ]
         }
       }
@@ -548,11 +473,19 @@
     "ground_truth": [
       {
         "calculate_gravitational_force": {
-          "mass1": [10],
-          "mass2": [5],
-          "distance": [2],
-          "unit": ["newtons", "N"],
-          "result": [8.34e-9]
+          "mass1": [
+            10
+          ],
+          "mass2": [
+            5
+          ],
+          "distance": [
+            2
+          ],
+          "unit": [
+            "newtons",
+            "N"
+          ]
         }
       }
     ]
@@ -562,9 +495,19 @@
     "ground_truth": [
       {
         "find_median": {
-          "numbers": [[3, 7, 9, 15, 21]],
-          "unit": ["units", ""],
-          "result": [9]
+          "numbers": [
+            [
+              3,
+              7,
+              9,
+              15,
+              21
+            ]
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -574,9 +517,13 @@
     "ground_truth": [
       {
         "convert_kph_to_mps": {
-          "kph": [120],
-          "unit": ["meters per second", "m/s"],
-          "result": [33.33]
+          "kph": [
+            120
+          ],
+          "unit": [
+            "meters per second",
+            "m/s"
+          ]
         }
       }
     ]
@@ -586,10 +533,16 @@
     "ground_truth": [
       {
         "calculate_molarity": {
-          "moles": [0.5],
-          "volume_liters": [2],
-          "unit": ["moles per liter", "M"],
-          "result": [0.25]
+          "moles": [
+            0.5
+          ],
+          "volume_liters": [
+            2
+          ],
+          "unit": [
+            "moles per liter",
+            "M"
+          ]
         }
       }
     ]
@@ -599,11 +552,19 @@
     "ground_truth": [
       {
         "calculate_triangle_perimeter": {
-          "side1": [5],
-          "side2": [7],
-          "side3": [9],
-          "unit": ["units", ""],
-          "result": [21]
+          "side1": [
+            5
+          ],
+          "side2": [
+            7
+          ],
+          "side3": [
+            9
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -613,10 +574,16 @@
     "ground_truth": [
       {
         "calculate_mean_arterial_pressure": {
-          "systolic": [120],
-          "diastolic": [80],
-          "unit": ["mmHg", ""],
-          "result": [93.33]
+          "systolic": [
+            120
+          ],
+          "diastolic": [
+            80
+          ],
+          "unit": [
+            "mmHg",
+            ""
+          ]
         }
       }
     ]
@@ -626,10 +593,16 @@
     "ground_truth": [
       {
         "convert_feet_inches_to_cm": {
-          "feet": [5],
-          "inches": [8],
-          "unit": ["centimeters", "cm"],
-          "result": [172.72]
+          "feet": [
+            5
+          ],
+          "inches": [
+            8
+          ],
+          "unit": [
+            "centimeters",
+            "cm"
+          ]
         }
       }
     ]
@@ -639,11 +612,19 @@
     "ground_truth": [
       {
         "calculate_trapezoid_area": {
-          "base1": [10],
-          "base2": [14],
-          "height": [6],
-          "unit": ["square units", ""],
-          "result": [72]
+          "base1": [
+            10
+          ],
+          "base2": [
+            14
+          ],
+          "height": [
+            6
+          ],
+          "unit": [
+            "square units",
+            ""
+          ]
         }
       }
     ]
@@ -653,10 +634,16 @@
     "ground_truth": [
       {
         "calculate_bmi_v2": {
-          "weight_kg": [60],
-          "height_m": [1.6],
-          "unit": ["units", ""],
-          "result": [23.44]
+          "weight_kg": [
+            60
+          ],
+          "height_m": [
+            1.6
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -666,10 +653,16 @@
     "ground_truth": [
       {
         "calculate_permutations": {
-          "n": [5],
-          "r": [3],
-          "unit": ["ways", ""],
-          "result": [60]
+          "n": [
+            5
+          ],
+          "r": [
+            3
+          ],
+          "unit": [
+            "ways",
+            ""
+          ]
         }
       }
     ]
@@ -679,9 +672,13 @@
     "ground_truth": [
       {
         "convert_gallons_to_liters": {
-          "gallons": [2],
-          "unit": ["liters", "L"],
-          "result": [7.57]
+          "gallons": [
+            2
+          ],
+          "unit": [
+            "liters",
+            "L"
+          ]
         }
       }
     ]
@@ -691,11 +688,19 @@
     "ground_truth": [
       {
         "calculate_future_value": {
-          "principal": [1000],
-          "rate": [0.06],
-          "years": [5],
-          "unit": ["units", ""],
-          "result": [1338.23]
+          "principal": [
+            1000
+          ],
+          "rate": [
+            0.06
+          ],
+          "years": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -705,9 +710,22 @@
     "ground_truth": [
       {
         "calculate_standard_deviation": {
-          "numbers": [[2, 4, 4, 4, 5, 5, 7, 9]],
-          "unit": ["units", ""],
-          "result": [2.0]
+          "numbers": [
+            [
+              2,
+              4,
+              4,
+              4,
+              5,
+              5,
+              7,
+              9
+            ]
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -717,9 +735,13 @@
     "ground_truth": [
       {
         "kelvin_to_celsius": {
-          "kelvin": [300],
-          "unit": ["celsius", "°C"],
-          "result": [26.85]
+          "kelvin": [
+            300
+          ],
+          "unit": [
+            "celsius",
+            "\u00b0C"
+          ]
         }
       }
     ]
@@ -729,10 +751,16 @@
     "ground_truth": [
       {
         "calculate_ellipse_area": {
-          "major_axis": [10],
-          "minor_axis": [6],
-          "unit": ["square units", ""],
-          "result": [188.5]
+          "major_axis": [
+            10
+          ],
+          "minor_axis": [
+            6
+          ],
+          "unit": [
+            "square units",
+            ""
+          ]
         }
       }
     ]
@@ -742,11 +770,19 @@
     "ground_truth": [
       {
         "calculate_monthly_loan_payment": {
-          "principal": [20000],
-          "annual_rate": [0.03],
-          "years": [5],
-          "unit": ["units", ""],
-          "result": [359.37]
+          "principal": [
+            20000
+          ],
+          "annual_rate": [
+            0.03
+          ],
+          "years": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -756,9 +792,13 @@
     "ground_truth": [
       {
         "convert_miles_to_kilometers": {
-          "miles": [50],
-          "unit": ["kilometers", "km"],
-          "result": [80.47]
+          "miles": [
+            50
+          ],
+          "unit": [
+            "kilometers",
+            "km"
+          ]
         }
       }
     ]
@@ -768,11 +808,19 @@
     "ground_truth": [
       {
         "binomial_probability": {
-          "trials": [5],
-          "successes": [2],
-          "probability": [0.5],
-          "unit": ["probability", ""],
-          "result": [0.3125]
+          "trials": [
+            5
+          ],
+          "successes": [
+            2
+          ],
+          "probability": [
+            0.5
+          ],
+          "unit": [
+            "probability",
+            ""
+          ]
         }
       }
     ]
@@ -782,9 +830,17 @@
     "ground_truth": [
       {
         "calculate_series_resistance": {
-          "resistors": [[2, 4, 6]],
-          "unit": ["ohms", "Ω"],
-          "result": [12]
+          "resistors": [
+            [
+              2,
+              4,
+              6
+            ]
+          ],
+          "unit": [
+            "ohms",
+            "\u03a9"
+          ]
         }
       }
     ]
@@ -794,9 +850,13 @@
     "ground_truth": [
       {
         "convert_ml_to_cups": {
-          "ml": [400],
-          "unit": ["cups", ""],
-          "result": [1.69]
+          "ml": [
+            400
+          ],
+          "unit": [
+            "cups",
+            ""
+          ]
         }
       }
     ]
@@ -806,9 +866,13 @@
     "ground_truth": [
       {
         "calculate_circumference": {
-          "diameter": [12],
-          "unit": ["units", ""],
-          "result": [37.7]
+          "diameter": [
+            12
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -818,9 +882,13 @@
     "ground_truth": [
       {
         "calculate_speed_of_sound": {
-          "temperature_c": [25],
-          "unit": ["meters per second", "m/s"],
-          "result": [346]
+          "temperature_c": [
+            25
+          ],
+          "unit": [
+            "meters per second",
+            "m/s"
+          ]
         }
       }
     ]
@@ -830,9 +898,13 @@
     "ground_truth": [
       {
         "calculate_ph": {
-          "hydrogen_concentration": [1e-5],
-          "unit": ["pH", ""],
-          "result": [5.0]
+          "hydrogen_concentration": [
+            1e-05
+          ],
+          "unit": [
+            "pH",
+            ""
+          ]
         }
       }
     ]
@@ -842,10 +914,16 @@
     "ground_truth": [
       {
         "convert_yen_to_usd": {
-          "yen": [1000],
-          "exchange_rate": [0.0091],
-          "unit": ["US dollars", "USD"],
-          "result": [9.1]
+          "yen": [
+            1000
+          ],
+          "exchange_rate": [
+            0.0091
+          ],
+          "unit": [
+            "US dollars",
+            "USD"
+          ]
         }
       }
     ]
@@ -855,9 +933,13 @@
     "ground_truth": [
       {
         "calculate_light_travel_time": {
-          "distance_km": [1500000],
-          "unit": ["seconds", "s"],
-          "result": [5.0]
+          "distance_km": [
+            1500000
+          ],
+          "unit": [
+            "seconds",
+            "s"
+          ]
         }
       }
     ]

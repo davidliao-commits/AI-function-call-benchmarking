@@ -136,27 +136,33 @@ def print_tool_calls(response: Any) -> None:
     else:
         print("No tool calls made") 
 
-def convert_output_to_json(response: Any) -> str:
+def convert_output_to_json(response: Any) -> dict:
     """
-    Convert the response to a JSON string
+    Convert the function call response to a JSON format for comparison
     
     Args:
-        response: OpenAI response message
+        response: OpenAI response message with tool calls
         
     Returns:
-        JSON string of the response
+        Dictionary containing the function call information
     """
     try:
-        # Extract the content from the response
-        content = response.content
-
-        # Parse the content as JSON
-        json_data = json.loads(content)
-
-        # Convert to JSON string
-        json_str = json.dumps(json_data, indent=2)
+        if not response.tool_calls:
+            return {"error": "No tool calls found in response"}
         
-        return json_str
+        # Extract function call information
+        tool_call = response.tool_calls[0]  # Get the first tool call
+        function_name = tool_call.function.name
+        arguments = json.loads(tool_call.function.arguments)
+        
+        # Create structured output for comparison
+        result = {
+            "function_name": function_name,
+            "arguments": arguments
+        }
+        
+        return result
+        
     except Exception as e:
         print(f"Error converting response to JSON: {e}")
-        return None
+        return {"error": str(e)}

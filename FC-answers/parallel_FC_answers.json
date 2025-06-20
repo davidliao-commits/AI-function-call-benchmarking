@@ -4,20 +4,36 @@
     "ground_truth": [
       {
         "calculate_em_force": {
-          "b_field": [5],
-          "area": [2],
-          "d_time": [4],
-          "unit": ["units", ""],
-          "result": [2.5]
+          "b_field": [
+            5
+          ],
+          "area": [
+            2
+          ],
+          "d_time": [
+            4
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "calculate_em_force": {
-          "b_field": [5],
-          "area": [2],
-          "d_time": [10],
-          "unit": ["units", ""],
-          "result": [1.0]
+          "b_field": [
+            5
+          ],
+          "area": [
+            2
+          ],
+          "d_time": [
+            10
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -27,20 +43,36 @@
     "ground_truth": [
       {
         "loan.calculate_monthly_payment": {
-          "principal": [100000],
-          "interest_rate": [5],
-          "years": [15],
-          "unit": ["units", ""],
-          "result": [790.79]
+          "principal": [
+            100000
+          ],
+          "interest_rate": [
+            5
+          ],
+          "years": [
+            15
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "loan.calculate_monthly_payment": {
-          "principal": [100000],
-          "interest_rate": [5],
-          "years": [30],
-          "unit": ["units", ""],
-          "result": [536.82]
+          "principal": [
+            100000
+          ],
+          "interest_rate": [
+            5
+          ],
+          "years": [
+            30
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -50,18 +82,30 @@
     "ground_truth": [
       {
         "nutrition.get_calories": {
-          "food_item": ["almonds"],
-          "quantity": [100],
-          "unit": ["units", ""],
-          "result": [579.0]
+          "food_item": [
+            "almonds"
+          ],
+          "quantity": [
+            100
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "nutrition.get_calories": {
-          "food_item": ["almonds"],
-          "quantity": [50],
-          "unit": ["units", ""],
-          "result": [289.5]
+          "food_item": [
+            "almonds"
+          ],
+          "quantity": [
+            50
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -71,18 +115,30 @@
     "ground_truth": [
       {
         "chemistry.calculate_molarity": {
-          "moles": [0.5],
-          "volume": [2],
-          "unit": ["units", ""],
-          "result": [0.25]
+          "moles": [
+            0.5
+          ],
+          "volume": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "chemistry.calculate_molarity": {
-          "moles": [0.5],
-          "volume": [1],
-          "unit": ["units", ""],
-          "result": [0.5]
+          "moles": [
+            0.5
+          ],
+          "volume": [
+            1
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -92,18 +148,30 @@
     "ground_truth": [
       {
         "geometry.calculate_rectangle_area": {
-          "length": [10],
-          "width": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "length": [
+            10
+          ],
+          "width": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "geometry.calculate_rectangle_area": {
-          "length": [10],
-          "width": [8],
-          "unit": ["units", ""],
-          "result": [80.0]
+          "length": [
+            10
+          ],
+          "width": [
+            8
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -113,20 +181,36 @@
     "ground_truth": [
       {
         "finance.convert_currency": {
-          "amount": [100],
-          "from_currency": ["USD"],
-          "to_currency": ["EUR"],
-          "unit": ["units", ""],
-          "result": [85.0]
+          "amount": [
+            100
+          ],
+          "from_currency": [
+            "USD"
+          ],
+          "to_currency": [
+            "EUR"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "finance.convert_currency": {
-          "amount": [200],
-          "from_currency": ["USD"],
-          "to_currency": ["EUR"],
-          "unit": ["units", ""],
-          "result": [170.0]
+          "amount": [
+            200
+          ],
+          "from_currency": [
+            "USD"
+          ],
+          "to_currency": [
+            "EUR"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -136,16 +220,24 @@
     "ground_truth": [
       {
         "earthquake.calculate_magnitude": {
-          "energy": [1e10],
-          "unit": ["units", ""],
-          "result": [4.0]
+          "energy": [
+            10000000000.0
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "earthquake.calculate_magnitude": {
-          "energy": [1e12],
-          "unit": ["units", ""],
-          "result": [5.0]
+          "energy": [
+            1000000000000.0
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -155,18 +247,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -176,18 +280,30 @@
     "ground_truth": [
       {
         "fitness.estimate_calories_burned": {
-          "activity": ["running"],
-          "duration": [30],
-          "unit": ["units", ""],
-          "result": [300.0]
+          "activity": [
+            "running"
+          ],
+          "duration": [
+            30
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "fitness.estimate_calories_burned": {
-          "activity": ["running"],
-          "duration": [60],
-          "unit": ["units", ""],
-          "result": [600.0]
+          "activity": [
+            "running"
+          ],
+          "duration": [
+            60
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -197,18 +313,30 @@
     "ground_truth": [
       {
         "network.calculate_download_time": {
-          "file_size_mb": [500],
-          "speed_mbps": [100],
-          "unit": ["units", ""],
-          "result": [40.0]
+          "file_size_mb": [
+            500
+          ],
+          "speed_mbps": [
+            100
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "network.calculate_download_time": {
-          "file_size_mb": [500],
-          "speed_mbps": [50],
-          "unit": ["units", ""],
-          "result": [80.0]
+          "file_size_mb": [
+            500
+          ],
+          "speed_mbps": [
+            50
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -218,18 +346,30 @@
     "ground_truth": [
       {
         "nutrition.get_calories": {
-          "food_item": ["almonds"],
-          "quantity": [100],
-          "unit": ["units", ""],
-          "result": [579.0]
+          "food_item": [
+            "almonds"
+          ],
+          "quantity": [
+            100
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "nutrition.get_calories": {
-          "food_item": ["almonds"],
-          "quantity": [50],
-          "unit": ["units", ""],
-          "result": [289.5]
+          "food_item": [
+            "almonds"
+          ],
+          "quantity": [
+            50
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -239,18 +379,30 @@
     "ground_truth": [
       {
         "chemistry.calculate_molarity": {
-          "moles": [0.5],
-          "volume": [2],
-          "unit": ["units", ""],
-          "result": [0.25]
+          "moles": [
+            0.5
+          ],
+          "volume": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "chemistry.calculate_molarity": {
-          "moles": [0.5],
-          "volume": [1],
-          "unit": ["units", ""],
-          "result": [0.5]
+          "moles": [
+            0.5
+          ],
+          "volume": [
+            1
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -260,18 +412,30 @@
     "ground_truth": [
       {
         "geometry.calculate_rectangle_area": {
-          "length": [10],
-          "width": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "length": [
+            10
+          ],
+          "width": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "geometry.calculate_rectangle_area": {
-          "length": [10],
-          "width": [8],
-          "unit": ["units", ""],
-          "result": [80.0]
+          "length": [
+            10
+          ],
+          "width": [
+            8
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -281,18 +445,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -302,18 +478,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -323,18 +511,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -344,18 +544,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -365,18 +577,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -386,18 +610,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -407,18 +643,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -428,18 +676,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -449,18 +709,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -470,18 +742,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -491,18 +775,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -512,18 +808,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -533,18 +841,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -554,18 +874,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -575,18 +907,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -596,18 +940,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -617,18 +973,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -638,18 +1006,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -659,18 +1039,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -680,18 +1072,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -701,18 +1105,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -722,18 +1138,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -743,18 +1171,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -764,18 +1204,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -785,18 +1237,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -806,18 +1270,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -827,18 +1303,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -848,18 +1336,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -869,18 +1369,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -890,18 +1402,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -911,18 +1435,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -932,18 +1468,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -953,18 +1501,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -974,18 +1534,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -995,18 +1567,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -1016,18 +1600,30 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -1037,20 +1633,32 @@
     "ground_truth": [
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [2],
-          "unit": ["units", ""],
-          "result": [20.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            2
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "physics.calculate_force": {
-          "mass": [10],
-          "acceleration": [5],
-          "unit": ["units", ""],
-          "result": [50.0]
+          "mass": [
+            10
+          ],
+          "acceleration": [
+            5
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
   }
-] 
+]

@@ -4,18 +4,30 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -25,17 +37,27 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "books.search": {
-          "query": ["Haruki Murakami"],
-          "unit": ["units", ""],
-          "result": ["Norwegian Wood, Kafka on the Shore, 1Q84, The Wind-Up Bird Chronicle"]
+          "query": [
+            "Haruki Murakami"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -45,18 +67,30 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -66,18 +100,30 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -87,18 +133,30 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -108,16 +166,24 @@
     "ground_truth": [
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "books.search": {
-          "query": ["Haruki Murakami"],
-          "unit": ["units", ""],
-          "result": ["Norwegian Wood, Kafka on the Shore, 1Q84, The Wind-Up Bird Chronicle"]
+          "query": [
+            "Haruki Murakami"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -127,18 +193,30 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -148,18 +226,30 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -169,17 +259,27 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -189,18 +289,30 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -210,18 +322,30 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -231,16 +355,24 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -250,17 +382,27 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -270,18 +412,30 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -291,18 +445,30 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -312,18 +478,30 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -333,18 +511,30 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -354,16 +544,24 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -373,16 +571,24 @@
     "ground_truth": [
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "books.search": {
-          "query": ["Haruki Murakami"],
-          "unit": ["units", ""],
-          "result": ["Norwegian Wood, Kafka on the Shore, 1Q84, The Wind-Up Bird Chronicle"]
+          "query": [
+            "Haruki Murakami"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -392,18 +598,30 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -413,18 +631,30 @@
     "ground_truth": [
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -434,17 +664,27 @@
     "ground_truth": [
       {
         "books.search": {
-          "query": ["Haruki Murakami"],
-          "unit": ["units", ""],
-          "result": ["Norwegian Wood, Kafka on the Shore, 1Q84, The Wind-Up Bird Chronicle"]
+          "query": [
+            "Haruki Murakami"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -454,17 +694,27 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -474,17 +724,27 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -494,18 +754,30 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -515,17 +787,27 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -535,17 +817,27 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -555,17 +847,27 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -575,16 +877,24 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -594,19 +904,33 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -616,17 +940,27 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -636,17 +970,27 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -656,17 +1000,27 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -676,17 +1030,27 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -696,16 +1060,24 @@
     "ground_truth": [
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -715,17 +1087,27 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -735,16 +1117,24 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -754,17 +1144,27 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -774,17 +1174,27 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -794,18 +1204,30 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -815,18 +1237,30 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [85000],
-          "location": ["Canada"],
-          "unit": ["units", ""],
-          "result": [21250.0]
+          "income": [
+            85000
+          ],
+          "location": [
+            "Canada"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -836,17 +1270,27 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -856,16 +1300,24 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "movies.recommend": {
-          "genre": ["sci-fi"],
-          "unit": ["units", ""],
-          "result": ["Blade Runner, The Matrix, Interstellar, Arrival, Ex Machina"]
+          "genre": [
+            "sci-fi"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -875,18 +1327,30 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": ["London"],
-          "destination": ["Berlin"],
-          "date": ["2025-07-12"],
-          "unit": ["units", ""],
-          "result": ["British Airways BA123, 09:00-12:30, $450"]
+          "origin": [
+            "London"
+          ],
+          "destination": [
+            "Berlin"
+          ],
+          "date": [
+            "2025-07-12"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -896,18 +1360,30 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "language.translate": {
-          "text": ["Good morning"],
-          "target_language": ["Italian"],
-          "unit": ["units", ""],
-          "result": ["Buongiorno"]
+          "text": [
+            "Good morning"
+          ],
+          "target_language": [
+            "Italian"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -917,17 +1393,27 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": ["Cape Town"],
-          "days": [3],
-          "unit": ["units", ""],
-          "result": ["Sunny, 22°C, Partly cloudy, 20°C, Rain, 18°C"]
+          "city": [
+            "Cape Town"
+          ],
+          "days": [
+            3
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -937,17 +1423,27 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -957,17 +1453,27 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": ["football"],
-          "unit": ["units", ""],
-          "result": ["Manchester United 2-1 Liverpool, Arsenal 3-0 Chelsea, Barcelona 1-1 Real Madrid"]
+          "sport": [
+            "football"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -977,17 +1483,27 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": ["Stanford University"],
-          "unit": ["units", ""],
-          "result": ["Stanford University is a private research university in Stanford, California. Founded in 1885, it's known for engineering, computer science, and business programs."]
+          "university_name": [
+            "Stanford University"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
@@ -997,19 +1513,29 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [62],
-          "height": [1.7],
-          "unit": ["units", ""],
-          "result": [21.45]
+          "weight": [
+            62
+          ],
+          "height": [
+            1.7
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": ["lasagna"],
-          "unit": ["units", ""],
-          "result": ["Ingredients: pasta sheets, ground beef, ricotta, mozzarella, tomato sauce. Instructions: Layer pasta, meat, cheese, repeat, bake 45min at 375°F"]
+          "dish": [
+            "lasagna"
+          ],
+          "unit": [
+            "units",
+            ""
+          ]
         }
       }
     ]
   }
-] 
+]
