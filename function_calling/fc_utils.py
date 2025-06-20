@@ -72,22 +72,30 @@ def load_and_prepare_data(json_file: str) -> tuple:
     print(f"Successfully converted {len(all_tools)} examples to tools format\n")
     return data, all_tools, function_names
 
-def make_function_call(prompt: str, tools: List[Dict[str, Any]], function_name: str = None, system_message: str = None) -> Any:
+def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] = None, function_name: str = None, system_message: str = None) -> Any:
     """
-    Make a function call to the OpenAI API
+    Make a function call using BFCL (Best Function Calling Language) format
     
     Args:
+        category: Type of function calling (simple, parallel, multiple)
         prompt: The user prompt
-        tools: Pre-converted tools in OpenAI format
-        function_name: Specific function name to use for tool_choice
+        tools: Pre-converted tools in OpenAI format (not used in BFCL)
+        function_name: Specific function name (not used in BFCL)
         system_message: Optional custom system message
         
     Returns:
         OpenAI response message
     """
     if system_message is None:
-        system_message = "you are a helpful assistant that can answer questions by calling on given functions. Always use a function if one is available."
-    
+        system_message = """You are an expert in composing functions. You are given a question and a set of possible functions. Based on the question, you will need to make one or more function/tool calls to achieve the purpose.
+    If none of the functions can be used, point it out. If the given question lacks the parameters required by the function, also point it out.
+    You should only return the function calls in your response.
+
+    If you decide to invoke any of the function(s), you MUST put it in the format of [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+    You SHOULD NOT include any other text in the response.
+
+    At each turn, you should try your best to complete the tasks requested by the user within the current turn. Continue to output functions to call until you have fulfilled the user's request to the best of your ability. Once you have no more functions to call, the system will consider the current turn complete and proceed to the next turn or task."""
+
     messages = [
         {
             "role": "system",
@@ -99,22 +107,10 @@ def make_function_call(prompt: str, tools: List[Dict[str, Any]], function_name: 
         }
     ]
     
-    # Set tool_choice based on function name
-    if function_name and tools:
-        tool_choice = {
-            "type": "function",
-            "function": {
-                "name": function_name
-            }
-        }
-    else:
-        tool_choice = "auto"
-    
+    # For BFCL, we use regular text completion without tools (SiliconFlow API limitation)
     response = client.chat.completions.create(
         model = "THUDM/glm-4-9b-chat",
         messages = messages,
-        tools = tools,
-        tool_choice = tool_choice,
         temperature = 0.0,
         top_p = 0.95,
         stream = False
@@ -123,45 +119,107 @@ def make_function_call(prompt: str, tools: List[Dict[str, Any]], function_name: 
 
 def print_tool_calls(response: Any) -> None:
     """
-    Print tool calls from the response
+    Print function calls from the response (BFCL format)
     
     Args:
         response: OpenAI response message
     """
-    if response.tool_calls:
-        print("Tool calls made:")
-        for tool_call in response.tool_calls:
-            print(f"  Function: {tool_call.function.name}")
-            print(f"  Arguments: {tool_call.function.arguments}")
+    if response.content:
+        print("Function calls made:")
+        print(f"  {response.content}")
     else:
-        print("No tool calls made") 
+        print("No function calls made") 
 
 def convert_output_to_json(response: Any) -> dict:
     """
-    Convert the function call response to a JSON format for comparison
+    Convert the BFCL function call response to a JSON format for comparison
     
     Args:
-        response: OpenAI response message with tool calls
+        response: OpenAI response message with BFCL text
         
     Returns:
         Dictionary containing the function call information
     """
     try:
-        if not response.tool_calls:
-            return {"error": "No tool calls found in response"}
+        if not response.content:
+            return {"error": "No content found in response"}
         
-        # Extract function call information
-        tool_call = response.tool_calls[0]  # Get the first tool call
-        function_name = tool_call.function.name
-        arguments = json.loads(tool_call.function.arguments)
+        content = response.content.strip()
         
-        # Create structured output for comparison
-        result = {
-            "function_name": function_name,
-            "arguments": arguments
-        }
+        # Parse BFCL format: [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+        if not content.startswith('[') or not content.endswith(']'):
+            return {"error": f"Invalid BFCL format: {content}"}
         
-        return result
+        # Remove outer brackets
+        content = content[1:-1]
+        
+        # Split by function calls (comma-separated)
+        function_calls = []
+        current_call = ""
+        bracket_count = 0
+        
+        for char in content:
+            if char == '(':
+                bracket_count += 1
+            elif char == ')':
+                bracket_count -= 1
+            
+            if char == ',' and bracket_count == 0:
+                # End of function call
+                function_calls.append(current_call.strip())
+                current_call = ""
+            else:
+                current_call += char
+        
+        # Add the last function call
+        if current_call.strip():
+            function_calls.append(current_call.strip())
+        
+        # Parse each function call
+        parsed_calls = []
+        for call in function_calls:
+            if '(' not in call or ')' not in call:
+                continue
+                
+            func_name = call.split('(')[0].strip()
+            params_str = call.split('(', 1)[1].rstrip(')')
+            
+            # Parse parameters
+            arguments = {}
+            if params_str:
+                param_pairs = params_str.split(',')
+                for pair in param_pairs:
+                    if '=' in pair:
+                        key, value = pair.split('=', 1)
+                        key = key.strip()
+                        value = value.strip()
+                        
+                        # Try to convert value to appropriate type
+                        try:
+                            if value.lower() == 'true':
+                                value = True
+                            elif value.lower() == 'false':
+                                value = False
+                            elif '.' in value:
+                                value = float(value)
+                            else:
+                                value = int(value)
+                        except ValueError:
+                            # Keep as string if conversion fails
+                            pass
+                        
+                        arguments[key] = value
+            
+            parsed_calls.append({
+                "function_name": func_name,
+                "arguments": arguments
+            })
+        
+        # Return single call or list of calls
+        if len(parsed_calls) == 1:
+            return parsed_calls[0]
+        else:
+            return parsed_calls
         
     except Exception as e:
         print(f"Error converting response to JSON: {e}")
