@@ -192,6 +192,18 @@
     ]
   },
   {
+    "id": "simple_13",
+    "ground_truth": [
+      {
+        "convert_fahrenheit_to_celsius": {
+          "fahrenheit": [
+            77
+          ]
+        }
+      }
+    ]
+  },
+  {
     "id": "simple_14",
     "ground_truth": [
       {

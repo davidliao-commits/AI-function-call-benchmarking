@@ -103,7 +103,18 @@ def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] =
     If none of the functions can be used, point it out. If the given question lacks the parameters required by the function, also point it out.
     You should only return the function calls in your response.
 
-    If you decide to invoke any of the function(s), you MUST put it in the format of [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+    CRITICAL: You MUST wrap ALL function calls in square brackets []. 
+    Format: [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
+    
+    Examples of CORRECT format:
+    - [calculate_area(length=5, width=3)]
+    - [convert_temperature(celsius=25)]
+    - [calculate_force(mass=10, acceleration=9.8)]
+    
+    Examples of INCORRECT format:
+    - calculate_area(length=5, width=3)  (missing brackets)
+    - [calculate_area(length=5, width=3  (missing closing bracket)
+    
     You SHOULD NOT include any other text in the response. You SHOULD NOT change the function name or parameter names.
 
     At each turn, you should try your best to complete the tasks requested by the user within the current turn. Continue to output functions to call until you have fulfilled the user's request to the best of your ability. Once you have no more functions to call, the system will consider the current turn complete and proceed to the next turn or task.{tools_info}"""

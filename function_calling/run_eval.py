@@ -1,6 +1,8 @@
 import json
 import sys
 import os
+import statistics
+import numpy as np
 
 # Add parent directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -73,6 +75,11 @@ def run_evaluation(test_category):
     total_output_tokens = 0
     total_tokens = 0
     
+    # Lists to collect token usage for statistics
+    all_input_tokens = []
+    all_output_tokens = []
+    all_total_tokens = []
+    
     if test_category == "simple":
         function_descriptions = json.load(open("../FC-samples/simple_FC.json"))
     elif test_category == "multiple":
@@ -95,9 +102,19 @@ def run_evaluation(test_category):
         total_output_tokens += token_usage["output_tokens"]
         total_tokens += token_usage["total_tokens"]
         
+        # Collect token usage for statistics
+        all_input_tokens.append(token_usage["input_tokens"])
+        all_output_tokens.append(token_usage["output_tokens"])
+        all_total_tokens.append(token_usage["total_tokens"])
+        
         if ast_result["isValid"] == True:
             correct_count += 1
         total_count += 1
+    
+    # Calculate statistics
+    std_token_usage = statistics.stdev(all_total_tokens) if len(all_total_tokens) > 1 else 0
+    mean_token_usage = statistics.mean(all_total_tokens) if all_total_tokens else 0
+    percentile_95_token_usage = np.percentile(all_total_tokens, 95) if all_total_tokens else 0
     
     result = {
         "accuracy": correct_count / total_count, 
@@ -107,8 +124,13 @@ def run_evaluation(test_category):
             "total_input_tokens": total_input_tokens,
             "total_output_tokens": total_output_tokens,
             "total_tokens": total_tokens,
-            "average_tokens_per_call": total_tokens / total_count if total_count > 0 else 0
+            "average_tokens_per_call": total_tokens / total_count if total_count > 0 else 0,
+            "std_token_usage": std_token_usage,
+            "mean_token_usage": mean_token_usage,
+            "percentile_95_token_usage": percentile_95_token_usage
         }
     }
+    breakpoint()
     return result
 
+run_evaluation("simple")
