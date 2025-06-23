@@ -79,22 +79,34 @@ def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] =
     Args:
         category: Type of function calling (simple, parallel, multiple)
         prompt: The user prompt
-        tools: Pre-converted tools in OpenAI format (not used in BFCL)
+        tools: Pre-converted tools in OpenAI format (used to inform system message)
         function_name: Specific function name (not used in BFCL)
         system_message: Optional custom system message
         
     Returns:
-        OpenAI response message
+        Full OpenAI response object (to access token usage)
     """
     if system_message is None:
-        system_message = """You are an expert in composing functions. You are given a question and a set of possible functions. Based on the question, you will need to make one or more function/tool calls to achieve the purpose.
+        # Create system message that includes information about available functions
+        tools_info = ""
+        if tools:
+            tools_info = "\n\nAvailable functions:\n"
+            for tool in tools:
+                func = tool["function"]
+                tools_info += f"- {func['name']}: {func['description']}\n"
+                if "parameters" in func and "properties" in func["parameters"]:
+                    tools_info += "  Parameters:\n"
+                    for param_name, param_info in func["parameters"]["properties"].items():
+                        tools_info += f"    - {param_name} ({param_info['type']}): {param_info['description']}\n"
+        
+        system_message = f"""You are an expert in composing functions. You are given a question and a set of possible functions. Based on the question, you will need to make one or more function/tool calls to achieve the purpose.
     If none of the functions can be used, point it out. If the given question lacks the parameters required by the function, also point it out.
     You should only return the function calls in your response.
 
     If you decide to invoke any of the function(s), you MUST put it in the format of [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
-    You SHOULD NOT include any other text in the response.
+    You SHOULD NOT include any other text in the response. You SHOULD NOT change the function name or parameter names.
 
-    At each turn, you should try your best to complete the tasks requested by the user within the current turn. Continue to output functions to call until you have fulfilled the user's request to the best of your ability. Once you have no more functions to call, the system will consider the current turn complete and proceed to the next turn or task."""
+    At each turn, you should try your best to complete the tasks requested by the user within the current turn. Continue to output functions to call until you have fulfilled the user's request to the best of your ability. Once you have no more functions to call, the system will consider the current turn complete and proceed to the next turn or task.{tools_info}"""
 
     messages = [
         {
@@ -115,20 +127,28 @@ def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] =
         top_p = 0.95,
         stream = False
     )
-    return response.choices[0].message
+    return response
 
 def print_tool_calls(response: Any) -> None:
     """
     Print function calls from the response (BFCL format)
     
     Args:
-        response: OpenAI response message
+        response: Full OpenAI response object or response message
     """
-    if response.content:
-        print("Function calls made:")
-        print(f"  {response.content}")
+    # Handle both full response object and message object
+    if hasattr(response, 'choices'):
+        # Full response object
+        message = response.choices[0].message
     else:
-        print("No function calls made") 
+        # Message object
+        message = response
+    
+    if message.content:
+        print("Function calls made:")
+        print(f"  {message.content}")
+    else:
+        print("No function calls made")
 
 def convert_output_to_json(response: Any) -> dict:
     """
