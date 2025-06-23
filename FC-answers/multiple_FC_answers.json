@@ -4,22 +4,14 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       },
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       }
     ]
@@ -29,19 +21,13 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "books.search": {
-          "query": [
-            "Haruki Murakami"
-          ]
+          "query": "Haruki Murakami"
         }
       }
     ]
@@ -51,22 +37,14 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -76,22 +54,14 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -101,22 +71,14 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       },
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       }
     ]
@@ -126,16 +88,12 @@
     "ground_truth": [
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       },
       {
         "books.search": {
-          "query": [
-            "Haruki Murakami"
-          ]
+          "query": "Haruki Murakami"
         }
       }
     ]
@@ -145,22 +103,14 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       }
     ]
@@ -170,22 +120,14 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       }
     ]
@@ -195,19 +137,13 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       },
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       }
     ]
@@ -217,22 +153,14 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -242,22 +170,14 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       },
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       }
     ]
@@ -267,16 +187,12 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       },
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       }
     ]
@@ -286,19 +202,13 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       },
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       }
     ]
@@ -308,22 +218,14 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       },
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       }
     ]
@@ -333,22 +235,14 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       }
     ]
@@ -358,22 +252,14 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -383,22 +269,14 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       },
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       }
     ]
@@ -408,16 +286,12 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       },
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       }
     ]
@@ -427,16 +301,12 @@
     "ground_truth": [
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       },
       {
         "books.search": {
-          "query": [
-            "Haruki Murakami"
-          ]
+          "query": "Haruki Murakami"
         }
       }
     ]
@@ -446,22 +316,14 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       },
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       }
     ]
@@ -471,22 +333,14 @@
     "ground_truth": [
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       },
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       }
     ]
@@ -496,19 +350,13 @@
     "ground_truth": [
       {
         "books.search": {
-          "query": [
-            "Haruki Murakami"
-          ]
+          "query": "Haruki Murakami"
         }
       },
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       }
     ]
@@ -518,19 +366,13 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       },
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       }
     ]
@@ -540,19 +382,13 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       },
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       }
     ]
@@ -562,22 +398,14 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -587,19 +415,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -609,19 +431,13 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       }
     ]
@@ -631,19 +447,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -653,16 +463,12 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -672,25 +478,15 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       }
     ]
@@ -700,19 +496,13 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -722,19 +512,13 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -744,19 +528,13 @@
     "ground_truth": [
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       },
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       }
     ]
@@ -766,19 +544,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       }
     ]
@@ -788,16 +560,12 @@
     "ground_truth": [
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       },
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       }
     ]
@@ -807,19 +575,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       }
     ]
@@ -829,16 +591,12 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       },
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       }
     ]
@@ -848,19 +606,13 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       },
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       }
     ]
@@ -870,19 +622,13 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       },
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       }
     ]
@@ -892,22 +638,14 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -917,22 +655,14 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": [
-            85000
-          ],
-          "location": [
-            "Canada"
-          ]
+          "income": 85000,
+          "location": "Canada"
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -942,19 +672,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       }
     ]
@@ -964,16 +688,12 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       },
       {
         "movies.recommend": {
-          "genre": [
-            "sci-fi"
-          ]
+          "genre": "sci-fi"
         }
       }
     ]
@@ -983,22 +703,14 @@
     "ground_truth": [
       {
         "travel.find_flights": {
-          "origin": [
-            "London"
-          ],
-          "destination": [
-            "Berlin"
-          ],
-          "date": [
-            "2025-07-12"
-          ]
+          "origin": "London",
+          "destination": "Berlin",
+          "date": "2025-07-12"
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -1008,22 +720,14 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "language.translate": {
-          "text": [
-            "Good morning"
-          ],
-          "target_language": [
-            "Italian"
-          ]
+          "text": "Good morning",
+          "target_language": "Italian"
         }
       }
     ]
@@ -1033,19 +737,13 @@
     "ground_truth": [
       {
         "weather.get_forecast": {
-          "city": [
-            "Cape Town"
-          ],
-          "days": [
-            3
-          ]
+          "city": "Cape Town",
+          "days": 3
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
@@ -1055,19 +753,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       }
     ]
@@ -1077,19 +769,13 @@
     "ground_truth": [
       {
         "sports.get_scores": {
-          "sport": [
-            "football"
-          ]
+          "sport": "football"
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -1099,19 +785,13 @@
     "ground_truth": [
       {
         "education.lookup_university": {
-          "university_name": [
-            "Stanford University"
-          ]
+          "university_name": "Stanford University"
         }
       },
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       }
     ]
@@ -1121,19 +801,13 @@
     "ground_truth": [
       {
         "health.bmi_calculator": {
-          "weight": [
-            62
-          ],
-          "height": [
-            1.7
-          ]
+          "weight": 62,
+          "height": 1.7
         }
       },
       {
         "recipes.get_recipe": {
-          "dish": [
-            "lasagna"
-          ]
+          "dish": "lasagna"
         }
       }
     ]
