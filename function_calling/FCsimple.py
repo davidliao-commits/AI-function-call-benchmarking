@@ -1,5 +1,5 @@
 from fc_utils import load_and_prepare_data, make_function_call, print_tool_calls, convert_output_to_json
-
+# may be disused, but good example of function calling
 def main(category: str):
     # Load data and pre-convert functions to tools format
     if category == "simple":
@@ -20,9 +20,12 @@ def main(category: str):
                 print(f"Prompt: {prompt}")
                 print(f"Target Function: {function_name}")
                 
-                response = make_function_call(category, prompt, tools, function_name)
-                print_tool_calls(response)
-                converted_output = convert_output_to_json(response)
+                full_response = make_function_call(category, prompt, tools, function_name)
+                print_tool_calls(full_response)
+                
+                # Extract message for conversion
+                response_message = full_response.choices[0].message
+                converted_output = convert_output_to_json(response_message)
                 print("converted output:",converted_output)
                 
                            
