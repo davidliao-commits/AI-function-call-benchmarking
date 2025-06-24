@@ -33,6 +33,46 @@ def eval_runner(
     token_info = parse_query_response_FC(full_response)
     
     converted_output = convert_output_to_json(response_message)
+    
+    # Handle both single function calls (dict) and parallel/multiple calls (list)
+    if isinstance(converted_output, dict):
+        if "function_name" not in converted_output:
+            error_msg = converted_output.get("error", "Missing 'function_name' in converted_output")
+            print(f"[ERROR] {error_msg}")
+            return {
+                "ast_result": {"isValid": False, "error": error_msg, "type": "conversion_error"},
+                "token_usage": {
+                    "input_tokens": token_info["input_token"],
+                    "output_tokens": token_info["output_token"],
+                    "total_tokens": token_info["input_token"] + token_info["output_token"]
+                }
+            }
+    elif isinstance(converted_output, list):
+        # For parallel/multiple calls, check if any have errors
+        for i, call in enumerate(converted_output):
+            if isinstance(call, dict) and "error" in call:
+                error_msg = f"Error in call {i+1}: {call['error']}"
+                print(f"[ERROR] {error_msg}")
+                return {
+                    "ast_result": {"isValid": False, "error": error_msg, "type": "conversion_error"},
+                    "token_usage": {
+                        "input_tokens": token_info["input_token"],
+                        "output_tokens": token_info["output_token"],
+                        "total_tokens": token_info["input_token"] + token_info["output_token"]
+                    }
+                }
+    else:
+        error_msg = f"Unexpected output type: {type(converted_output)}"
+        print(f"[ERROR] {error_msg}")
+        return {
+            "ast_result": {"isValid": False, "error": error_msg, "type": "conversion_error"},
+            "token_usage": {
+                "input_tokens": token_info["input_token"],
+                "output_tokens": token_info["output_token"],
+                "total_tokens": token_info["input_token"] + token_info["output_token"]
+            }
+        }
+    
     ast_result = ast_checker(function_description, converted_output, possible_answer, test_category)
     
     # Add token information to the result
@@ -133,4 +173,11 @@ def run_evaluation(test_category):
     breakpoint()
     return result
 
-run_evaluation("simple")
+def get_statistics():
+    simple_function_call = run_evaluation("simple")
+    parallel_function_call = run_evaluation("parallel")
+    multiple_function_call = run_evaluation("multiple")
+    breakpoint()
+    return simple_function_call, parallel_function_call, multiple_function_call
+    
+run_evaluation("multiple")

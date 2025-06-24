@@ -1,1707 +1,1687 @@
 [
-    {
-      "id": "parallel_0",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then repeat with a change in time of 10 seconds."
-          }
-        ]
-      ],
-      "function": [
+  {
+    "id": "parallel_0",
+    "question": [
+      [
         {
-          "name": "calculate_em_force",
-          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "b_field": {
-                "type": "integer",
-                "description": "The magnetic field in Tesla."
-              },
-              "area": {
-                "type": "integer",
-                "description": "The change in area of magnetic field in square meters."
-              },
-              "d_time": {
-                "type": "integer",
-                "description": "The change in time in seconds."
-              }
-            },
-            "required": [
-              "b_field",
-              "area",
-              "d_time"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate the kinetic energy of a 10kg object moving at 5 m/s, then repeat with 10kg object moving at 2 m/s"
         }
       ]
-    },
-    {
-      "id": "parallel_1",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the monthly loan payment for a $100,000 loan at 5% for 15 years, and again for 30 years."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "loan.calculate_monthly_payment",
-          "description": "Calculate monthly loan payments given principal, interest rate, and duration.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "principal": {
-                "type": "float",
-                "description": "The loan amount."
-              },
-              "interest_rate": {
-                "type": "float",
-                "description": "Annual interest rate (percentage)."
-              },
-              "years": {
-                "type": "integer",
-                "description": "Duration in years."
-              }
+    ],
+    "function": [
+      {
+        "name": "physics.calculate_kinetic_energy",
+        "description": "Calculate the kinetic energy of a given mass and velocity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in kilograms."
             },
-            "required": [
-              "principal",
-              "interest_rate",
-              "years"
-            ]
-          }
+            "velocity": {
+              "type": "float",
+              "description": "Velocity in meters per second."
+            }
+          },
+          "required": [
+            "mass",
+            "velocity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_1",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Determine the gravitational force between two 5kg masses 2 meters apart, then repeat with 10kg masses 3 meters apart"
         }
       ]
-    },
-    {
-      "id": "parallel_2",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "physics.calculate_gravitational_force",
+        "description": "Determine the gravitational force between two given masses and distance.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass1": {
+              "type": "float",
+              "description": "Mass of object 1 in kg."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "mass2": {
+              "type": "float",
+              "description": "Mass of object 2 in kg."
+            },
+            "distance": {
+              "type": "float",
+              "description": "Distance between masses in meters."
+            }
+          },
+          "required": [
+            "mass1",
+            "mass2",
+            "distance"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_2",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Compute the compound interest on $5,000 at 7% annual rate for 3 years, then repeat with $10,000 at 5% for 2 years"
         }
       ]
-    },
-    {
-      "id": "parallel_3",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "chemistry.calculate_molarity",
-          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "moles": {
-                "type": "float",
-                "description": "Moles of solute."
-              },
-              "volume": {
-                "type": "float",
-                "description": "Volume of solution in liters."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.calculate_compound_interest",
+        "description": "Compute the compound interest on a given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial investment."
             },
-            "required": [
-              "moles",
-              "volume"
-            ]
-          }
+            "rate": {
+              "type": "float",
+              "description": "Annual interest rate, in percent."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_3",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Determine monthly mortgage payment for $250,000 loan at 4% for 30 years, then repeat with $500,000 at 3% for 25 years"
         }
       ]
-    },
-    {
-      "id": "parallel_4",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the area of a rectangle with length 10 and width 5, and then with width 8."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "geometry.calculate_rectangle_area",
-          "description": "Calculate the area of a rectangle.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "float",
-                "description": "Length of the rectangle."
-              },
-              "width": {
-                "type": "float",
-                "description": "Width of the rectangle."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.calculate_mortgage_payment",
+        "description": "Determine monthly mortgage payment for a given loan amount, annual rate, and years.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "loan_amount": {
+              "type": "float",
+              "description": "Principal loan amount."
             },
-            "required": [
-              "length",
-              "width"
-            ]
-          }
+            "annual_rate": {
+              "type": "float",
+              "description": "Annual interest rate in decimals."
+            },
+            "years": {
+              "type": "float",
+              "description": "Loan duration in years."
+            }
+          },
+          "required": [
+            "loan_amount",
+            "annual_rate",
+            "years"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_4",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Get the sugar content for 200g of strawberries, then repeat with 100g of almonds"
         }
       ]
-    },
-    {
-      "id": "parallel_5",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Convert 100 USD to EUR, and then convert 200 USD to EUR."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "finance.convert_currency",
-          "description": "Convert amount from one currency to another given the exchange rate.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "amount": {
-                "type": "float",
-                "description": "The amount of money to convert."
-              },
-              "from_currency": {
-                "type": "string",
-                "description": "Original currency."
-              },
-              "to_currency": {
-                "type": "string",
-                "description": "Target currency."
-              }
+    ],
+    "function": [
+      {
+        "name": "nutrition.get_sugar_content",
+        "description": "Get the sugar content for a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
             },
-            "required": [
-              "amount",
-              "from_currency",
-              "to_currency"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_5",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find the fiber in 50g of oats, then repeat with 100g of almonds"
         }
       ]
-    },
-    {
-      "id": "parallel_6",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "earthquake.calculate_magnitude",
-          "description": "Calculate Richter scale magnitude from seismic energy.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "energy": {
-                "type": "float",
-                "description": "Seismic energy in joules."
-              }
+    ],
+    "function": [
+      {
+        "name": "nutrition.get_fiber_content",
+        "description": "Find the fiber in a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Name of the food item."
             },
-            "required": [
-              "energy"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Quantity in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_6",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate CO2 emission from a 300km train ride, then repeat with 200km car ride"
         }
       ]
-    },
-    {
-      "id": "parallel_7",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "environment.calculate_co2_emission",
+        "description": "Estimate CO2 emission from a given distance and transport mode.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "transport_mode": {
+              "type": "string",
+              "description": "Mode of transport. Options: train, car, plane"
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "distance_km": {
+              "type": "float",
+              "description": "Travel distance in kilometers."
+            }
+          },
+          "required": [
+            "transport_mode",
+            "distance_km"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_7",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate water footprint of producing 1kg of beef, then repeat with 1kg of chicken"
         }
       ]
-    },
-    {
-      "id": "parallel_8",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Estimate calories burned running for 30 minutes and then for 60 minutes."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "fitness.estimate_calories_burned",
-          "description": "Estimate calories burned during exercise.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "activity": {
-                "type": "string",
-                "description": "Type of exercise."
-              },
-              "duration": {
-                "type": "integer",
-                "description": "Duration in minutes."
-              }
+    ],
+    "function": [
+      {
+        "name": "environment.calculate_water_footprint",
+        "description": "Calculate water footprint of producing a given quantity of a product.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "product": {
+              "type": "string",
+              "description": "Name of the product."
             },
-            "required": [
-              "activity",
-              "duration"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Quantity in kilograms."
+            }
+          },
+          "required": [
+            "product",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_8",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate the volume of a cone with radius 3cm and height 9cm, then repeat with radius 4cm and height 12cm"
         }
       ]
-    },
-    {
-      "id": "parallel_9",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate download time for a 500MB file at 100 Mbps, then at 50 Mbps."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "network.calculate_download_time",
-          "description": "Calculate time to download a file based on file size and internet speed.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "file_size_mb": {
-                "type": "float",
-                "description": "File size in megabytes."
-              },
-              "speed_mbps": {
-                "type": "float",
-                "description": "Internet speed in megabits per second."
-              }
+    ],
+    "function": [
+      {
+        "name": "geometry.calculate_cone_volume",
+        "description": "Calculate the volume of a cone with given radius and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "float",
+              "description": "Radius in cm."
             },
-            "required": [
-              "file_size_mb",
-              "speed_mbps"
-            ]
-          }
+            "height": {
+              "type": "float",
+              "description": "Height in cm."
+            }
+          },
+          "required": [
+            "radius",
+            "height"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_9",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find the diagonal length of a rectangle with sides 6cm and 8cm, then repeat with sides 10cm and 12cm"
         }
       ]
-    },
-    {
-      "id": "parallel_10",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 188 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "geometry.calculate_rectangle_diagonal",
+        "description": "Find the diagonal length of a rectangle with given length and width.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "length": {
+              "type": "float",
+              "description": "Length of the rectangle."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "width": {
+              "type": "float",
+              "description": "Width of the rectangle."
+            }
+          },
+          "required": [
+            "length",
+            "width"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_10",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate moles from 36g of water (H\u2082O), then repeat with 18g of ethanol (C\u2082H\u2085OH)"
         }
       ]
-    },
-    {
-      "id": "parallel_11",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "chemistry.calculate_molarity",
-          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "moles": {
-                "type": "float",
-                "description": "Moles of solute."
-              },
-              "volume": {
-                "type": "float",
-                "description": "Volume of solution in liters."
-              }
+    ],
+    "function": [
+      {
+        "name": "chemistry.calculate_moles",
+        "description": "Calculate moles from a given mass and molar mass.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in grams."
             },
-            "required": [
-              "moles",
-              "volume"
-            ]
-          }
+            "molar_mass": {
+              "type": "float",
+              "description": "Molar mass in g/mol."
+            }
+          },
+          "required": [
+            "mass",
+            "molar_mass"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_11",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find percent composition of carbon in CO\u2082, then repeat with CO\u2081"
         }
       ]
-    },
-    {
-      "id": "parallel_12",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 366 with width 8."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "geometry.calculate_rectangle_area",
-          "description": "Calculate the area of a rectangle.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "float",
-                "description": "Length of the rectangle."
-              },
-              "width": {
-                "type": "float",
-                "description": "Width of the rectangle."
-              }
+    ],
+    "function": [
+      {
+        "name": "chemistry.calculate_percent_composition",
+        "description": "Find percent composition of a given element in a compound.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "element_mass": {
+              "type": "float",
+              "description": "Mass of the element."
             },
-            "required": [
-              "length",
-              "width"
-            ]
-          }
+            "compound_mass": {
+              "type": "float",
+              "description": "Mass of the compound."
+            }
+          },
+          "required": [
+            "element_mass",
+            "compound_mass"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_12",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate heart rate zone for a 25-year-old during exercise, then repeat with a 30-year-old"
         }
       ]
-    },
-    {
-      "id": "parallel_13",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 885 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "biology.calculate_heart_rate_zone",
+        "description": "Estimate heart rate zone for a given age during exercise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "float",
+              "description": "Age in years."
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_13",
+    "question": [
+      [
         {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
-            },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate BMI for 68kg, 1.75m person, then repeat with 80kg, 1.8m person"
         }
       ]
-    },
-    {
-      "id": "parallel_14",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "health.calculate_bmi",
+        "description": "Calculate BMI for a given weight and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weight": {
+              "type": "float",
+              "description": "Weight in kilograms."
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "weight",
+            "height"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_14",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate GPA for grades [4.0, 3.7, 3.3] with credits [3, 4, 3], then repeat with grades [3.0, 3.5, 4.0] and credits [2, 3, 4]"
         }
       ]
-    },
-    {
-      "id": "parallel_15",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 872 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "education.calculate_gpa",
+        "description": "Calculate GPA for given grades and credits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of grade points."
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "credits": {
+              "type": "array",
+              "description": "List of credit hours."
+            }
+          },
+          "required": [
+            "grades",
+            "credits"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_15",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Convert letter grades ['A', 'B+', 'C'] to GPA, then repeat with ['B', 'A-', 'C+']"
         }
       ]
-    },
-    {
-      "id": "parallel_16",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "education.convert_letter_to_gpa",
+        "description": "Convert letter grades to GPA.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of letter grades."
+            }
+          },
+          "required": [
+            "grades"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_16",
+    "question": [
+      [
         {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
-            },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+          "role": "user",
+          "content": "Estimate calories burned playing soccer for 45 minutes, then repeat with 30 minutes"
         }
       ]
-    },
-    {
-      "id": "parallel_17",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 721 again with different values at seed 885 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "fitness.estimate_calories_burned",
+        "description": "Estimate calories burned playing a given activity for a given duration.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string",
+              "description": "Type of activity. e.g soccer,basketball, running"
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "duration": {
+              "type": "float",
+              "description": "Duration in minutes."
+            }
+          },
+          "required": [
+            "activity",
+            "duration"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_17",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate average speed from 10km run in 50 minutes, then repeat with 20km run in 100 minutes"
         }
       ]
-    },
-    {
-      "id": "parallel_18",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate download time for a 500MB file at 100 Mbps, then again with different values at seed 405 at 50 Mbps."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "network.calculate_download_time",
-          "description": "Calculate time to download a file based on file size and internet speed.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "file_size_mb": {
-                "type": "float",
-                "description": "File size in megabytes."
-              },
-              "speed_mbps": {
-                "type": "float",
-                "description": "Internet speed in megabits per second."
-              }
+    ],
+    "function": [
+      {
+        "name": "fitness.calculate_average_speed",
+        "description": "Calculate average speed from a given distance and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Distance in kilometers."
             },
-            "required": [
-              "file_size_mb",
-              "speed_mbps"
-            ]
-          }
+            "time": {
+              "type": "float",
+              "description": "Time in minutes."
+            }
+          },
+          "required": [
+            "distance",
+            "time"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_18",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate heat index for 35\u00b0C and 70% humidity, then repeat with 40\u00b0C and 60% humidity"
         }
       ]
-    },
-    {
-      "id": "parallel_19",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 104 again with different values at seed 188 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "weather.calculate_heat_index",
+        "description": "Estimate heat index for a given temperature and humidity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "temperature": {
+              "type": "float",
+              "description": "Temperature in Celsius."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "humidity": {
+              "type": "float",
+              "description": "Humidity in percent."
+            }
+          },
+          "required": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_19",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Determine wind chill at -5\u00b0C and 30 km/h wind, then repeat with -10\u00b0C and 20 km/h wind"
         }
       ]
-    },
-    {
-      "id": "parallel_20",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 540 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "weather.calculate_wind_chill",
+        "description": "Determine wind chill at a given temperature and wind speed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "temperature": {
+              "type": "float",
+              "description": "Temperature in Celsius."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "wind_speed": {
+              "type": "float",
+              "description": "Wind speed in km/h."
+            }
+          },
+          "required": [
+            "temperature",
+            "wind_speed"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_20",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate upload time for 2GB file at 10 Mbps, then repeat with 1GB file at 5 Mbps"
         }
       ]
-    },
-    {
-      "id": "parallel_21",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 266 again with different values at seed 104 again with different values at seed 188 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "network.calculate_upload_time",
+        "description": "Estimate upload time for a given file size and upload speed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_size_gb": {
+              "type": "float",
+              "description": "File size in gigabytes."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "upload_speed_mbps": {
+              "type": "float",
+              "description": "Upload speed in megabits per second."
+            }
+          },
+          "required": [
+            "file_size_gb",
+            "upload_speed_mbps"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_21",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Convert download speed of 50 Mbps to MB/s, then repeat with 100 Mbps"
         }
       ]
-    },
-    {
-      "id": "parallel_22",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 751 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "network.convert_speed_units",
+        "description": "Convert download speed from Mbps to MB/s.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "speed_mbps": {
+              "type": "float",
+              "description": "Speed in megabits per second."
+            }
+          },
+          "required": [
+            "speed_mbps"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_22",
+    "question": [
+      [
         {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
-            },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate escape velocity from a planet of mass 6e24 kg and radius 6.4e6 m, then repeat with mass 8e24 kg and radius 7e6 m"
         }
       ]
-    },
-    {
-      "id": "parallel_23",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 397 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "astronomy.calculate_escape_velocity",
+        "description": "Calculate escape velocity from a planet of given mass and radius.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass of the planet in kg."
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "radius": {
+              "type": "float",
+              "description": "Radius of the planet in meters."
+            }
+          },
+          "required": [
+            "mass",
+            "radius"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_23",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find orbital period for satellite at 300km altitude around Earth, then repeat with 400km altitude"
         }
       ]
-    },
-    {
-      "id": "parallel_24",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 878 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "astronomy.calculate_orbital_period",
+        "description": "Find orbital period for satellite at a given altitude around Earth.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "altitude": {
+              "type": "float",
+              "description": "Altitude above Earth's surface in kilometers."
+            }
+          },
+          "required": [
+            "altitude"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_24",
+    "question": [
+      [
         {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
-            },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+          "role": "user",
+          "content": "Estimate fuel cost for a 100km trip at 7L/100km and $1.5/L, then repeat with 200km trip at 5L/100km and $1.2/L"
         }
       ]
-    },
-    {
-      "id": "parallel_25",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 999 again with different values at seed 751 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "transport.calculate_fuel_cost",
+        "description": "Estimate fuel cost for a given distance, fuel consumption, and price per liter.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "consumption": {
+              "type": "float",
+              "description": "Fuel consumption in L/100km."
+            },
+            "price_per_liter": {
+              "type": "float",
+              "description": "Fuel price per liter."
+            }
+          },
+          "required": [
+            "distance",
+            "consumption",
+            "price_per_liter"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_25",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate time to travel 200km at 90 km/h, then repeat with 300km at 100 km/h"
         }
       ]
-    },
-    {
-      "id": "parallel_26",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "chemistry.calculate_molarity",
-          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "moles": {
-                "type": "float",
-                "description": "Moles of solute."
-              },
-              "volume": {
-                "type": "float",
-                "description": "Volume of solution in liters."
-              }
+    ],
+    "function": [
+      {
+        "name": "transport.estimate_travel_time",
+        "description": "Calculate time to travel a given distance at a given speed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Distance in kilometers."
             },
-            "required": [
-              "moles",
-              "volume"
-            ]
-          }
+            "speed": {
+              "type": "float",
+              "description": "Speed in kilometers per hour."
+            }
+          },
+          "required": [
+            "distance",
+            "speed"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_26",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Convert letter grades ['A', 'B+', 'C'] to GPA, then repeat with ['B', 'A-', 'C+']"
         }
       ]
-    },
-    {
-      "id": "parallel_27",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 611 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "education.convert_letter_to_gpa",
+        "description": "Convert letter grades to GPA.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of letter grades."
+            }
+          },
+          "required": [
+            "grades"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_27",
+    "question": [
+      [
         {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
-            },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate the kinetic energy of a 10kg object moving at 5 m/s, then repeat with 10kg object moving at 2 m/s"
         }
       ]
-    },
-    {
-      "id": "parallel_28",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 521 with width 8."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "geometry.calculate_rectangle_area",
-          "description": "Calculate the area of a rectangle.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "float",
-                "description": "Length of the rectangle."
-              },
-              "width": {
-                "type": "float",
-                "description": "Width of the rectangle."
-              }
+    ],
+    "function": [
+      {
+        "name": "physics.calculate_kinetic_energy",
+        "description": "Calculate the kinetic energy of a given mass and velocity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in kilograms."
             },
-            "required": [
-              "length",
-              "width"
-            ]
-          }
+            "velocity": {
+              "type": "float",
+              "description": "Velocity in meters per second."
+            }
+          },
+          "required": [
+            "mass",
+            "velocity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_28",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Compute the compound interest on $5,000 at 7% annual rate for 3 years, then repeat with $10,000 at 5% for 2 years"
         }
       ]
-    },
-    {
-      "id": "parallel_29",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "chemistry.calculate_molarity",
-          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "moles": {
-                "type": "float",
-                "description": "Moles of solute."
-              },
-              "volume": {
-                "type": "float",
-                "description": "Volume of solution in liters."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.calculate_compound_interest",
+        "description": "Compute the compound interest on a given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial investment."
             },
-            "required": [
-              "moles",
-              "volume"
-            ]
-          }
+            "rate": {
+              "type": "float",
+              "description": "Annual interest rate, in decimals."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_29",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate heart rate zone for a 25-year-old during exercise, then repeat with a 30-year-old"
         }
       ]
-    },
-    {
-      "id": "parallel_30",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "biology.calculate_heart_rate_zone",
+        "description": "Estimate heart rate zone for a given age during exercise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "float",
+              "description": "Age in years."
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_30",
+    "question": [
+      [
         {
-          "name": "earthquake.calculate_magnitude",
-          "description": "Calculate Richter scale magnitude from seismic energy.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "energy": {
-                "type": "float",
-                "description": "Seismic energy in joules."
-              }
-            },
-            "required": [
-              "energy"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate moles from 36g of water (H\u2082O), then repeat with 18g of ethanol (C\u2082H\u2085OH)"
         }
       ]
-    },
-    {
-      "id": "parallel_31",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then again with different values at seed 837 repeat with a change in time of 10 seconds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "calculate_em_force",
-          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "b_field": {
-                "type": "integer",
-                "description": "The magnetic field in Tesla."
-              },
-              "area": {
-                "type": "integer",
-                "description": "The change in area of magnetic field in square meters."
-              },
-              "d_time": {
-                "type": "integer",
-                "description": "The change in time in seconds."
-              }
+    ],
+    "function": [
+      {
+        "name": "chemistry.calculate_moles",
+        "description": "Calculate moles from a given mass and molar mass.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in grams."
             },
-            "required": [
-              "b_field",
-              "area",
-              "d_time"
-            ]
-          }
+            "molar_mass": {
+              "type": "float",
+              "description": "Molar mass in g/mol."
+            }
+          },
+          "required": [
+            "mass",
+            "molar_mass"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_31",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find the diagonal length of a rectangle with sides 6cm and 8cm, then repeat with sides 10cm and 12cm"
         }
       ]
-    },
-    {
-      "id": "parallel_32",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "earthquake.calculate_magnitude",
-          "description": "Calculate Richter scale magnitude from seismic energy.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "energy": {
-                "type": "float",
-                "description": "Seismic energy in joules."
-              }
+    ],
+    "function": [
+      {
+        "name": "geometry.calculate_rectangle_diagonal",
+        "description": "Find the diagonal length of a rectangle with given length and width.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "length": {
+              "type": "float",
+              "description": "Length of the rectangle."
             },
-            "required": [
-              "energy"
-            ]
-          }
+            "width": {
+              "type": "float",
+              "description": "Width of the rectangle."
+            }
+          },
+          "required": [
+            "length",
+            "width"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_32",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find the fiber in 50g of oats, then repeat with 100g of almonds"
         }
       ]
-    },
-    {
-      "id": "parallel_33",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 437 again with different values at seed 104 again with different values at seed 188 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "nutrition.get_fiber_content",
+        "description": "Find the fiber in a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Name of the food item."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Quantity in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_33",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find the fiber in 9000g of oats, then repeat with 2100g of almonds"
         }
       ]
-    },
-    {
-      "id": "parallel_34",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 786 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "nutrition.get_fiber_content",
+        "description": "Find the fiber in a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Name of the food item."
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Quantity in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_34",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate water footprint of producing 1kg of beef, then repeat with 1kg of chicken"
         }
       ]
-    },
-    {
-      "id": "parallel_35",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "chemistry.calculate_molarity",
-          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "moles": {
-                "type": "float",
-                "description": "Moles of solute."
-              },
-              "volume": {
-                "type": "float",
-                "description": "Volume of solution in liters."
-              }
+    ],
+    "function": [
+      {
+        "name": "environment.calculate_water_footprint",
+        "description": "Calculate water footprint of producing a given quantity of a product.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "product": {
+              "type": "string",
+              "description": "Name of the product."
             },
-            "required": [
-              "moles",
-              "volume"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Quantity in kilograms."
+            }
+          },
+          "required": [
+            "product",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_35",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate fuel cost for a 100km trip at 7L/100km and $1.5/L, then repeat with 200km trip at 5L/100km and $1.2/L"
         }
       ]
-    },
-    {
-      "id": "parallel_36",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "earthquake.calculate_magnitude",
-          "description": "Calculate Richter scale magnitude from seismic energy.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "energy": {
-                "type": "float",
-                "description": "Seismic energy in joules."
-              }
+    ],
+    "function": [
+      {
+        "name": "transport.calculate_fuel_cost",
+        "description": "Estimate fuel cost for a given distance, fuel consumption, and price per liter.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
             },
-            "required": [
-              "energy"
-            ]
-          }
+            "consumption": {
+              "type": "float",
+              "description": "Fuel consumption in L/100km."
+            },
+            "price_per_liter": {
+              "type": "float",
+              "description": "Fuel price per liter."
+            }
+          },
+          "required": [
+            "distance",
+            "consumption",
+            "price_per_liter"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_36",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find percent composition of carbon in CO\u2082, then repeat with CO\u2081"
         }
       ]
-    },
-    {
-      "id": "parallel_37",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the molarity of 0.5 moles of solute in 2 liters of solution, and again in 1 liter."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "chemistry.calculate_molarity",
-          "description": "Calculate molarity given moles of solute and volume of solution in liters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "moles": {
-                "type": "float",
-                "description": "Moles of solute."
-              },
-              "volume": {
-                "type": "float",
-                "description": "Volume of solution in liters."
-              }
+    ],
+    "function": [
+      {
+        "name": "chemistry.calculate_percent_composition",
+        "description": "Find percent composition of a given element in a compound.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "element_mass": {
+              "type": "float",
+              "description": "Mass of the element."
             },
-            "required": [
-              "moles",
-              "volume"
-            ]
-          }
+            "compound_mass": {
+              "type": "float",
+              "description": "Mass of the compound."
+            }
+          },
+          "required": [
+            "element_mass",
+            "compound_mass"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_37",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate CO2 emission from a 300km train ride, then repeat with 200km car ride"
         }
       ]
-    },
-    {
-      "id": "parallel_38",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then again with different values at seed 695 repeat with a change in time of 10 seconds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "calculate_em_force",
-          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "b_field": {
-                "type": "integer",
-                "description": "The magnetic field in Tesla."
-              },
-              "area": {
-                "type": "integer",
-                "description": "The change in area of magnetic field in square meters."
-              },
-              "d_time": {
-                "type": "integer",
-                "description": "The change in time in seconds."
-              }
+    ],
+    "function": [
+      {
+        "name": "environment.calculate_co2_emission",
+        "description": "Estimate CO2 emission from a given distance and transport mode.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "transport_mode": {
+              "type": "string",
+              "description": "Mode of transport. Options: train, car, plane"
             },
-            "required": [
-              "b_field",
-              "area",
-              "d_time"
-            ]
-          }
+            "distance_km": {
+              "type": "float",
+              "description": "Travel distance in kilometers."
+            }
+          },
+          "required": [
+            "transport_mode",
+            "distance_km"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_38",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Get the sugar content for 200g of strawberries, then repeat with 100g of almonds"
         }
       ]
-    },
-    {
-      "id": "parallel_39",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 461 again with different values at seed 540 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "nutrition.get_sugar_content",
+        "description": "Get the sugar content for a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_39",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find the diagonal length of a rectangle with sides 6cm and 8cm, then repeat with sides 10cm and 12cm"
         }
       ]
-    },
-    {
-      "id": "parallel_40",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 548 again with different values at seed 461 again with different values at seed 540 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "geometry.calculate_rectangle_diagonal",
+        "description": "Find the diagonal length of a rectangle with given length and width.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "length": {
+              "type": "float",
+              "description": "Length of the rectangle."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "width": {
+              "type": "float",
+              "description": "Width of the rectangle."
+            }
+          },
+          "required": [
+            "length",
+            "width"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_40",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate the volume of a cone with radius 3cm and height 9cm, then repeat with radius 4cm and height 12cm"
         }
       ]
-    },
-    {
-      "id": "parallel_41",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 203 again with different values at seed 540 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "geometry.calculate_cone_volume",
+        "description": "Calculate the volume of a cone with given radius and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "float",
+              "description": "Radius in cm."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "height": {
+              "type": "float",
+              "description": "Height in cm."
+            }
+          },
+          "required": [
+            "radius",
+            "height"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_41",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Estimate fuel cost for a 100km trip at 7L/100km and $1.5/L, then repeat with 200km trip at 5L/100km and $1.2/L"
         }
       ]
-    },
-    {
-      "id": "parallel_42",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 645 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "transport.calculate_fuel_cost",
+        "description": "Estimate fuel cost for a given distance, fuel consumption, and price per liter.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "consumption": {
+              "type": "float",
+              "description": "Fuel consumption in L/100km."
+            },
+            "price_per_liter": {
+              "type": "float",
+              "description": "Fuel price per liter."
+            }
+          },
+          "required": [
+            "distance",
+            "consumption",
+            "price_per_liter"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_42",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Get the sugar content for 20g of mangos, then repeat with 100g of chocolate"
         }
       ]
-    },
-    {
-      "id": "parallel_43",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 311 again with different values at seed 885 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
+    ],
+    "function": [
+      {
+        "name": "nutrition.get_sugar_content",
+        "description": "Get the sugar content for a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
             },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_43",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Calculate moles from 36g of water (H\u2082O), then repeat with 18g of methane (CH\u2084)"
         }
       ]
-    },
-    {
-      "id": "parallel_44",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get the calories for 100g of almonds, and then again with different values at seed 877 again with different values at seed 203 again with different values at seed 540 for 50g of almonds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nutrition.get_calories",
-          "description": "Get calorie information for a food item based on quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_item": {
-                "type": "string",
-                "description": "Name of the food item."
-              },
-              "quantity": {
-                "type": "float",
-                "description": "Quantity in grams."
-              }
+    ],
+    "function": [
+      {
+        "name": "chemistry.calculate_moles",
+        "description": "Calculate moles from a given mass and molar mass.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in grams."
             },
-            "required": [
-              "food_item",
-              "quantity"
-            ]
-          }
+            "molar_mass": {
+              "type": "float",
+              "description": "Molar mass in g/mol."
+            }
+          },
+          "required": [
+            "mass",
+            "molar_mass"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_44",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Convert letter grades ['A', 'B+', 'C'] to GPA, then repeat with ['B', 'A-', 'C+']"
         }
       ]
-    },
-    {
-      "id": "parallel_45",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the force for mass 10kg and acceleration 2m/s\u00b2, and then again with different values at seed 930 again with different values at seed 910 again with different values at seed 577 for 5m/s\u00b2."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "education.convert_letter_to_gpa",
+        "description": "Convert letter grades to GPA.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of letter grades."
+            }
+          },
+          "required": [
+            "grades"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_45",
+    "question": [
+      [
         {
-          "name": "physics.calculate_force",
-          "description": "Calculate force given mass and acceleration (F=ma).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mass": {
-                "type": "float",
-                "description": "Mass in kg."
-              },
-              "acceleration": {
-                "type": "float",
-                "description": "Acceleration in m/s\u00b2."
-              }
-            },
-            "required": [
-              "mass",
-              "acceleration"
-            ]
-          }
+          "role": "user",
+          "content": "Estimate heart rate zone for a 25-year-old during exercise, then repeat with a 30-year-old"
         }
       ]
-    },
-    {
-      "id": "parallel_46",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 384 with width 8."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "biology.calculate_heart_rate_zone",
+        "description": "Estimate heart rate zone for a given age during exercise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "float",
+              "description": "Age in years."
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_46",
+    "question": [
+      [
         {
-          "name": "geometry.calculate_rectangle_area",
-          "description": "Calculate the area of a rectangle.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "float",
-                "description": "Length of the rectangle."
-              },
-              "width": {
-                "type": "float",
-                "description": "Width of the rectangle."
-              }
-            },
-            "required": [
-              "length",
-              "width"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate the average income of a person in the year 2024 with salary 2000000, then repeat with year 2001 and income 150000"
         }
       ]
-    },
-    {
-      "id": "parallel_47",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the induced electromagnetic force for a magnetic field of 5 Tesla, area of 2 square meters and change in time of 4 seconds, then again with different values at seed 754 again with different values at seed 837 repeat with a change in time of 10 seconds."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "calculate_em_force",
-          "description": "Calculate the induced electromagnetic force based on Faraday's Law of Electromagnetic Induction, given the magnetic field (in Tesla), change in magnetic field area (in square meters), and the change in time (in seconds).",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "b_field": {
-                "type": "integer",
-                "description": "The magnetic field in Tesla."
-              },
-              "area": {
-                "type": "integer",
-                "description": "The change in area of magnetic field in square meters."
-              },
-              "d_time": {
-                "type": "integer",
-                "description": "The change in time in seconds."
-              }
+    ],
+    "function": [
+      {
+        "name": "income.calculate_average_income",
+        "description": "Calculate the average income of a person in a given year with a given salary",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "year": {
+              "type": "int",
+              "description": "Year in which the income is calculated."
             },
-            "required": [
-              "b_field",
-              "area",
-              "d_time"
-            ]
-          }
+            "income": {
+              "type": "float",
+              "description": "Income of the person in the given year."
+            }
+          },
+          "required": [
+            "year",
+            "income"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_47",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find orbital period for satellite at 300km altitude around Earth, then repeat with 400km altitude"
         }
       ]
-    },
-    {
-      "id": "parallel_48",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the area of a rectangle with length 10 and width 5, and then again with different values at seed 147 with width 8."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "astronomy.calculate_orbital_period",
+        "description": "Find orbital period for satellite at a given altitude around Earth.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "altitude": {
+              "type": "float",
+              "description": "Altitude above Earth's surface in kilometers."
+            }
+          },
+          "required": [
+            "altitude"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_48",
+    "question": [
+      [
         {
-          "name": "geometry.calculate_rectangle_area",
-          "description": "Calculate the area of a rectangle.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "float",
-                "description": "Length of the rectangle."
-              },
-              "width": {
-                "type": "float",
-                "description": "Width of the rectangle."
-              }
-            },
-            "required": [
-              "length",
-              "width"
-            ]
-          }
+          "role": "user",
+          "content": "Convert download speed of 50 Mbps to MB/s, then repeat with 100 Mbps"
         }
       ]
-    },
-    {
-      "id": "parallel_49",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the magnitude for 10^10 joules and for 10^12 joules of seismic energy."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "network.convert_speed_units",
+        "description": "Convert download speed from Mbps to MB/s.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "speed_mbps": {
+              "type": "float",
+              "description": "Speed in megabits per second."
+            }
+          },
+          "required": [
+            "speed_mbps"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "parallel_49",
+    "question": [
+      [
         {
-          "name": "earthquake.calculate_magnitude",
-          "description": "Calculate Richter scale magnitude from seismic energy.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "energy": {
-                "type": "float",
-                "description": "Seismic energy in joules."
-              }
-            },
-            "required": [
-              "energy"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate GPA for grades [4.0, 2.2, 3.0] with credits [3, 4, 3], then repeat with grades [3.0, 3.5, 4.0] and credits [2, 3, 1]"
         }
       ]
-    }
-  ]
+    ],
+    "function": [
+      {
+        "name": "education.calculate_gpa",
+        "description": "Calculate GPA for given grades and credits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of grade points."
+            },
+            "credits": {
+              "type": "array",
+              "description": "List of credit hours."
+            }
+          },
+          "required": [
+            "grades",
+            "credits"
+          ]
+        }
+      }
+    ]
+  }
+]

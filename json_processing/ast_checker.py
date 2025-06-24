@@ -13,6 +13,7 @@ PYTHON_TYPE_MAPPING = {
     "tuple":list,
     "dict":dict,
     "any":str,
+    "int":int,
     "object":dict,
     "number":float
 }
@@ -42,11 +43,20 @@ def simple_ast_checker(
         function_description,
         model_output,
         possible_answer,
+        test_category,
 ):
+    function_name = None
+    function_arguments = None
+    required_parameters = None
     possible_answer = possible_answer[0]
-    function_name = function_description["function"][0]["name"]
-    function_arguments = function_description["function"][0]["parameters"]["properties"]
-    required_parameters = function_description["function"][0]["parameters"]["required"]
+    if test_category == "parallel" or test_category == "simple":
+        function_name = function_description["function"][0]["name"]
+        function_arguments = function_description["function"][0]["parameters"]["properties"]
+        required_parameters = function_description["function"][0]["parameters"]["required"]
+    elif test_category == "multiple":
+        function_name = function_description["name"]
+        function_arguments = function_description["parameters"]["properties"]
+        required_parameters = function_description["parameters"]["required"]
 
     result = {
         "isValid": True,
@@ -95,16 +105,43 @@ def simple_ast_checker(
         # Get expected values for this parameter
         expected_values = function_possible_answer[param]
         
+        # Handle both array and direct value formats
+        if isinstance(expected_values, list):
+            # If it's already a list, use it as is
+            expected_values_list = expected_values
+        else:
+            # If it's a direct value, wrap it in a list
+            expected_values_list = [expected_values]
+        
         # Check if the value matches any of the expected values
         value_matches = False
-        for expected_value in expected_values:
+        for expected_value in expected_values_list:
+            # Try direct comparison first
             if value == expected_value:
                 value_matches = True
                 break
+            
+            # Handle type conversions for numeric values
+            if isinstance(expected_value, (int, float)):
+                # Try to convert value to numeric if it's a string
+                if isinstance(value, str):
+                    try:
+                        # Handle scientific notation and regular numbers
+                        converted_value = float(value)
+                        if abs(converted_value - expected_value) < 1e-10:  # Small epsilon for float comparison
+                            value_matches = True
+                            break
+                    except (ValueError, TypeError):
+                        pass
+                elif isinstance(value, (int, float)):
+                    # Both are numeric, use epsilon comparison
+                    if abs(value - expected_value) < 1e-10:
+                        value_matches = True
+                        break
         
         if not value_matches:
             result["isValid"] = False
-            result["error"] = f"Value mismatch for {param}: expected one of {expected_values}, got {value}"
+            result["error"] = f"Value mismatch for {param}: expected one of {expected_values_list}, got {value} (type: {type(value)})"
             return result
         
         # Check type compatibility
@@ -169,29 +206,31 @@ def parallel_ast_checker(
         for j, possible_call in enumerate(possible_answer):
             if matched_answers[j]:  # Skip already matched answers
                 continue
+
                 
             # Create a temporary function description with this possible answer
             temp_function_description = function_description.copy()
             temp_function_description["function"] = [temp_function_description["function"][0].copy()]
-            
+           
             # Check if this call matches the possible answer
-            call_result = simple_ast_checker(temp_function_description, call, [possible_call])
+            call_result = simple_ast_checker(temp_function_description, call, [possible_call], "parallel")
             if call_result["isValid"]:
                 matched_answers[j] = True
                 call_matched = True
                 break
         
+        # Only check for failure if no match was found
         if not call_matched:
             result["isValid"] = False
-            result["error"] = f"Function call {i+1} could not be matched to any possible answer"
+            result["error"] = f"Function {i+1} was not matched"
             return result
-    
+
     # Verify all possible answers were matched
     if not all(matched_answers):
         result["isValid"] = False
         result["error"] = "Not all possible answers were matched"
         return result
-    
+    print("PASS",result)
     return result
 
 def multiple_ast_checker(
@@ -199,6 +238,7 @@ def multiple_ast_checker(
         model_output,
         possible_answer,
 ):
+    
     """
     Check multiple function calls where different functions are called
     """
@@ -219,19 +259,28 @@ def multiple_ast_checker(
         result["error"] = f"Number of function calls does not match the number of possible answers"
         return result
     
-    # Check each function call against its corresponding function description
+    matched_answers = 0
+
     for i, call in enumerate(model_output):
-        # For multiple calls, each call might have a different function
-        # We need to find the matching function description
-        call_function_name = call.get("function_name", "")
-        
-        # Find the corresponding function description and possible answer
-        # This is a simplified version - you might need to adjust based on your data structure
-        
-        call_result = simple_ast_checker(function_description, call, possible_answer)
-        if not call_result["isValid"]:
+            possible_call = possible_answer[i]
+            function_name = list(possible_call.keys())[0]
+            function_description_copy = find_function_description(function_description, function_name)
+            call_result = simple_ast_checker(function_description_copy, call, [possible_call], "multiple")
+            if call_result["isValid"]:
+                matched_answers += 1
+
+    if matched_answers != len(possible_answer):
             result["isValid"] = False
-            result["error"] = f"Function call {i+1} failed: {call_result['error']}"
+            result["error"] = "Not all possible answers were matched"
             return result
-    
+
+    print("PASS", result)
     return result
+
+
+
+def find_function_description(function_descriptions, function_name):
+    for function_description in function_descriptions["function"]:
+        if function_description["name"] == function_name:
+            return function_description
+    return None
