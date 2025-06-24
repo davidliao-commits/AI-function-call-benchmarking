@@ -1,10 +1,11 @@
 from openai import OpenAI
 import json
 from typing import List, Dict, Any
+from config import MODEL_NAME, SILICONFLOW_API_KEY
 
 # Shared OpenAI client
 client = OpenAI(
-    api_key = "sk-wosxiisuzqcpwbnmaobpgflmgxzpumvxsuvusoduscvhcdoc",
+    api_key = SILICONFLOW_API_KEY,
     base_url = "https://api.siliconflow.cn/v1"
 )
 
@@ -74,7 +75,7 @@ def load_and_prepare_data(json_file: str) -> tuple:
 
 def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] = None, function_name: str = None, system_message: str = None) -> Any:
     """
-    Make a function call using BFCL (Best Function Calling Language) format
+    Make a function call
     
     Args:
         category: Type of function calling (simple, parallel, multiple)
@@ -103,17 +104,29 @@ def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] =
     If none of the functions can be used, point it out. If the given question lacks the parameters required by the function, also point it out.
     You should only return the function calls in your response.
 
-    CRITICAL: You MUST wrap ALL function calls in square brackets []. 
+    CRITICAL FORMAT REQUIREMENTS:
+    1. You MUST wrap ALL function calls in square brackets [].
+    2. You MUST use the EXACT function name as provided (including namespace prefixes like "loan.calculate_monthly_payment").
+    3. You MUST use the EXACT parameter names as provided.
+    4. You MUST use the correct data types:
+       - Percentages should be decimal (e.g., 5% = 0.05, not 5.0)
+       - Strings should NOT have quotes (e.g., "almonds" should be almonds)
+       - Numbers should match the expected type (integer vs float)
+       - Scientific notation should be decimal (e.g., 10^10 = 10000000000.0)
+       - Arrays should be in the format of [value1, value2, value3]
+    5. Do NOT add any extra parameters not defined in the function.
+    
     Format: [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
     
     Examples of CORRECT format:
-    - [calculate_area(length=5, width=3)]
-    - [convert_temperature(celsius=25)]
-    - [calculate_force(mass=10, acceleration=9.8)]
+    - [loan.calculate_monthly_payment(principal=100000, interest_rate=0.05, years=15)]
+    - [nutrition.get_calories(food_item=almonds, quantity=100)]
+    - [calculate_em_force(b_field=5, area=2, d_time=4)]
     
     Examples of INCORRECT format:
-    - calculate_area(length=5, width=3)  (missing brackets)
-    - [calculate_area(length=5, width=3  (missing closing bracket)
+    - loan.calculate_monthly_payment(principal=100000, interest_rate=5.0, years=15)  (missing brackets, wrong interest rate)
+    - [nutrition.get_calories(food_item="almonds", quantity=100)]  (quotes around string)
+    - [calculate_em_force(b_field=5, area=2, d_time=4, seed=123)]  (extra parameter)
     
     You SHOULD NOT include any other text in the response. You SHOULD NOT change the function name or parameter names.
 
@@ -132,7 +145,7 @@ def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] =
     
     # For BFCL, we use regular text completion without tools (SiliconFlow API limitation)
     response = client.chat.completions.create(
-        model = "THUDM/glm-4-9b-chat",
+        model = MODEL_NAME,
         messages = messages,
         temperature = 0.0,
         top_p = 0.95,
