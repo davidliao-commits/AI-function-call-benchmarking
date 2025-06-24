@@ -109,7 +109,7 @@
         [
           {
             "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+            "content": "How much tax do I owe if I earn $85000 in Canada? Also, What's my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
           }
         ]
       ],
@@ -319,7 +319,7 @@
         [
           {
             "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, Translate 'Good morning' to Italian."
+            "content": "How much tax do I owe if I earn $200000 in Mexico? Also, Translate 'Good morning' to Italian."
           }
         ]
       ],
@@ -374,7 +374,7 @@
         [
           {
             "role": "user",
-            "content": "What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall? Also, How much tax do I owe if I earn $85000 in Canada?"
+            "content": "What's my BMI if I weigh 92 kg and I'm 1.85 meters tall? Also, How much tax do I owe if I earn $85000 in Canada?"
           }
         ]
       ],
@@ -429,7 +429,7 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, What are some good sci-fi movies to watch?"
+            "content": "Give me the 5-day weather forecast for Shanghai. Also, What are some good romantic movies to watch?"
           }
         ]
       ],
@@ -477,30 +477,30 @@
       "question": [
         [
           {
-            "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+              "role": "user",
+              "content": "How many calories are in 55 cakes, each cake has 40 Kcals in Canada? Also, What's my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
           }
         ]
       ],
       "function": [
         {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
+          "name": "food.calculate_calories",
+          "description": "Calculate the calories based on number of cakes and calories per cake.",
           "parameters": {
             "type": "object",
             "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
+              "number_of_items": {
+                "type": "integer",
+                "description": "Number of given items."
               },
-              "location": {
-                "type": "string",
-                "description": "Country or region."
+              "calories_per_item": {
+                "type": "integer",
+                "description": "Calories per given item."
               }
             },
             "required": [
-              "income",
-              "location"
+              "number_of_items",
+              "calories_per_item"
             ]
           }
         },
@@ -533,7 +533,7 @@
         [
           {
             "role": "user",
-            "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Tell me about Stanford University."
+            "content": "Find me a flight from Pennsylvania to Alaska on 2025-07-12. Also, Tell me about Tsinghua University."
           }
         ]
       ],
@@ -588,7 +588,7 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, Tell me about Stanford University."
+            "content": "Show me the latest basketball match results. Also, Tell me which city is the capital city of Spain."
           }
         ]
       ],
@@ -610,18 +610,18 @@
           }
         },
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "cities.lookup_capital",
+          "description": "Find information about a city.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "city_name": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Name of the city."
               }
             },
             "required": [
-              "university_name"
+              "city_name"
             ]
           }
         }
@@ -633,40 +633,50 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, What are some good sci-fi movies to watch?"
+            "content": "Calculate the elasticity of a product with price $100 and quantity 200. Also, What are the average points scored by Lebron James in the 2025 season?"
           }
         ]
       ],
       "function": [
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "economics.calculate_elasticity",
+          "description": "Calculate the elasticity of a product with price and quantity.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
-                "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+              "price": {
+                "type": "float",
+                "description": "Price of the product."
+              },
+              "quantity": {
+                "type": "integer",
+                "description": "Quantity of the product."
               }
             },
             "required": [
-              "sport"
+              "price",
+              "quantity"
             ]
           }
         },
         {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
+          "name": "players.get_average_points",
+          "description": "Get the average points scored by a basketball player in a given season.",
           "parameters": {
             "type": "object",
             "properties": {
-              "genre": {
+              "player_name": {
                 "type": "string",
-                "description": "Preferred movie genre."
+                "description": "Name of the player."
+              },
+              "season": {
+                "type": "string",
+                "description": "Season of the player."
               }
             },
             "required": [
-              "genre"
+              "player_name",
+              "season"
             ]
           }
         }
@@ -678,40 +688,55 @@
         [
           {
             "role": "user",
-            "content": "Find books written by Haruki Murakami. Also, Tell me about Stanford University."
+            "content": "Book a table for 3 at 7:00 PM at the restaurant named 'Wolfgang Steakhouse'. Also, get traffic conditions for Oklahoma City on 2025-07-12."
           }
         ]
       ],
       "function": [
         {
-          "name": "books.search",
-          "description": "Search for books by title or author.",
+          "name": "restaurants.book_table",
+          "description": "Book a table at a restaurant.",
           "parameters": {
             "type": "object",
             "properties": {
-              "query": {
+              "restaurant_name": {
                 "type": "string",
-                "description": "Title or author name."
+                "description": "Name of the restaurant."
+              },
+              "time": {
+                "type": "int",
+                "description": "time of the booking, in time of day."
+              },
+              "number_of_people": {
+                "type": "integer",
+                "description": "Number of people in the booking."
               }
             },
             "required": [
-              "query"
+              "restaurant_name",
+              "time",
+              "number_of_people"
             ]
           }
         },
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "traffic.get_conditions",
+          "description": "Get traffic conditions for a given city.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "city_name": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Name of the city."
+              },
+              "date": {
+                "type": "string",
+                "description": "Date of the traffic conditions, in YYYY-MM-DD format."
               }
             },
             "required": [
-              "university_name"
+              "city_name",
+              "date"
             ]
           }
         }
@@ -723,50 +748,50 @@
         [
           {
             "role": "user",
-            "content": "Translate 'Good morning' to Italian. Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+            "content": "Set up a reminder for me at tomorrow 10AM to go to the dentist, then make a psychiatrist appointment at 2PM."
           }
         ]
       ],
       "function": [
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "reminders.set_reminder",
+          "description": "Set up a reminder for a given time and given event.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
+              "event": {
                 "type": "string",
-                "description": "The phrase to translate."
+                "description": "The event to set up a reminder for."
               },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
+              "time": {
+                "type": "int",
+                "description": "The time to set up a reminder for."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "event",
+              "time"
             ]
           }
         },
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "appointments.make_appointment",
+          "description": "Make an appointment for a given time and given event.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
+              "event": {
+                "type": "string",
+                "description": "The event to make an appointment for."
               },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "time": {
+                "type": "int",
+                "description": "The time to make an appointment for."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "event",
+              "time"
             ]
           }
         }
@@ -778,44 +803,40 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, What are some good sci-fi movies to watch?"
+            "content": "Search the headline news for Arizona, California, and New York. Also, tell me how tall is the Mount Everest ?"
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "news.search_headlines",
+          "description": "Search the headline news for a given city.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
-                "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+              "cities": {
+                "type": "array",
+                "description": "List of cities to search for."
               }
             },
             "required": [
-              "city"
+              "cities"
             ]
           }
         },
         {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
+          "name": "mountains.get_height",
+          "description": "Get the height of a given mountain.",
           "parameters": {
             "type": "object",
             "properties": {
-              "genre": {
+              "mountain_name": {
                 "type": "string",
-                "description": "Preferred movie genre."
+                "description": "Name of the mountain."
               }
             },
             "required": [
-              "genre"
+              "mountain_name"
             ]
           }
         }
@@ -827,29 +848,24 @@
         [
           {
             "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, Can you show me the recipe for lasagna?"
+            "content": "What is the population of France? Also, Can you show me the recipe for lasagna?"
           }
         ]
       ],
       "function": [
         {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
+          "name": "countries.get_population",
+          "description": "Get the population of a given country.",
           "parameters": {
             "type": "object",
             "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
+              "country_name": {
                 "type": "string",
-                "description": "Country or region."
+                "description": "Name of the country."
               }
             },
             "required": [
-              "income",
-              "location"
+              "country_name"
             ]
           }
         },
@@ -877,45 +893,55 @@
         [
           {
             "role": "user",
-            "content": "What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall? Also, Can you show me the recipe for lasagna?"
+            "content": "Play 'Shake it off' by Taylor Swift. Also, send an email to 'furby@gmail.com` with the subject 'Hello' and the body 'How are you?'"
           }
         ]
       ],
       "function": [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "music.play_song",
+          "description": "Play a song by a given artist.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
+              "song_name": {
+                "type": "string",
+                "description": "Name of the song."
               },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "artist_name": {
+                "type": "string",
+                "description": "Name of the artist."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "song_name",
+              "artist_name"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "emails.send_email",
+          "description": "Send an email to a given email address with a given subject and body.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "email_address": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Email address to send the email to."
+              },
+              "subject": {
+                "type": "string",
+                "description": "Subject of the email."
+              },
+              "body": {
+                "type": "string",
+                "description": "Body of the email."
               }
             },
             "required": [
-              "dish"
+              "email_address",
+              "subject",
+              "body"
             ]
           }
         }
@@ -927,54 +953,45 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, Find me a flight from London to Berlin on 2025-07-12."
+            "content": "Search for the best Chinese Restaurant in Ferg Avenue. Also, generate a 6 letter password for me."
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "restaurants.search_restaurant",
+          "description": "Search for a restaurant for a given cuisine in a given street.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "cuisine": {
                 "type": "string",
-                "description": "City name"
+                "description": "Cuisine type."
               },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+              "street": {
+                "type": "string",
+                "description": "Street name."
               }
             },
             "required": [
-              "city"
+              "cuisine",
+              "street"
             ]
           }
         },
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "passwords.generate_password",
+          "description": "Generate a password for a given length.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
-                "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+              "length": {
+                "type": "int",
+                "description": "Length of the password."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "length"
             ]
           }
         }
@@ -986,40 +1003,40 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, Can you show me the recipe for lasagna?"
+            "content": "How much money should I invest in Amazon? Also, show me the current weather in Tokyo."
           }
         ]
       ],
       "function": [
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "investments.get_investment_advice",
+          "description": "Get investment advice for a given company.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "company_name": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Name of the company."
               }
             },
             "required": [
-              "sport"
+              "company_name"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "weather.get_weather",
+          "description": "Get the current weather for a given city.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "city_name": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Name of the city."
               }
             },
             "required": [
-              "dish"
+              "city_name"
             ]
           }
         }
@@ -1031,45 +1048,45 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+            "content": "Check the flight status for Delta 456. Also, how do I renew my driver's license?"
           }
         ]
       ],
       "function": [
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "travel.check_flight_status",
+          "description": "Check the status of a flight.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "airline": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Name of the airline."
+              },
+              "flight_number": {
+                "type": "string",
+                "description": "Flight number."
               }
             },
             "required": [
-              "sport"
+              "airline",
+              "flight_number"
             ]
           }
         },
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "government.license_renewal_info",
+          "description": "Get information about renewing a driver's license.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "state": {
+                "type": "string",
+                "description": "State where the license is issued."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "state"
             ]
           }
         }
@@ -1081,50 +1098,40 @@
         [
           {
             "role": "user",
-            "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Show me the latest football match results."
+            "content": "Find a recipe for lasagna. Also, how many calories are in a banana?"
           }
         ]
       ],
       "function": [
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "cooking.search_recipe",
+          "description": "Find a cooking recipe by keyword.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
+              "dish_name": {
                 "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+                "description": "Name of the dish to search for."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "dish_name"
             ]
           }
         },
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "nutrition.lookup_food_info",
+          "description": "Get nutritional data about a food item.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "food_name": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Name of the food item."
               }
             },
             "required": [
-              "sport"
+              "food_name"
             ]
           }
         }
@@ -1136,45 +1143,45 @@
         [
           {
             "role": "user",
-            "content": "Translate 'Good morning' to Italian. Also, Can you show me the recipe for lasagna?"
+            "content": "What's the exchange rate between Euro and Canadian Dollar? Also, when is the next full moon?"
           }
         ]
       ],
       "function": [
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "finance.get_exchange_rate",
+          "description": "Retrieve the exchange rate between two currencies.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
+              "from_currency": {
                 "type": "string",
-                "description": "The phrase to translate."
+                "description": "Source currency code."
               },
-              "target_language": {
+              "to_currency": {
                 "type": "string",
-                "description": "Target language (e.g., French)."
+                "description": "Target currency code."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "from_currency",
+              "to_currency"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "astronomy.get_moon_phase",
+          "description": "Get the date of the next moon phase.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "phase": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Moon phase to look for."
               }
             },
             "required": [
-              "dish"
+              "phase"
             ]
           }
         }
@@ -1186,50 +1193,40 @@
         [
           {
             "role": "user",
-            "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Show me the latest football match results."
+            "content": "Get a joke about cats. Also, tell me when the next bus arrives at Main Street station."
           }
         ]
       ],
       "function": [
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "entertainment.get_joke",
+          "description": "Fetch a joke related to a given topic.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
+              "topic": {
                 "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+                "description": "Topic for the joke."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "topic"
             ]
           }
         },
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "transit.next_bus_arrival",
+          "description": "Get the arrival time for the next bus at a station.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "station_name": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Name of the bus station."
               }
             },
             "required": [
-              "sport"
+              "station_name"
             ]
           }
         }
@@ -1241,44 +1238,45 @@
         [
           {
             "role": "user",
-            "content": "Tell me about Stanford University. Also, Give me the 3-day weather forecast for Cape Town."
+            "content": "Find a job for a software engineer in New York. Also, summarize the article from this URL."
           }
         ]
       ],
       "function": [
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "jobs.search_openings",
+          "description": "Search for job openings by title and location.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "job_title": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Title of the job position."
+              },
+              "location": {
+                "type": "string",
+                "description": "Location for the job search."
               }
             },
             "required": [
-              "university_name"
+              "job_title",
+              "location"
             ]
           }
         },
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "web.summarize_url",
+          "description": "Summarize the contents of a webpage.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "url": {
                 "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+                "description": "URL of the webpage to summarize."
               }
             },
             "required": [
-              "city"
+              "url"
             ]
           }
         }
@@ -1290,45 +1288,45 @@
         [
           {
             "role": "user",
-            "content": "Tell me about Stanford University. Also, Translate 'Good morning' to Italian."
+            "content": "Record my weight as 68.5 kg today. Also, what's my average weight over the past 7 days?"
           }
         ]
       ],
       "function": [
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "health.log_weight",
+          "description": "Log today's body weight.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "weight": {
+                "type": "float",
+                "description": "Weight in kilograms."
+              },
+              "date": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Date in YYYY-MM-DD format."
               }
             },
             "required": [
-              "university_name"
+              "weight",
+              "date"
             ]
           }
         },
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "health.get_weight_average",
+          "description": "Get average weight over a period.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
-                "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
+              "days": {
+                "type": "integer",
+                "description": "Number of days to calculate average for."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "days"
             ]
           }
         }
@@ -1340,49 +1338,45 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+            "content": "Turn off the kitchen lights. Also, set the thermostat to 22 degrees Celsius."
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "home.lights_control",
+          "description": "Turn lights on or off in a specified room.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "room": {
                 "type": "string",
-                "description": "City name"
+                "description": "Name of the room."
               },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+              "state": {
+                "type": "string",
+                "description": "State of the lights (on/off)."
               }
             },
             "required": [
-              "city"
+              "room",
+              "state"
             ]
           }
         },
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "home.set_thermostat",
+          "description": "Set the thermostat temperature.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
+              "temperature": {
                 "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+                "description": "Temperature in Celsius."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "temperature"
             ]
           }
         }
@@ -1394,50 +1388,45 @@
         [
           {
             "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+            "content": "Create a new contact named Emily with phone number 555-6789. Also, add 'buy groceries' to my todo list?"
           }
         ]
       ],
       "function": [
         {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
+          "name": "contacts.add_contact",
+          "description": "Add a new contact to your phonebook.",
           "parameters": {
             "type": "object",
             "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
+              "name": {
                 "type": "string",
-                "description": "Country or region."
+                "description": "Name of the contact."
+              },
+              "phone": {
+                "type": "string",
+                "description": "Phone number of the contact."
               }
             },
             "required": [
-              "income",
-              "location"
+              "name",
+              "phone"
             ]
           }
         },
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "tasks.update_todo_list",
+          "description": "Add a new task to the user's to-do list.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "task_name": {
+                "type": "string",
+                "description": "Name of the task."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "task_name"
             ]
           }
         }
@@ -1449,40 +1438,40 @@
         [
           {
             "role": "user",
-            "content": "What are some good sci-fi movies to watch? Also, Show me the latest football match results."
+            "content": "What's the definition of 'entropy'? Also, give me a quote about perseverance."
           }
         ]
       ],
       "function": [
         {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
+          "name": "dictionary.define_word",
+          "description": "Get the definition of a word.",
           "parameters": {
             "type": "object",
             "properties": {
-              "genre": {
+              "word": {
                 "type": "string",
-                "description": "Preferred movie genre."
+                "description": "Word to define."
               }
             },
             "required": [
-              "genre"
+              "word"
             ]
           }
         },
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "quotes.get_quote",
+          "description": "Retrieve a quote on a given theme.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "theme": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Theme for the quote."
               }
             },
             "required": [
-              "sport"
+              "theme"
             ]
           }
         }
@@ -1494,50 +1483,45 @@
         [
           {
             "role": "user",
-            "content": "Can you show me the recipe for lasagna? Also, Find me a flight from London to Berlin on 2025-07-12."
+            "content": "Find events happening this weekend in Chicago. Also, set a countdown for my vacation in 30 days."
           }
         ]
       ],
       "function": [
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "events.search_local_events",
+          "description": "Search for events in a city.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "city": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Name of the city."
+              },
+              "date_range": {
+                "type": "string",
+                "description": "Date range for the search."
               }
             },
             "required": [
-              "dish"
+              "city",
+              "date_range"
             ]
           }
         },
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "tools.set_countdown_timer",
+          "description": "Set a countdown timer for a future date.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
-                "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+              "days_from_now": {
+                "type": "integer",
+                "description": "Number of days from now."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "days_from_now"
             ]
           }
         }
@@ -1549,40 +1533,50 @@
         [
           {
             "role": "user",
-            "content": "Tell me about Stanford University. Also, What are some good sci-fi movies to watch?"
+            "content": "Check if there are any earthquakes near Japan in the last 24 hours. Also, alert me if another one happens tomorrow."
           }
         ]
       ],
       "function": [
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "geology.get_recent_earthquakes",
+          "description": "Retrieve earthquake data for a region and timeframe.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "region": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Geographic region to search for earthquakes."
+              },
+              "hours": {
+                "type": "integer",
+                "description": "Number of hours to look back."
               }
             },
             "required": [
-              "university_name"
+              "region",
+              "hours"
             ]
           }
         },
         {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
+          "name": "alerts.set_earthquake_alert",
+          "description": "Set an alert for future earthquakes in a region.",
           "parameters": {
             "type": "object",
             "properties": {
-              "genre": {
+              "region": {
                 "type": "string",
-                "description": "Preferred movie genre."
+                "description": "Geographic region to monitor."
+              },
+              "days_ahead": {
+                "type": "integer",
+                "description": "Number of days ahead to set the alert for."
               }
             },
             "required": [
-              "genre"
+              "region",
+              "days_ahead"
             ]
           }
         }
@@ -1594,50 +1588,40 @@
         [
           {
             "role": "user",
-            "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Find books written by Haruki Murakami."
+            "content": "Check the current air quality in Beijing. Also, recommend a face mask suitable for PM2.5 protection."
           }
         ]
       ],
       "function": [
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "environment.get_air_quality",
+          "description": "Get the air quality index for a location.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
+              "city": {
                 "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+                "description": "Name of the city."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "city"
             ]
           }
         },
         {
-          "name": "books.search",
-          "description": "Search for books by title or author.",
+          "name": "health.recommend_mask",
+          "description": "Recommend a face mask based on air quality level.",
           "parameters": {
             "type": "object",
             "properties": {
-              "query": {
+              "pollutant_type": {
                 "type": "string",
-                "description": "Title or author name."
+                "description": "Type of pollutant to protect against."
               }
             },
             "required": [
-              "query"
+              "pollutant_type"
             ]
           }
         }
@@ -1649,44 +1633,45 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, Show me the latest football match results."
+            "content": "Find the lyrics for 'Bohemian Rhapsody'. Also, create a Spotify playlist with Queen songs."
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "music.get_lyrics",
+          "description": "Retrieve song lyrics by title.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "song_title": {
                 "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+                "description": "Title of the song."
               }
             },
             "required": [
-              "city"
+              "song_title"
             ]
           }
         },
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "spotify.create_playlist",
+          "description": "Create a Spotify playlist with a list of artists or tracks.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "playlist_name": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Name for the new playlist."
+              },
+              "artist": {
+                "type": "string",
+                "description": "Artist name to include in the playlist."
               }
             },
             "required": [
-              "sport"
+              "playlist_name",
+              "artist"
             ]
           }
         }
@@ -1698,49 +1683,40 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, Translate 'Good morning' to Italian."
+            "content": "Get details on the James Webb Space Telescope. Also, tell me the next visible ISS pass over Tokyo."
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "space.lookup_mission",
+          "description": "Retrieve information about a space mission or telescope.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "mission_name": {
                 "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+                "description": "Name of the space mission or telescope."
               }
             },
             "required": [
-              "city"
+              "mission_name"
             ]
           }
         },
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "space.get_iss_pass_time",
+          "description": "Get the next ISS flyover time for a location.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
+              "location": {
                 "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
+                "description": "Location to check ISS pass for."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "location"
             ]
           }
         }
@@ -1752,50 +1728,55 @@
         [
           {
             "role": "user",
-            "content": "Tell me about Stanford University. Also, Find me a flight from London to Berlin on 2025-07-12."
+            "content": "Plot a sine wave for the interval 0 to 1. Also, differentiate the function f(x) = sin(x) * e^x."
           }
         ]
       ],
       "function": [
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "math.plot_function",
+          "description": "Plot a mathematical function over an interval.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "expression": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Mathematical expression to plot."
+              },
+              "start": {
+                "type": "float",
+                "description": "Starting value for the x-axis."
+              },
+              "end": {
+                "type": "float",
+                "description": "Ending value for the x-axis."
               }
             },
             "required": [
-              "university_name"
+              "expression",
+              "start",
+              "end"
             ]
           }
         },
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "math.differentiate",
+          "description": "Symbolically differentiate a given expression.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
+              "expression": {
                 "type": "string",
-                "description": "Departure city."
+                "description": "Mathematical expression to differentiate."
               },
-              "destination": {
+              "variable": {
                 "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+                "description": "Variable to differentiate with respect to."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "expression",
+              "variable"
             ]
           }
         }
@@ -1807,45 +1788,45 @@
         [
           {
             "role": "user",
-            "content": "What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall? Also, Can you show me the recipe for lasagna?"
+            "content": "Start a new blog post titled 'My AI Journey'. Also, add a task to finish it by 2025-07-12."
           }
         ]
       ],
       "function": [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "blog.create_post",
+          "description": "Create a new blog post draft.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "title": {
+                "type": "string",
+                "description": "Title of the blog post."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "title"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "tasks.add_task",
+          "description": "Add a new task with a deadline.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "task_name": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Name of the task."
+              },
+              "due_date": {
+                "type": "string",
+                "description": "Due date for the task."
               }
             },
             "required": [
-              "dish"
+              "task_name",
+              "due_date"
             ]
           }
         }
@@ -1857,45 +1838,45 @@
         [
           {
             "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, What are some good sci-fi movies to watch?"
+            "content": "Analyze this text for sentiment: 'I love how easy this is to use!'. Also, translate it into Spanish."
           }
         ]
       ],
       "function": [
         {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
+          "name": "nlp.analyze_sentiment",
+          "description": "Perform sentiment analysis on a text.",
           "parameters": {
             "type": "object",
             "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
+              "text": {
                 "type": "string",
-                "description": "Country or region."
+                "description": "Text to analyze for sentiment."
               }
             },
             "required": [
-              "income",
-              "location"
+              "text"
             ]
           }
         },
         {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
+          "name": "language.translate_text",
+          "description": "Translate a piece of text into another language.",
           "parameters": {
             "type": "object",
             "properties": {
-              "genre": {
+              "text": {
                 "type": "string",
-                "description": "Preferred movie genre."
+                "description": "Text to translate."
+              },
+              "language": {
+                "type": "string",
+                "description": "Target language for translation."
               }
             },
             "required": [
-              "genre"
+              "text",
+              "language"
             ]
           }
         }
@@ -1907,50 +1888,40 @@
         [
           {
             "role": "user",
-            "content": "Can you show me the recipe for lasagna? Also, Find me a flight from London to Berlin on 2025-07-12."
+            "content": "Give me a fun fact about octopuses. Also, draw a cartoon octopus in ASCII."
           }
         ]
       ],
       "function": [
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "facts.random_fact",
+          "description": "Return a fun fact about an animal.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "animal": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Name of the animal."
               }
             },
             "required": [
-              "dish"
+              "animal"
             ]
           }
         },
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "art.draw_ascii",
+          "description": "Draw an object using ASCII art.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
+              "object_name": {
                 "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+                "description": "Name of the object to draw."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "object_name"
             ]
           }
         }
@@ -1962,40 +1933,40 @@
         [
           {
             "role": "user",
-            "content": "Tell me about Stanford University. Also, Show me the latest football match results."
+            "content": "Find me a Wikipedia summary of the Industrial Revolution. Also, calculate how many hours are in 3.5 weeks."
           }
         ]
       ],
       "function": [
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "wikipedia.get_summary",
+          "description": "Return a summary from Wikipedia.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "topic": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "Topic to search for on Wikipedia."
               }
             },
             "required": [
-              "university_name"
+              "topic"
             ]
           }
         },
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "unit_conversion.weeks_to_hours",
+          "description": "Convert weeks into hours.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
-                "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+              "weeks": {
+                "type": "float",
+                "description": "Number of weeks to convert."
               }
             },
             "required": [
-              "sport"
+              "weeks"
             ]
           }
         }
@@ -2007,50 +1978,40 @@
         [
           {
             "role": "user",
-            "content": "Find books written by Haruki Murakami. Also, Find me a flight from London to Berlin on 2025-07-12."
+            "content": "Tell me how to prepare green tea. Also, log my water intake as 500ml."
           }
         ]
       ],
       "function": [
         {
-          "name": "books.search",
-          "description": "Search for books by title or author.",
+          "name": "cooking.get_recipe_instructions",
+          "description": "Return step-by-step instructions for preparing a drink or dish.",
           "parameters": {
             "type": "object",
             "properties": {
-              "query": {
+              "item": {
                 "type": "string",
-                "description": "Title or author name."
+                "description": "Name of the drink or dish."
               }
             },
             "required": [
-              "query"
+              "item"
             ]
           }
         },
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "health.log_water_intake",
+          "description": "Record water intake in milliliters.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
-                "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+              "amount_ml": {
+                "type": "integer",
+                "description": "Amount of water consumed in milliliters."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "amount_ml"
             ]
           }
         }
@@ -2062,45 +2023,45 @@
         [
           {
             "role": "user",
-            "content": "Translate 'Good morning' to Italian. Also, Can you show me the recipe for lasagna?"
+            "content": "Check the status of my package with tracking number 1Z999. Also, send a message to my Slack team saying 'Running 10 minutes late.'"
           }
         ]
       ],
       "function": [
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "logistics.track_package",
+          "description": "Track the delivery status of a package.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
+              "tracking_number": {
                 "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
+                "description": "Package tracking number."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "tracking_number"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "communication.send_slack_message",
+          "description": "Send a message to a Slack channel or user.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "channel": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Slack channel or user to send message to."
+              },
+              "message": {
+                "type": "string",
+                "description": "Message content to send."
               }
             },
             "required": [
-              "dish"
+              "channel",
+              "message"
             ]
           }
         }
@@ -2112,49 +2073,40 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, Translate 'Good morning' to Italian."
+            "content": "Get an overview of Python as a programming language. Also, schedule a 30-minute focus session starting now."
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "knowledge.describe_topic",
+          "description": "Return an explanation of a given concept or topic.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "topic": {
                 "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+                "description": "Topic to get an overview of."
               }
             },
             "required": [
-              "city"
+              "topic"
             ]
           }
         },
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "productivity.start_focus_timer",
+          "description": "Start a focus session timer.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
-                "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
+              "duration_minutes": {
+                "type": "integer",
+                "description": "Duration of the focus session in minutes."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "duration_minutes"
             ]
           }
         }
@@ -2166,50 +2118,45 @@
         [
           {
             "role": "user",
-            "content": "What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall? Also, How much tax do I owe if I earn $85000 in Canada?"
+            "content": "Scan the text 'This is a test document.' for plagiarism. Also, compress the image https://example.com/image.jpg to under 2MB."
           }
         ]
       ],
       "function": [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "documents.check_plagiarism",
+          "description": "Check a document for plagiarism content.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "text": {
+                "type": "string",
+                "description": "Text content to check for plagiarism."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "text"
             ]
           }
         },
         {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
+          "name": "media.compress_image",
+          "description": "Compress an image file to a target size.",
           "parameters": {
             "type": "object",
             "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
+              "image_url": {
                 "type": "string",
-                "description": "Country or region."
+                "description": "URL or path to the image file."
+              },
+              "max_size_mb": {
+                "type": "float",
+                "description": "Maximum file size in megabytes."
               }
             },
             "required": [
-              "income",
-              "location"
+              "image_url",
+              "max_size_mb"
             ]
           }
         }
@@ -2221,40 +2168,50 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, What are some good sci-fi movies to watch?"
+            "content": "Log my blood pressure as 120/80. Also, remind me to check it again in 6 hours."
           }
         ]
       ],
       "function": [
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "health.log_blood_pressure",
+          "description": "Record a blood pressure reading.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
-                "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+              "systolic": {
+                "type": "integer",
+                "description": "Systolic blood pressure reading."
+              },
+              "diastolic": {
+                "type": "integer",
+                "description": "Diastolic blood pressure reading."
               }
             },
             "required": [
-              "sport"
+              "systolic",
+              "diastolic"
             ]
           }
         },
         {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
+          "name": "reminders.schedule_reminder",
+          "description": "Schedule a reminder message.",
           "parameters": {
             "type": "object",
             "properties": {
-              "genre": {
+              "message": {
                 "type": "string",
-                "description": "Preferred movie genre."
+                "description": "Reminder message content."
+              },
+              "delay_hours": {
+                "type": "integer",
+                "description": "Number of hours to delay the reminder."
               }
             },
             "required": [
-              "genre"
+              "message",
+              "delay_hours"
             ]
           }
         }
@@ -2266,50 +2223,60 @@
         [
           {
             "role": "user",
-            "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Can you show me the recipe for lasagna?"
+            "content": "Find historical exchange rates from 2015 between GBP and USD. Also, calculate the compound interest on $1,000 over 5 years at 4%."
           }
         ]
       ],
       "function": [
         {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
+          "name": "finance.get_historical_rate",
+          "description": "Retrieve historical exchange rate data.",
           "parameters": {
             "type": "object",
             "properties": {
-              "origin": {
+              "from_currency": {
                 "type": "string",
-                "description": "Departure city."
+                "description": "Source currency code."
               },
-              "destination": {
+              "to_currency": {
                 "type": "string",
-                "description": "Arrival city."
+                "description": "Target currency code."
               },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
+              "year": {
+                "type": "integer",
+                "description": "Year to get historical data for."
               }
             },
             "required": [
-              "origin",
-              "destination",
-              "date"
+              "from_currency",
+              "to_currency",
+              "year"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "finance.calculate_compound_interest",
+          "description": "Compute compound interest over time.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
-                "type": "string",
-                "description": "Name of the dish."
+              "principal": {
+                "type": "float",
+                "description": "Initial principal amount."
+              },
+              "rate_percent": {
+                "type": "float",
+                "description": "Annual interest rate as a percentage."
+              },
+              "years": {
+                "type": "integer",
+                "description": "Number of years to calculate interest for."
               }
             },
             "required": [
-              "dish"
+              "principal",
+              "rate_percent",
+              "years"
             ]
           }
         }
@@ -2321,50 +2288,40 @@
         [
           {
             "role": "user",
-            "content": "What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall? Also, Translate 'Good morning' to Italian."
+            "content": "Check my GitHub notifications for mentions. Also, generate a QR code for the link https://openai.com. And also, check my GitHub notifications for mentions."
           }
         ]
       ],
       "function": [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "github.fetch_notifications",
+          "description": "Retrieve GitHub notification items.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "notification_type": {
+                "type": "string",
+                "description": "Type of notification to fetch."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "notification_type"
             ]
           }
         },
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
+          "name": "tools.generate_qr_code",
+          "description": "Create a QR code from a URL.",
           "parameters": {
             "type": "object",
             "properties": {
-              "text": {
+              "url": {
                 "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
+                "description": "URL to encode in the QR code."
               }
             },
             "required": [
-              "text",
-              "target_language"
+              "url"
             ]
           }
         }
@@ -2376,44 +2333,45 @@
         [
           {
             "role": "user",
-            "content": "Give me the 3-day weather forecast for Cape Town. Also, Can you show me the recipe for lasagna?"
+            "content": "Add 'milk' to my shopping list. Also, estimate how many bricks I need to build a 10x10 wall."
           }
         ]
       ],
       "function": [
         {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
+          "name": "lists.add_shopping_item",
+          "description": "Add an item to the shopping list.",
           "parameters": {
             "type": "object",
             "properties": {
-              "city": {
+              "item": {
                 "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
+                "description": "Item to add to the shopping list."
               }
             },
             "required": [
-              "city"
+              "item"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "construction.estimate_brick_count",
+          "description": "Estimate number of bricks required for a wall.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
-                "type": "string",
-                "description": "Name of the dish."
+              "width_meters": {
+                "type": "float",
+                "description": "Width of the wall in meters."
+              },
+              "height_meters": {
+                "type": "float",
+                "description": "Height of the wall in meters."
               }
             },
             "required": [
-              "dish"
+              "width_meters",
+              "height_meters"
             ]
           }
         }
@@ -2425,45 +2383,40 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
+            "content": "Tell me the probability of `rolling a sum of 8 with two dice`. Also, simulate a coin toss 10 times."
           }
         ]
       ],
       "function": [
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "math.calculate_probability",
+          "description": "Compute the probability of a specific outcome.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "event": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Description of the event to calculate probability for."
               }
             },
             "required": [
-              "sport"
+              "event"
             ]
           }
         },
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "simulation.flip_coin",
+          "description": "Simulate a coin toss.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "number_of_flips": {
+                "type": "integer",
+                "description": "Number of times to flip the coin."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "number_of_flips"
             ]
           }
         }
@@ -2475,40 +2428,40 @@
         [
           {
             "role": "user",
-            "content": "Show me the latest football match results. Also, Tell me about Stanford University."
+            "content": "Draft a tweet that includes 'I'm going to the gym today!'. Also, upload a new profile picture to my account with url https://example.com/image.jpg"
           }
         ]
       ],
       "function": [
         {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
+          "name": "social.create_tweet",
+          "description": "Create a tweet with given content.",
           "parameters": {
             "type": "object",
             "properties": {
-              "sport": {
+              "content": {
                 "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
+                "description": "Content for the tweet."
               }
             },
             "required": [
-              "sport"
+              "content"
             ]
           }
         },
         {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
+          "name": "social.upload_profile_picture",
+          "description": "Change the user's profile picture.",
           "parameters": {
             "type": "object",
             "properties": {
-              "university_name": {
+              "image_url": {
                 "type": "string",
-                "description": "Name of the university."
+                "description": "URL of the new profile picture."
               }
             },
             "required": [
-              "university_name"
+              "image_url"
             ]
           }
         }
@@ -2520,45 +2473,50 @@
         [
           {
             "role": "user",
-            "content": "What\u2019s my BMI if I weigh 62 kg and I'm 1.7 meters tall? Also, Can you show me the recipe for lasagna?"
+            "content": "What's the GDP of India in 2022? Also, visualize it as a bar chart with value 2.5."
           }
         ]
       ],
       "function": [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
+          "name": "economics.get_gdp_data",
+          "description": "Retrieve GDP data by country and year.",
           "parameters": {
             "type": "object",
             "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
+              "country": {
+                "type": "string",
+                "description": "Name of the country."
               },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
+              "year": {
+                "type": "integer",
+                "description": "Year to get GDP data for."
               }
             },
             "required": [
-              "weight",
-              "height"
+              "country",
+              "year"
             ]
           }
         },
         {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
+          "name": "charts.generate_bar_chart",
+          "description": "Generate a bar chart from data points.",
           "parameters": {
             "type": "object",
             "properties": {
-              "dish": {
+              "label": {
                 "type": "string",
-                "description": "Name of the dish."
+                "description": "Label for the data point."
+              },
+              "value": {
+                "type": "float",
+                "description": "Value for the data point."
               }
             },
             "required": [
-              "dish"
+              "label",
+              "value"
             ]
           }
         }

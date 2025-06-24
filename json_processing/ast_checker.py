@@ -265,6 +265,13 @@ def multiple_ast_checker(
             possible_call = possible_answer[i]
             function_name = list(possible_call.keys())[0]
             function_description_copy = find_function_description(function_description, function_name)
+            
+            # Check if function description was found
+            if function_description_copy is None:
+                result["isValid"] = False
+                result["error"] = f"Function '{function_name}' not found in function description. Available functions: {[f['name'] for f in function_description['function']]}"
+                return result
+                
             call_result = simple_ast_checker(function_description_copy, call, [possible_call], "multiple")
             if call_result["isValid"]:
                 matched_answers += 1
