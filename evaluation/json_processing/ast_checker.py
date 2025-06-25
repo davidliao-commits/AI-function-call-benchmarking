@@ -303,7 +303,6 @@ def multiple_ast_checker(
             call_result = simple_ast_checker(function_description_copy, call, [possible_call], "multiple")
 
             if call_result["isValid"] == True:
-                print("answer matched", possible_call)
                 matched_answers[j] = True
                 call_matched = True
                 break
@@ -320,7 +319,6 @@ def multiple_ast_checker(
         result["error"] = "Not all possible answers were matched"
         return result
 
-    print("PASS", function_description["id"])
     return result
 
 

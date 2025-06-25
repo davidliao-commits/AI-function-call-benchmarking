@@ -3,6 +3,7 @@ import sys
 import os
 import statistics
 import numpy as np
+import time
 
 # Add parent directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -24,7 +25,10 @@ def eval_runner(
     tools = function_description["function"]  # This is already a list
     tools = convert_functions_to_tools(tools)  # Convert to tools format for system message
     function_name = function_description["function"][0]["name"]  # Get the first function's name
+    start_time = time.time()
     full_response = make_function_call(test_category, prompt, tools, function_name)
+    end_time = time.time()
+    time_taken = end_time - start_time
     
     # Extract the message from the full response
     response_message = full_response.choices[0].message
@@ -38,39 +42,39 @@ def eval_runner(
     if isinstance(converted_output, dict):
         if "function_name" not in converted_output:
             error_msg = converted_output.get("error", "Missing 'function_name' in converted_output")
-            print(f"[ERROR] {error_msg}")
             return {
                 "ast_result": {"isValid": False, "error": error_msg, "type": "conversion_error"},
                 "token_usage": {
                     "input_tokens": token_info["input_token"],
                     "output_tokens": token_info["output_token"],
                     "total_tokens": token_info["input_token"] + token_info["output_token"]
-                }
+                },
+                "time_taken": time_taken
             }
     elif isinstance(converted_output, list):
         # For parallel/multiple calls, check if any have errors
         for i, call in enumerate(converted_output):
             if isinstance(call, dict) and "error" in call:
                 error_msg = f"Error in call {i+1}: {call['error']}"
-                print(f"[ERROR] {error_msg}")
                 return {
                     "ast_result": {"isValid": False, "error": error_msg, "type": "conversion_error"},
                     "token_usage": {
                         "input_tokens": token_info["input_token"],
                         "output_tokens": token_info["output_token"],
                         "total_tokens": token_info["input_token"] + token_info["output_token"]
-                    }
+                    },
+                    "time_taken": time_taken
                 }
     else:
         error_msg = f"Unexpected output type: {type(converted_output)}"
-        print(f"[ERROR] {error_msg}")
         return {
             "ast_result": {"isValid": False, "error": error_msg, "type": "conversion_error"},
             "token_usage": {
                 "input_tokens": token_info["input_token"],
                 "output_tokens": token_info["output_token"],
                 "total_tokens": token_info["input_token"] + token_info["output_token"]
-            }
+            },
+            "time_taken": time_taken
         }
     
     ast_result = ast_checker(function_description, converted_output, possible_answer, test_category)
@@ -82,7 +86,8 @@ def eval_runner(
             "input_tokens": token_info["input_token"],
             "output_tokens": token_info["output_token"],
             "total_tokens": token_info["input_token"] + token_info["output_token"]
-        }
+        },
+        "time_taken": time_taken
     }
     
     return result
@@ -114,7 +119,7 @@ def run_evaluation(test_category):
     total_input_tokens = 0
     total_output_tokens = 0
     total_tokens = 0
-    
+    total_time_taken = 0
     # Lists to collect token usage for statistics
     all_input_tokens = []
     all_output_tokens = []
@@ -136,12 +141,12 @@ def run_evaluation(test_category):
         # Extract AST result and token usage
         ast_result = eval_result["ast_result"]
         token_usage = eval_result["token_usage"]
-        
+        time_taken = eval_result["time_taken"]
         # Update token counters
         total_input_tokens += token_usage["input_tokens"]
         total_output_tokens += token_usage["output_tokens"]
         total_tokens += token_usage["total_tokens"]
-        
+        total_time_taken += time_taken
         # Collect token usage for statistics
         all_input_tokens.append(token_usage["input_tokens"])
         all_output_tokens.append(token_usage["output_tokens"])
@@ -168,9 +173,10 @@ def run_evaluation(test_category):
             "std_token_usage": std_token_usage,
             "mean_token_usage": mean_token_usage,
             "percentile_95_token_usage": percentile_95_token_usage
-        }
+        },
+        "average_time_taken_per_call (seconds)": total_time_taken / total_count if total_count > 0 else 0
     }
-    
+    print(result)
     return result
 
 

@@ -47,7 +47,6 @@ def load_and_prepare_data(json_file: str) -> tuple:
         data = json.load(f)
     
     # Pre-convert all functions to tools format for efficiency
-    print(f"Pre-converting functions to tools format from {json_file}...")
     all_tools = {}
     function_names = {}
     
@@ -66,11 +65,11 @@ def load_and_prepare_data(json_file: str) -> tuple:
                 function_names[i] = None
                 
         except Exception as e:
-            print(f"Error converting functions for example {i+1}: {e}")
+            
             all_tools[i] = []
             function_names[i] = None
     
-    print(f"Successfully converted {len(all_tools)} examples to tools format\n")
+    
     return data, all_tools, function_names
 
 def make_function_call(category: str, prompt: str, tools: List[Dict[str, Any]] = None, function_name: str = None, system_message: str = None) -> Any:
@@ -192,7 +191,7 @@ def convert_output_to_json(response: Any) -> dict:
         
         # Parse BFCL format: [func_name1(params_name1=params_value1, params_name2=params_value2...), func_name2(params)]
         if not content.startswith('[') or not content.endswith(']'):
-            return {"error": f"Invalid BFCL format: {content}"}
+            return {"error": f"Invalid call format: {content}"}
         
         # Remove outer brackets
         content = content[1:-1]
@@ -271,5 +270,4 @@ def convert_output_to_json(response: Any) -> dict:
             return parsed_calls
         
     except Exception as e:
-        print(f"Error converting response to JSON: {e}")
         return {"error": str(e)}

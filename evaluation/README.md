@@ -72,11 +72,6 @@ SILICONFLOW_API_KEY = "your-api-key-here"  # 你的API密钥
 # 运行完整评估（包括所有三种测试类型）
 cd function_calling
 python run_eval.py
-
-# 或者运行特定类型的测试
-python -c "from run_eval import run_evaluation; print(run_evaluation('simple'))"
-python -c "from run_eval import run_evaluation; print(run_evaluation('multiple'))"
-python -c "from run_eval import run_evaluation; print(run_evaluation('parallel'))"
 ```
 
 ### 5. 查看结果
@@ -94,16 +89,16 @@ python -c "from run_eval import run_evaluation; print(run_evaluation('parallel')
 - 测试模型对基本函数调用的理解能力
 
 ### 2. 多重函数调用 (Multiple Function Calling)
-- 连续调用多个相关函数
+- 连续调用多个不同的函数
 - 测试模型的逻辑推理和函数组合能力
 
 ### 3. 并行函数调用 (Parallel Function Calling)
-- 同时调用多个独立函数
+- 多次调用同一个函数
 - 测试模型处理并发任务的能力
 
 ## 输出格式
 
-评估结果包含以下信息：
+对于每一种测试类别`(simple, parallel, multiple)`会有一下输出：
 ```json
 {
   "accuracy": 0.85,
@@ -120,6 +115,10 @@ python -c "from run_eval import run_evaluation; print(run_evaluation('parallel')
   }
 }
 ```
+
+最后会输出综合分数，综合分数为三种类别测试准确率的均值给出:
+
+`Average score: 0.xxxx`
 
 ## 注意事项
 
