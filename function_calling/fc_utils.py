@@ -222,6 +222,11 @@ def convert_output_to_json(response: Any) -> dict:
         # Parse each function call
         parsed_calls = []
         for call in function_calls:
+            # Remove any extra outer brackets that might be around individual calls
+            call = call.strip()
+            if call.startswith('[') and call.endswith(']'):
+                call = call[1:-1].strip()
+            
             if '(' not in call or ')' not in call:
                 continue
                 
