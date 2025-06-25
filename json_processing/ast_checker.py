@@ -27,9 +27,9 @@ def ast_checker(
         test_category,
 ):
     if "simple" in test_category:
-        return simple_ast_checker(function_description, model_output, possible_answer)
+        return simple_ast_checker(function_description, model_output, possible_answer, test_category)
     elif "parallel" in test_category:
-        return parallel_ast_checker(function_description, model_output, possible_answer)
+        return parallel_ast_checker(function_description, model_output, possible_answer )
     elif "multiple" in test_category:
         return multiple_ast_checker(function_description, model_output, possible_answer)
     else:
@@ -48,7 +48,12 @@ def simple_ast_checker(
     function_name = None
     function_arguments = None
     required_parameters = None
-    possible_answer = possible_answer[0]
+    if test_category == "parallel":
+        possible_answer = possible_answer[0]
+    elif test_category == "multiple":
+        possible_answer = possible_answer[0]
+    else:
+        possible_answer = possible_answer
     if test_category == "parallel" or test_category == "simple":
         function_name = function_description["function"][0]["name"]
         function_arguments = function_description["function"][0]["parameters"]["properties"]
@@ -73,13 +78,16 @@ def simple_ast_checker(
     
     model_arguments = model_output["arguments"]
 
+
     # Get the function-specific possible answer
+    
     if function_name not in possible_answer:
         result["isValid"] = False
         result["error"] = f"Function {function_name} not found in possible answers"
         return result
     
     function_possible_answer = possible_answer[function_name]
+
 
     # Check for missing required parameters
     for param in required_parameters:
@@ -90,6 +98,8 @@ def simple_ast_checker(
     
     # Check each parameter in model output
     for param, value in model_arguments.items():
+
+        
         # Check if parameter is expected
         if param not in function_arguments:
             result["isValid"] = False
@@ -116,10 +126,21 @@ def simple_ast_checker(
         # Check if the value matches any of the expected values
         value_matches = False
         for expected_value in expected_values_list:
+           
+            
             # Try direct comparison first
             if value == expected_value:
                 value_matches = True
                 break
+            
+            # Handle quotation marks for string comparisons
+            if isinstance(value, str) and isinstance(expected_value, str):
+                # Strip quotes from both values for comparison
+                clean_value = value.strip('"\'')
+                clean_expected = expected_value.strip('"\'')
+                if clean_value == clean_expected:
+                    value_matches = True
+                    break
             
             # Handle type conversions for numeric values
             if isinstance(expected_value, (int, float)):
@@ -230,7 +251,6 @@ def parallel_ast_checker(
         result["isValid"] = False
         result["error"] = "Not all possible answers were matched"
         return result
-    print("PASS",result)
     return result
 
 def multiple_ast_checker(
@@ -259,10 +279,18 @@ def multiple_ast_checker(
         result["error"] = f"Number of function calls does not match the number of possible answers"
         return result
     
-    matched_answers = 0
-
-    for i, call in enumerate(model_output):
-            possible_call = possible_answer[i]
+    # Create a list to track which possible answers have been matched
+    matched_answers = [False] * len(possible_answer)
+    
+    # Check each function call against all possible answers
+    for call in model_output:
+        call_matched = False
+        
+        # Try to match this call with any of the possible answers
+        for j, possible_call in enumerate(possible_answer):
+            if matched_answers[j]:  # Skip already matched answers
+                continue
+                
             function_name = list(possible_call.keys())[0]
             function_description_copy = find_function_description(function_description, function_name)
             
@@ -273,15 +301,26 @@ def multiple_ast_checker(
                 return result
                 
             call_result = simple_ast_checker(function_description_copy, call, [possible_call], "multiple")
-            if call_result["isValid"]:
-                matched_answers += 1
 
-    if matched_answers != len(possible_answer):
+            if call_result["isValid"] == True:
+                print("answer matched", possible_call)
+                matched_answers[j] = True
+                call_matched = True
+                break
+        
+        # If no match was found for this call
+        if not call_matched:
             result["isValid"] = False
-            result["error"] = "Not all possible answers were matched"
+            result["error"] = f"Function call {call.get('function_name', 'unknown')} was not matched"
             return result
 
-    print("PASS", result)
+    # Verify all possible answers were matched
+    if not all(matched_answers):
+        result["isValid"] = False
+        result["error"] = "Not all possible answers were matched"
+        return result
+
+    print("PASS", function_description["id"])
     return result
 
 
