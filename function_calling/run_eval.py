@@ -132,7 +132,7 @@ def run_evaluation(test_category):
     for function_description in function_descriptions:
         possible_answer = get_possible_answer(function_description, test_category)
         eval_result = eval_runner(test_category, function_description, possible_answer)
-        
+    
         # Extract AST result and token usage
         ast_result = eval_result["ast_result"]
         token_usage = eval_result["token_usage"]
@@ -170,14 +170,21 @@ def run_evaluation(test_category):
             "percentile_95_token_usage": percentile_95_token_usage
         }
     }
-    breakpoint()
+    
     return result
 
-def get_statistics():
-    simple_function_call = run_evaluation("simple")
-    parallel_function_call = run_evaluation("parallel")
-    multiple_function_call = run_evaluation("multiple")
-    breakpoint()
-    return simple_function_call, parallel_function_call, multiple_function_call
-    
-run_evaluation("multiple")
+
+def fc_score():
+    simple_result = run_evaluation("simple")
+    parallel_result = run_evaluation("parallel")
+    multiple_result = run_evaluation("multiple")
+
+    simple_score = simple_result["accuracy"]
+    parallel_score = parallel_result["accuracy"]
+    multiple_score = multiple_result["accuracy"]
+
+    average_score = (simple_score + parallel_score + multiple_score) / 3
+    print(f"Average score: {average_score}")
+    return average_score
+
+fc_score()
