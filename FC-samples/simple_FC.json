@@ -30,6 +30,32 @@
             "side_b"
           ]
         }
+      },
+      {
+        "name": "calculate_triangle_area",
+        "description": "Calculate the area of a triangle given its sides.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "side_a": {
+              "type": "number",
+              "description": "Length of side a."
+            },
+            "side_b": {
+              "type": "number",
+              "description": "Length of side b."
+            },
+            "side_c": {
+              "type": "number",
+              "description": "Length of side c."
+            }
+          },
+          "required": [
+            "side_a",
+            "side_b",
+            "side_c"
+          ]
+        }
       }
     ]
   },
@@ -57,6 +83,22 @@
           },
           "required": [
             "celsius"
+          ]
+        }
+      },
+      {
+        "name": "convert_fahrenheit_to_celsius",
+        "description": "Convert Fahrenheit to Celsius.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "fahrenheit": {
+              "type": "number",
+              "description": "Temperature in Fahrenheit."
+            }
+          },
+          "required": [
+            "fahrenheit"
           ]
         }
       }
@@ -93,6 +135,18 @@
             "height"
           ]
         }
+      },
+      {
+        "name": "calculate_bmi_v2",
+        "description": "Calculate BMI given weight and height (version 2).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weight_kg": {"type": "number", "description": "Weight in kilograms."},
+            "height_m": {"type": "number", "description": "Height in meters."}
+          },
+          "required": ["weight_kg", "height_m"]
+        }
       }
     ]
   },
@@ -120,6 +174,32 @@
             "rate": {
               "type": "number",
               "description": "Annual interest rate."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
             },
             "time": {
               "type": "number",
@@ -166,6 +246,32 @@
             "width"
           ]
         }
+      },
+      {
+        "name": "calculate_triangle_area",
+        "description": "Calculate the area of a triangle given its sides.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "side_a": {
+              "type": "number",
+              "description": "Length of side a."
+            },
+            "side_b": {
+              "type": "number",
+              "description": "Length of side b."
+            },
+            "side_c": {
+              "type": "number",
+              "description": "Length of side c."
+            }
+          },
+          "required": [
+            "side_a",
+            "side_b",
+            "side_c"
+          ]
+        }
       }
     ]
   },
@@ -200,6 +306,17 @@
             "time"
           ]
         }
+      },
+      {
+        "name": "convert_miles_to_kilometers",
+        "description": "Convert distance from miles to kilometers.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "miles": {"type": "number", "description": "Distance in miles."}
+          },
+          "required": ["miles"]
+        }
       }
     ]
   },
@@ -232,6 +349,32 @@
           "required": [
             "moles",
             "volume"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
           ]
         }
       }
@@ -268,6 +411,32 @@
             "grams"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -300,6 +469,32 @@
           "required": [
             "grade_points",
             "credit_hours"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
           ]
         }
       }
@@ -336,6 +531,27 @@
             "rate"
           ]
         }
+      },
+      {
+        "name": "convert_eur_to_usd",
+        "description": "Convert EUR to USD based on exchange rate.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "eur": {
+              "type": "number",
+              "description": "Amount in EUR."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Exchange rate (USD to EUR)."
+            }
+          },
+          "required": [
+            "eur",
+            "rate"
+          ]
+        }
       }
     ]
   },
@@ -359,6 +575,22 @@
             "genre": {
               "type": "string",
               "description": "Recommend some relaxing classical music."
+            }
+          },
+          "required": [
+            "genre"
+          ]
+        }
+      },
+      {
+        "name": "recommend_rock_music",
+        "description": "Recommend rock music.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "genre": {
+              "type": "string",
+              "description": "Recommend rock music."
             }
           },
           "required": [
@@ -399,6 +631,32 @@
             "radius"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -433,6 +691,32 @@
             "at_bats"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -460,6 +744,22 @@
           },
           "required": [
             "fahrenheit"
+          ]
+        }
+      },
+      {
+        "name": "convert_celsius_to_fahrenheit",
+        "description": "Convert Celsius to Fahrenheit.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "celsius": {
+              "type": "number",
+              "description": "Temperature in Celsius."
+            }
+          },
+          "required": [
+            "celsius"
           ]
         }
       }
@@ -491,6 +791,27 @@
             "radius"
           ]
         }
+      },
+      {
+        "name": "calculate_cylinder_volume",
+        "description": "Calculate the volume of a cylinder given its radius and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number",
+              "description": "Radius of the cylinder in meters."
+            },
+            "height": {
+              "type": "number",
+              "description": "Height of the cylinder in meters."
+            }
+          },
+          "required": [
+            "radius",
+            "height"
+          ]
+        }
       }
     ]
   },
@@ -508,6 +829,32 @@
       {
         "name": "calculate_compound_interest",
         "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "calculate_simple_interest",
+        "description": "Calculate simple interest given principal, rate, and time.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -564,6 +911,32 @@
             "velocity"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -596,6 +969,32 @@
           "required": [
             "mass",
             "volume"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
           ]
         }
       }
@@ -632,6 +1031,32 @@
             "width"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -666,6 +1091,32 @@
             "hours"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -693,6 +1144,32 @@
           },
           "required": [
             "side_length"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
           ]
         }
       }
@@ -734,6 +1211,32 @@
             "time"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -761,6 +1264,32 @@
           },
           "required": [
             "radius"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
           ]
         }
       }
@@ -797,6 +1326,32 @@
             "distance"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -829,6 +1384,32 @@
           "required": [
             "force",
             "area"
+          ]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
           ]
         }
       }
@@ -865,6 +1446,32 @@
             "speed"
           ]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -891,6 +1498,32 @@
           },
           "required": ["mass1", "mass2", "distance"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -914,6 +1547,32 @@
             "numbers": {"type": "array", "items": {"type": "number"}, "description": "List of numbers."}
           },
           "required": ["numbers"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -939,6 +1598,32 @@
           },
           "required": ["kph"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -963,6 +1648,32 @@
             "volume_liters": {"type": "number", "description": "Volume of solution in liters."}
           },
           "required": ["moles", "volume_liters"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -990,6 +1701,32 @@
           },
           "required": ["side1", "side2", "side3"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1015,6 +1752,32 @@
           },
           "required": ["systolic", "diastolic"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1039,6 +1802,32 @@
             "inches": {"type": "integer", "description": "Inches part of height."}
           },
           "required": ["feet", "inches"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1066,6 +1855,32 @@
           },
           "required": ["base1", "base2", "height"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1090,6 +1905,32 @@
             "height_m": {"type": "number", "description": "Height in meters."}
           },
           "required": ["weight_kg", "height_m"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1116,6 +1957,32 @@
           },
           "required": ["n", "r"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1139,6 +2006,32 @@
             "gallons": {"type": "number", "description": "Volume in gallons."}
           },
           "required": ["gallons"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1166,6 +2059,32 @@
           },
           "required": ["principal", "rate", "years"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1189,6 +2108,32 @@
             "numbers": {"type": "array", "items": {"type": "number"}, "description": "List of numbers."}
           },
           "required": ["numbers"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1214,6 +2159,32 @@
           },
           "required": ["kelvin"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1238,6 +2209,32 @@
             "minor_axis": {"type": "number", "description": "Length of minor axis."}
           },
           "required": ["major_axis", "minor_axis"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1265,6 +2262,32 @@
           },
           "required": ["principal", "annual_rate", "years"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1288,6 +2311,32 @@
             "miles": {"type": "number", "description": "Distance in miles."}
           },
           "required": ["miles"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1315,6 +2364,32 @@
           },
           "required": ["trials", "successes", "probability"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1338,6 +2413,32 @@
             "resistors": {"type": "array", "items": {"type": "number"}, "description": "List of resistor values in ohms."}
           },
           "required": ["resistors"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1363,6 +2464,32 @@
           },
           "required": ["ml"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1386,6 +2513,32 @@
             "diameter": {"type": "number", "description": "Diameter of the circle."}
           },
           "required": ["diameter"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1411,6 +2564,32 @@
           },
           "required": ["temperature_c"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1434,6 +2613,32 @@
             "hydrogen_concentration": {"type": "number", "description": "Hydrogen ion concentration in moles per liter."}
           },
           "required": ["hydrogen_concentration"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]
@@ -1460,6 +2665,32 @@
           },
           "required": ["yen", "exchange_rate"]
         }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -1483,6 +2714,32 @@
             "distance_km": {"type": "number", "description": "Distance in kilometers."}
           },
           "required": ["distance_km"]
+        }
+      },
+      {
+        "name": "calculate_compound_interest",
+        "description": "Calculate compound interest given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "description": "Initial investment amount."
+            },
+            "rate": {
+              "type": "number",
+              "description": "Annual interest rate as decimal."
+            },
+            "time": {
+              "type": "number",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
         }
       }
     ]

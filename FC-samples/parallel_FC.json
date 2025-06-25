@@ -30,6 +30,27 @@
             "velocity"
           ]
         }
+      },
+      {
+        "name": "physics.calculate_potential_energy",
+        "description": "Calculate the potential energy of a given mass and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in kilograms."
+            },
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "mass",
+            "height"
+          ]
+        }
       }
     ]
   },
@@ -69,6 +90,32 @@
             "distance"
           ]
         }
+      },
+      {
+        "name": "finance.calculate_simple_interest",
+        "description": "Compute the simple interest on a given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial investment."
+            },
+            "rate": {
+              "type": "float",
+              "description": "Annual interest rate, in percent."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -86,6 +133,32 @@
       {
         "name": "finance.calculate_compound_interest",
         "description": "Compute the compound interest on a given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial investment."
+            },
+            "rate": {
+              "type": "float",
+              "description": "Annual interest rate, in percent."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "finance.calculate_simple_interest",
+        "description": "Compute the simple interest on a given principal, rate, and time.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -147,6 +220,32 @@
             "years"
           ]
         }
+      },
+      {
+        "name": "finance.calculate_simple_interest",
+        "description": "Compute the simple interest on a given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial investment."
+            },
+            "rate": {
+              "type": "float",
+              "description": "Annual interest rate, in percent."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -164,6 +263,27 @@
       {
         "name": "nutrition.get_sugar_content",
         "description": "Get the sugar content for a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
+            },
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      },
+      {
+        "name": "nutrition.calculate_calories",
+        "description": "Calculate the calories in a given food item and quantity.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -215,6 +335,27 @@
             "quantity"
           ]
         }
+      },
+      {
+        "name": "nutrition.calculate_fiber_grams",
+        "description": "Calculate the fiber content in a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
+            },
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
       }
     ]
   },
@@ -247,6 +388,22 @@
           "required": [
             "transport_mode",
             "distance_km"
+          ]
+        }
+      },
+      {
+        "name": "environment.calculate_carbon_footprint",
+        "description": "Calculate the carbon footprint of a given activity or journey.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string",
+              "description": "Description of the activity or journey."
+            }
+          },
+          "required": [
+            "activity"
           ]
         }
       }
@@ -283,6 +440,22 @@
             "quantity"
           ]
         }
+      },
+      {
+        "name": "environment.calculate_water_usage",
+        "description": "Calculate the water usage for a given activity or process.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string",
+              "description": "Description of the activity or process."
+            }
+          },
+          "required": [
+            "activity"
+          ]
+        }
       }
     ]
   },
@@ -300,6 +473,27 @@
       {
         "name": "geometry.calculate_cone_volume",
         "description": "Calculate the volume of a cone with given radius and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "float",
+              "description": "Radius in cm."
+            },
+            "height": {
+              "type": "float",
+              "description": "Height in cm."
+            }
+          },
+          "required": [
+            "radius",
+            "height"
+          ]
+        }
+      },
+      {
+        "name": "geometry.calculate_cylinder_volume",
+        "description": "Calculate the volume of a cylinder with given radius and height.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -351,6 +545,22 @@
             "width"
           ]
         }
+      },
+      {
+        "name": "geometry.calculate_square_diagonal",
+        "description": "Find the diagonal length of a square with given side length.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "side_length": {
+              "type": "float",
+              "description": "Length of one side of the square."
+            }
+          },
+          "required": [
+            "side_length"
+          ]
+        }
       }
     ]
   },
@@ -383,6 +593,27 @@
           "required": [
             "mass",
             "molar_mass"
+          ]
+        }
+      },
+      {
+        "name": "chemistry.calculate_mole_fraction",
+        "description": "Calculate the mole fraction of a given component in a mixture.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass_component": {
+              "type": "float",
+              "description": "Mass of the component."
+            },
+            "mass_mixture": {
+              "type": "float",
+              "description": "Mass of the mixture."
+            }
+          },
+          "required": [
+            "mass_component",
+            "mass_mixture"
           ]
         }
       }
@@ -419,6 +650,27 @@
             "compound_mass"
           ]
         }
+      },
+      {
+        "name": "chemistry.calculate_mole_fraction",
+        "description": "Calculate the mole fraction of a given component in a mixture.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass_component": {
+              "type": "float",
+              "description": "Mass of the component."
+            },
+            "mass_mixture": {
+              "type": "float",
+              "description": "Mass of the mixture."
+            }
+          },
+          "required": [
+            "mass_component",
+            "mass_mixture"
+          ]
+        }
       }
     ]
   },
@@ -436,6 +688,22 @@
       {
         "name": "biology.calculate_heart_rate_zone",
         "description": "Estimate heart rate zone for a given age during exercise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "float",
+              "description": "Age in years."
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      },
+      {
+        "name": "biology.calculate_resting_heart_rate",
+        "description": "Calculate the resting heart rate of a person.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -482,6 +750,22 @@
             "height"
           ]
         }
+      },
+      {
+        "name": "health.calculate_ideal_weight",
+        "description": "Calculate the ideal weight for a given height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "height"
+          ]
+        }
       }
     ]
   },
@@ -516,6 +800,22 @@
             "credits"
           ]
         }
+      },
+      {
+        "name": "education.calculate_cumulative_gpa",
+        "description": "Calculate the cumulative GPA for a given list of courses and grades.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "courses": {
+              "type": "array",
+              "description": "List of course objects."
+            }
+          },
+          "required": [
+            "courses"
+          ]
+        }
       }
     ]
   },
@@ -545,6 +845,27 @@
             "grades"
           ]
         }
+      },
+      {
+        "name": "education.calculate_gpa",
+        "description": "Calculate GPA for given grades and credits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of grade points."
+            },
+            "credits": {
+              "type": "array",
+              "description": "List of credit hours."
+            }
+          },
+          "required": [
+            "grades",
+            "credits"
+          ]
+        }
       }
     ]
   },
@@ -562,6 +883,27 @@
       {
         "name": "fitness.estimate_calories_burned",
         "description": "Estimate calories burned playing a given activity for a given duration.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string",
+              "description": "Type of activity. e.g soccer,basketball, running"
+            },
+            "duration": {
+              "type": "float",
+              "description": "Duration in minutes."
+            }
+          },
+          "required": [
+            "activity",
+            "duration"
+          ]
+        }
+      },
+      {
+        "name": "fitness.calculate_calories_burned",
+        "description": "Calculate the calories burned during a given activity for a given duration.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -613,6 +955,27 @@
             "time"
           ]
         }
+      },
+      {
+        "name": "fitness.calculate_pace",
+        "description": "Calculate pace for a given distance and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Distance in kilometers."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in minutes."
+            }
+          },
+          "required": [
+            "distance",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -630,6 +993,27 @@
       {
         "name": "weather.calculate_heat_index",
         "description": "Estimate heat index for a given temperature and humidity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "temperature": {
+              "type": "float",
+              "description": "Temperature in Celsius."
+            },
+            "humidity": {
+              "type": "float",
+              "description": "Humidity in percent."
+            }
+          },
+          "required": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      },
+      {
+        "name": "weather.calculate_dew_point",
+        "description": "Calculate the dew point for a given temperature and humidity.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -681,6 +1065,27 @@
             "wind_speed"
           ]
         }
+      },
+      {
+        "name": "weather.calculate_wind_speed",
+        "description": "Calculate the wind speed for a given temperature and wind chill.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "temperature": {
+              "type": "float",
+              "description": "Temperature in Celsius."
+            },
+            "wind_chill": {
+              "type": "float",
+              "description": "Wind chill in Celsius."
+            }
+          },
+          "required": [
+            "temperature",
+            "wind_chill"
+          ]
+        }
       }
     ]
   },
@@ -715,6 +1120,27 @@
             "upload_speed_mbps"
           ]
         }
+      },
+      {
+        "name": "network.calculate_download_time",
+        "description": "Estimate download time for a given file size and download speed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_size_gb": {
+              "type": "float",
+              "description": "File size in gigabytes."
+            },
+            "download_speed_mbps": {
+              "type": "float",
+              "description": "Download speed in megabits per second."
+            }
+          },
+          "required": [
+            "file_size_gb",
+            "download_speed_mbps"
+          ]
+        }
       }
     ]
   },
@@ -742,6 +1168,27 @@
           },
           "required": [
             "speed_mbps"
+          ]
+        }
+      },
+      {
+        "name": "network.calculate_upload_time",
+        "description": "Estimate upload time for a given file size and upload speed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_size_gb": {
+              "type": "float",
+              "description": "File size in gigabytes."
+            },
+            "upload_speed_mbps": {
+              "type": "float",
+              "description": "Upload speed in megabits per second."
+            }
+          },
+          "required": [
+            "file_size_gb",
+            "upload_speed_mbps"
           ]
         }
       }
@@ -778,6 +1225,22 @@
             "radius"
           ]
         }
+      },
+      {
+        "name": "astronomy.calculate_orbital_period",
+        "description": "Find orbital period for satellite at a given altitude around Earth.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "altitude": {
+              "type": "float",
+              "description": "Altitude above Earth's surface in kilometers."
+            }
+          },
+          "required": [
+            "altitude"
+          ]
+        }
       }
     ]
   },
@@ -805,6 +1268,27 @@
           },
           "required": [
             "altitude"
+          ]
+        }
+      },
+      {
+        "name": "astronomy.calculate_escape_velocity",
+        "description": "Calculate escape velocity from a planet of given mass and radius.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass of the planet in kg."
+            },
+            "radius": {
+              "type": "float",
+              "description": "Radius of the planet in meters."
+            }
+          },
+          "required": [
+            "mass",
+            "radius"
           ]
         }
       }
@@ -846,6 +1330,27 @@
             "price_per_liter"
           ]
         }
+      },
+      {
+        "name": "transport.calculate_carbon_footprint",
+        "description": "Calculate the carbon footprint of a given transportation journey.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
+            },
+            "mode": {
+              "type": "string",
+              "description": "Transportation mode. e.g. car, train, plane"
+            }
+          },
+          "required": [
+            "distance",
+            "mode"
+          ]
+        }
       }
     ]
   },
@@ -880,6 +1385,27 @@
             "speed"
           ]
         }
+      },
+      {
+        "name": "transport.calculate_carbon_footprint",
+        "description": "Calculate the carbon footprint of a given transportation journey.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
+            },
+            "mode": {
+              "type": "string",
+              "description": "Transportation mode. e.g. car, train, plane"
+            }
+          },
+          "required": [
+            "distance",
+            "mode"
+          ]
+        }
       }
     ]
   },
@@ -907,6 +1433,27 @@
           },
           "required": [
             "grades"
+          ]
+        }
+      },
+      {
+        "name": "education.calculate_gpa",
+        "description": "Calculate GPA for given grades and credits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of grade points."
+            },
+            "credits": {
+              "type": "array",
+              "description": "List of credit hours."
+            }
+          },
+          "required": [
+            "grades",
+            "credits"
           ]
         }
       }
@@ -941,6 +1488,27 @@
           "required": [
             "mass",
             "velocity"
+          ]
+        }
+      },
+      {
+        "name": "physics.calculate_potential_energy",
+        "description": "Calculate the potential energy of a given mass and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass in kilograms."
+            },
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "mass",
+            "height"
           ]
         }
       }
@@ -982,6 +1550,32 @@
             "time"
           ]
         }
+      },
+      {
+        "name": "finance.calculate_simple_interest",
+        "description": "Compute the simple interest on a given principal, rate, and time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial investment."
+            },
+            "rate": {
+              "type": "float",
+              "description": "Annual interest rate, in percent."
+            },
+            "time": {
+              "type": "float",
+              "description": "Time in years."
+            }
+          },
+          "required": [
+            "principal",
+            "rate",
+            "time"
+          ]
+        }
       }
     ]
   },
@@ -999,6 +1593,22 @@
       {
         "name": "biology.calculate_heart_rate_zone",
         "description": "Estimate heart rate zone for a given age during exercise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "float",
+              "description": "Age in years."
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      },
+      {
+        "name": "biology.calculate_resting_heart_rate",
+        "description": "Calculate the resting heart rate of a person.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -1045,6 +1655,27 @@
             "molar_mass"
           ]
         }
+      },
+      {
+        "name": "chemistry.calculate_mole_fraction",
+        "description": "Calculate the mole fraction of a given component in a mixture.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass_component": {
+              "type": "float",
+              "description": "Mass of the component."
+            },
+            "mass_mixture": {
+              "type": "float",
+              "description": "Mass of the mixture."
+            }
+          },
+          "required": [
+            "mass_component",
+            "mass_mixture"
+          ]
+        }
       }
     ]
   },
@@ -1079,6 +1710,22 @@
             "width"
           ]
         }
+      },
+      {
+        "name": "geometry.calculate_square_diagonal",
+        "description": "Find the diagonal length of a square with given side length.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "side_length": {
+              "type": "float",
+              "description": "Length of one side of the square."
+            }
+          },
+          "required": [
+            "side_length"
+          ]
+        }
       }
     ]
   },
@@ -1106,6 +1753,27 @@
             "quantity": {
               "type": "float",
               "description": "Quantity in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      },
+      {
+        "name": "nutrition.calculate_fiber_grams",
+        "description": "Calculate the fiber content in a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
+            },
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
             }
           },
           "required": [
@@ -1147,6 +1815,27 @@
             "quantity"
           ]
         }
+      },
+      {
+        "name": "nutrition.calculate_fiber_grams",
+        "description": "Calculate the fiber content in a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
+            },
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
       }
     ]
   },
@@ -1179,6 +1868,22 @@
           "required": [
             "product",
             "quantity"
+          ]
+        }
+      },
+      {
+        "name": "environment.calculate_water_usage",
+        "description": "Calculate the water usage for a given activity or process.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string",
+              "description": "Description of the activity or process."
+            }
+          },
+          "required": [
+            "activity"
           ]
         }
       }
@@ -1220,6 +1925,27 @@
             "price_per_liter"
           ]
         }
+      },
+      {
+        "name": "transport.calculate_carbon_footprint",
+        "description": "Calculate the carbon footprint of a given transportation journey.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
+            },
+            "mode": {
+              "type": "string",
+              "description": "Transportation mode. e.g. car, train, plane"
+            }
+          },
+          "required": [
+            "distance",
+            "mode"
+          ]
+        }
       }
     ]
   },
@@ -1252,6 +1978,27 @@
           "required": [
             "element_mass",
             "compound_mass"
+          ]
+        }
+      },
+      {
+        "name": "chemistry.calculate_mole_fraction",
+        "description": "Calculate the mole fraction of a given component in a mixture.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass_component": {
+              "type": "float",
+              "description": "Mass of the component."
+            },
+            "mass_mixture": {
+              "type": "float",
+              "description": "Mass of the mixture."
+            }
+          },
+          "required": [
+            "mass_component",
+            "mass_mixture"
           ]
         }
       }
@@ -1288,6 +2035,22 @@
             "distance_km"
           ]
         }
+      },
+      {
+        "name": "environment.calculate_carbon_footprint",
+        "description": "Calculate the carbon footprint of a given activity or journey.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "activity": {
+              "type": "string",
+              "description": "Description of the activity or journey."
+            }
+          },
+          "required": [
+            "activity"
+          ]
+        }
       }
     ]
   },
@@ -1305,6 +2068,27 @@
       {
         "name": "nutrition.get_sugar_content",
         "description": "Get the sugar content for a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
+            },
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      },
+      {
+        "name": "nutrition.calculate_calories",
+        "description": "Calculate the calories in a given food item and quantity.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -1356,6 +2140,22 @@
             "width"
           ]
         }
+      },
+      {
+        "name": "geometry.calculate_square_diagonal",
+        "description": "Find the diagonal length of a square with given side length.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "side_length": {
+              "type": "float",
+              "description": "Length of one side of the square."
+            }
+          },
+          "required": [
+            "side_length"
+          ]
+        }
       }
     ]
   },
@@ -1373,6 +2173,27 @@
       {
         "name": "geometry.calculate_cone_volume",
         "description": "Calculate the volume of a cone with given radius and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "float",
+              "description": "Radius in cm."
+            },
+            "height": {
+              "type": "float",
+              "description": "Height in cm."
+            }
+          },
+          "required": [
+            "radius",
+            "height"
+          ]
+        }
+      },
+      {
+        "name": "geometry.calculate_cylinder_volume",
+        "description": "Calculate the volume of a cylinder with given radius and height.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -1429,6 +2250,27 @@
             "price_per_liter"
           ]
         }
+      },
+      {
+        "name": "transport.calculate_carbon_footprint",
+        "description": "Calculate the carbon footprint of a given transportation journey.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "distance": {
+              "type": "float",
+              "description": "Trip distance in kilometers."
+            },
+            "mode": {
+              "type": "string",
+              "description": "Transportation mode. e.g. car, train, plane"
+            }
+          },
+          "required": [
+            "distance",
+            "mode"
+          ]
+        }
       }
     ]
   },
@@ -1446,6 +2288,27 @@
       {
         "name": "nutrition.get_sugar_content",
         "description": "Get the sugar content for a given food item and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_item": {
+              "type": "string",
+              "description": "Food item name."
+            },
+            "quantity": {
+              "type": "float",
+              "description": "Amount in grams."
+            }
+          },
+          "required": [
+            "food_item",
+            "quantity"
+          ]
+        }
+      },
+      {
+        "name": "nutrition.calculate_calories",
+        "description": "Calculate the calories in a given food item and quantity.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -1497,6 +2360,27 @@
             "molar_mass"
           ]
         }
+      },
+      {
+        "name": "chemistry.calculate_mole_fraction",
+        "description": "Calculate the mole fraction of a given component in a mixture.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass_component": {
+              "type": "float",
+              "description": "Mass of the component."
+            },
+            "mass_mixture": {
+              "type": "float",
+              "description": "Mass of the mixture."
+            }
+          },
+          "required": [
+            "mass_component",
+            "mass_mixture"
+          ]
+        }
       }
     ]
   },
@@ -1526,6 +2410,27 @@
             "grades"
           ]
         }
+      },
+      {
+        "name": "education.calculate_gpa",
+        "description": "Calculate GPA for given grades and credits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "grades": {
+              "type": "array",
+              "description": "List of grade points."
+            },
+            "credits": {
+              "type": "array",
+              "description": "List of credit hours."
+            }
+          },
+          "required": [
+            "grades",
+            "credits"
+          ]
+        }
       }
     ]
   },
@@ -1543,6 +2448,22 @@
       {
         "name": "biology.calculate_heart_rate_zone",
         "description": "Estimate heart rate zone for a given age during exercise.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "float",
+              "description": "Age in years."
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      },
+      {
+        "name": "biology.calculate_resting_heart_rate",
+        "description": "Calculate the resting heart rate of a person.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -1589,6 +2510,22 @@
             "income"
           ]
         }
+      },
+      {
+        "name": "income.calculate_tax_liability",
+        "description": "Calculate the tax liability for a given income.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "income": {
+              "type": "float",
+              "description": "Income of the person."
+            }
+          },
+          "required": [
+            "income"
+          ]
+        }
       }
     ]
   },
@@ -1618,6 +2555,27 @@
             "altitude"
           ]
         }
+      },
+      {
+        "name": "astronomy.calculate_escape_velocity",
+        "description": "Calculate escape velocity from a planet of given mass and radius.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mass": {
+              "type": "float",
+              "description": "Mass of the planet in kg."
+            },
+            "radius": {
+              "type": "float",
+              "description": "Radius of the planet in meters."
+            }
+          },
+          "required": [
+            "mass",
+            "radius"
+          ]
+        }
       }
     ]
   },
@@ -1645,6 +2603,27 @@
           },
           "required": [
             "speed_mbps"
+          ]
+        }
+      },
+      {
+        "name": "network.calculate_upload_time",
+        "description": "Estimate upload time for a given file size and upload speed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_size_gb": {
+              "type": "float",
+              "description": "File size in gigabytes."
+            },
+            "upload_speed_mbps": {
+              "type": "float",
+              "description": "Upload speed in megabits per second."
+            }
+          },
+          "required": [
+            "file_size_gb",
+            "upload_speed_mbps"
           ]
         }
       }
@@ -1679,6 +2658,22 @@
           "required": [
             "grades",
             "credits"
+          ]
+        }
+      },
+      {
+        "name": "education.calculate_cumulative_gpa",
+        "description": "Calculate the cumulative GPA for a given list of courses and grades.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "courses": {
+              "type": "array",
+              "description": "List of course objects."
+            }
+          },
+          "required": [
+            "courses"
           ]
         }
       }

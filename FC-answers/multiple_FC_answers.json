@@ -21,7 +21,7 @@
     "ground_truth": [
       {
         "finance.calculate_tax": {
-          "income": 85000,
+          "income": 85000.0,
           "location": "Canada"
         }
       },
@@ -191,8 +191,8 @@
         }
       },
       {
-        "cities.lookup_capital": {
-          "city_name": "Madrid"
+        "countries.lookup_capital": {
+          "city_name": "Spain"
         }
       }
     ]
@@ -209,7 +209,7 @@
       {
         "players.get_average_points": {
           "player_name": "Lebron James",
-          "season": "2025"
+          "season": 2025
         }
       }
     ]
@@ -220,7 +220,7 @@
       {
         "restaurants.book_table": {
           "restaurant_name": "Wolfgang Steakhouse",
-          "time": 7,
+          "time": 19,
           "number_of_people": 3
         }
       },
@@ -273,8 +273,8 @@
         }
       },
       {
-        "sports.get_scores": {
-          "sport": "football"
+        "recipes.get_recipe": {
+          "dish": "lasagna"
         }
       }
     ]

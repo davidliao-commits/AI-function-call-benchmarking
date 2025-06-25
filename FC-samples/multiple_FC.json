@@ -1,2527 +1,3701 @@
 [
-    {
-      "id": "multiple_unique_0",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Translate 'Good morning' to Italian. Also, Give me the 3-day weather forecast for Cape Town."
-          }
-        ]
-      ],
-      "function": [
+  {
+    "id": "multiple_unique_0",
+    "question": [
+      [
         {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
-              }
-            },
-            "required": [
-              "text",
-              "target_language"
-            ]
-          }
-        },
-        {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city": {
-                "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
-              }
-            },
-            "required": [
-              "city"
-            ]
-          }
+          "role": "user",
+          "content": "Translate 'Good morning' to Italian. Also, Give me the 3-day weather forecast for Cape Town."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_1",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, Find books written by Haruki Murakami."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
-                "type": "string",
-                "description": "Country or region."
-              }
+    ],
+    "function": [
+      {
+        "name": "language.translate",
+        "description": "Translate a phrase to a specified language.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "The phrase to translate."
             },
-            "required": [
-              "income",
-              "location"
-            ]
-          }
-        },
-        {
-          "name": "books.search",
-          "description": "Search for books by title or author.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "query": {
-                "type": "string",
-                "description": "Title or author name."
-              }
+            "target_language": {
+              "type": "string",
+              "description": "Target language (e.g., French)."
+            }
+          },
+          "required": [
+            "text",
+            "target_language"
+          ]
+        }
+      },
+      {
+        "name": "weather.get_forecast",
+        "description": "Retrieve the weather forecast for a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
             },
-            "required": [
-              "query"
-            ]
-          }
+            "days": {
+              "type": "integer",
+              "description": "Number of days to forecast"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "weather.get_humidity",
+        "description": "Retrieve the humidity for a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "music.get_album",
+        "description": "Retrieve album details by artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artist": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "artist"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_1",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "How much tax do I owe if I earn $85000 in Canada? Also, Find books written by Haruki Murakami."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_2",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "How much tax do I owe if I earn $85000 in Canada? Also, What's my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
-                "type": "string",
-                "description": "Country or region."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.calculate_tax",
+        "description": "Calculate the tax payable based on income and location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "income": {
+              "type": "float",
+              "description": "Annual income in USD."
             },
-            "required": [
-              "income",
-              "location"
-            ]
-          }
-        },
+            "location": {
+              "type": "string",
+              "description": "Country or region."
+            }
+          },
+          "required": [
+            "income",
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "books.search",
+        "description": "Search for books by title or author.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Title or author name."
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      },
+      {
+        "name": "books.get_summary",
+        "description": "Get a summary of a book by title or author.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Title or author name."
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_2",
+    "question": [
+      [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
-              }
-            },
-            "required": [
-              "weight",
-              "height"
-            ]
-          }
+          "role": "user",
+          "content": "How much tax do I owe if I earn $85000 in Canada? Also, What's my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_3",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Can you show me the recipe for lasagna?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "origin": {
-                "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.calculate_tax",
+        "description": "Calculate the tax payable based on income and location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "income": {
+              "type": "float",
+              "description": "Annual income in USD."
             },
-            "required": [
-              "origin",
-              "destination",
-              "date"
-            ]
-          }
-        },
-        {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "dish": {
-                "type": "string",
-                "description": "Name of the dish."
-              }
+            "location": {
+              "type": "string",
+              "description": "Country or region."
+            }
+          },
+          "required": [
+            "income",
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "health.bmi_calculator",
+        "description": "Calculate Body Mass Index given weight and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weight": {
+              "type": "float",
+              "description": "Weight in kilograms."
             },
-            "required": [
-              "dish"
-            ]
-          }
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "weight",
+            "height"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_3",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find me a flight from London to Berlin on 2025-07-12. Also, Can you show me the recipe for lasagna?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_4",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Tell me about Stanford University. Also, Find me a flight from London to Berlin on 2025-07-12."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "university_name": {
-                "type": "string",
-                "description": "Name of the university."
-              }
+    ],
+    "function": [
+      {
+        "name": "travel.find_flights",
+        "description": "Search for flights between two cities.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string",
+              "description": "Departure city."
             },
-            "required": [
-              "university_name"
-            ]
-          }
-        },
-        {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "origin": {
-                "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
-              }
+            "destination": {
+              "type": "string",
+              "description": "Arrival city."
             },
-            "required": [
-              "origin",
-              "destination",
-              "date"
-            ]
-          }
+            "date": {
+              "type": "string",
+              "description": "Travel date in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "origin",
+            "destination",
+            "date"
+          ]
+        }
+      },
+      {
+        "name": "recipes.get_recipe",
+        "description": "Retrieve a cooking recipe based on a dish name.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "dish": {
+              "type": "string",
+              "description": "Name of the dish."
+            }
+          },
+          "required": [
+            "dish"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_4",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Tell me about Stanford University. Also, Find me a flight from London to Berlin on 2025-07-12."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_5",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "What are some good sci-fi movies to watch? Also, Find books written by Haruki Murakami."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "genre": {
-                "type": "string",
-                "description": "Preferred movie genre."
-              }
+    ],
+    "function": [
+      {
+        "name": "education.lookup_university",
+        "description": "Find information about a university.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "university_name": {
+              "type": "string",
+              "description": "Name of the university."
+            }
+          },
+          "required": [
+            "university_name"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_flights",
+        "description": "Search for flights between two cities.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string",
+              "description": "Departure city."
             },
-            "required": [
-              "genre"
-            ]
-          }
-        },
-        {
-          "name": "books.search",
-          "description": "Search for books by title or author.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "query": {
-                "type": "string",
-                "description": "Title or author name."
-              }
+            "destination": {
+              "type": "string",
+              "description": "Arrival city."
             },
-            "required": [
-              "query"
-            ]
-          }
+            "date": {
+              "type": "string",
+              "description": "Travel date in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "origin",
+            "destination",
+            "date"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_5",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "What are some good sci-fi movies to watch? Also, Find books written by Haruki Murakami."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_6",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "How much tax do I owe if I earn $200000 in Mexico? Also, Translate 'Good morning' to Italian."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "movies.recommend",
+        "description": "Recommend movies based on a genre.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "genre": {
+              "type": "string",
+              "description": "Preferred movie genre."
+            }
+          },
+          "required": [
+            "genre"
+          ]
+        }
+      },
+      {
+        "name": "books.search",
+        "description": "Search for books by title or author.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Title or author name."
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_6",
+    "question": [
+      [
         {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
-                "type": "string",
-                "description": "Country or region."
-              }
-            },
-            "required": [
-              "income",
-              "location"
-            ]
-          }
-        },
-        {
-          "name": "language.translate",
-          "description": "Translate a phrase to a specified language.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "description": "The phrase to translate."
-              },
-              "target_language": {
-                "type": "string",
-                "description": "Target language (e.g., French)."
-              }
-            },
-            "required": [
-              "text",
-              "target_language"
-            ]
-          }
+          "role": "user",
+          "content": "How much tax do I owe if I earn $200000 in Mexico? Also, Translate 'Good morning' to Italian."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_7",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "What's my BMI if I weigh 92 kg and I'm 1.85 meters tall? Also, How much tax do I owe if I earn $85000 in Canada?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.calculate_tax",
+        "description": "Calculate the tax payable based on income and location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "income": {
+              "type": "float",
+              "description": "Annual income in USD."
             },
-            "required": [
-              "weight",
-              "height"
-            ]
-          }
-        },
-        {
-          "name": "finance.calculate_tax",
-          "description": "Calculate the tax payable based on income and location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "income": {
-                "type": "float",
-                "description": "Annual income in USD."
-              },
-              "location": {
-                "type": "string",
-                "description": "Country or region."
-              }
+            "location": {
+              "type": "string",
+              "description": "Country or region."
+            }
+          },
+          "required": [
+            "income",
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "language.translate",
+        "description": "Translate a phrase to a specified language.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "The phrase to translate."
             },
-            "required": [
-              "income",
-              "location"
-            ]
-          }
+            "target_language": {
+              "type": "string",
+              "description": "Target language (e.g., French)."
+            }
+          },
+          "required": [
+            "text",
+            "target_language"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_7",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "What's my BMI if I weigh 92 kg and I'm 1.85 meters tall? Also, How much tax do I owe if I earn $85000 in Canada?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_8",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Give me the 5-day weather forecast for Shanghai. Also, What are some good romantic movies to watch?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "weather.get_forecast",
-          "description": "Retrieve the weather forecast for a given city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city": {
-                "type": "string",
-                "description": "City name"
-              },
-              "days": {
-                "type": "integer",
-                "description": "Number of days to forecast"
-              }
+    ],
+    "function": [
+      {
+        "name": "health.bmi_calculator",
+        "description": "Calculate Body Mass Index given weight and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weight": {
+              "type": "float",
+              "description": "Weight in kilograms."
             },
-            "required": [
-              "city"
-            ]
-          }
-        },
-        {
-          "name": "movies.recommend",
-          "description": "Recommend movies based on a genre.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "genre": {
-                "type": "string",
-                "description": "Preferred movie genre."
-              }
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "weight",
+            "height"
+          ]
+        }
+      },
+      {
+        "name": "finance.calculate_tax",
+        "description": "Calculate the tax payable based on income and location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "income": {
+              "type": "float",
+              "description": "Annual income in USD."
             },
-            "required": [
-              "genre"
-            ]
-          }
+            "location": {
+              "type": "string",
+              "description": "Country or region."
+            }
+          },
+          "required": [
+            "income",
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "music.get_album",
+        "description": "Retrieve album details by artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artist": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "artist"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_8",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Give me the 5-day weather forecast for Shanghai. Also, What are some good romantic movies to watch?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_9",
-      "question": [
-        [
-          {
-              "role": "user",
-              "content": "How many calories are in 55 cakes, each cake has 40 Kcals in Canada? Also, What's my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "food.calculate_calories",
-          "description": "Calculate the calories based on number of cakes and calories per cake.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "number_of_items": {
-                "type": "integer",
-                "description": "Number of given items."
-              },
-              "calories_per_item": {
-                "type": "integer",
-                "description": "Calories per given item."
-              }
+    ],
+    "function": [
+      {
+        "name": "weather.get_forecast",
+        "description": "Retrieve the weather forecast for a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
             },
-            "required": [
-              "number_of_items",
-              "calories_per_item"
-            ]
-          }
-        },
+            "days": {
+              "type": "integer",
+              "description": "Number of days to forecast"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "movies.recommend",
+        "description": "Recommend movies based on a genre.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "genre": {
+              "type": "string",
+              "description": "Preferred movie genre."
+            }
+          },
+          "required": [
+            "genre"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_9",
+    "question": [
+      [
         {
-          "name": "health.bmi_calculator",
-          "description": "Calculate Body Mass Index given weight and height.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "height": {
-                "type": "float",
-                "description": "Height in meters."
-              }
-            },
-            "required": [
-              "weight",
-              "height"
-            ]
-          }
+          "role": "user",
+          "content": "How many calories are in 55 cakes, each cake has 40 Kcals in Canada? Also, What's my BMI if I weigh 62 kg and I'm 1.7 meters tall?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_10",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find me a flight from Pennsylvania to Alaska on 2025-07-12. Also, Tell me about Tsinghua University."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "travel.find_flights",
-          "description": "Search for flights between two cities.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "origin": {
-                "type": "string",
-                "description": "Departure city."
-              },
-              "destination": {
-                "type": "string",
-                "description": "Arrival city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Travel date in YYYY-MM-DD format."
-              }
+    ],
+    "function": [
+      {
+        "name": "food.calculate_calories",
+        "description": "Calculate the calories based on number of cakes and calories per cake.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "number_of_items": {
+              "type": "integer",
+              "description": "Number of given items."
             },
-            "required": [
-              "origin",
-              "destination",
-              "date"
-            ]
-          }
-        },
-        {
-          "name": "education.lookup_university",
-          "description": "Find information about a university.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "university_name": {
-                "type": "string",
-                "description": "Name of the university."
-              }
+            "calories_per_item": {
+              "type": "integer",
+              "description": "Calories per given item."
+            }
+          },
+          "required": [
+            "number_of_items",
+            "calories_per_item"
+          ]
+        }
+      },
+      {
+        "name": "health.bmi_calculator",
+        "description": "Calculate Body Mass Index given weight and height.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weight": {
+              "type": "float",
+              "description": "Weight in kilograms."
             },
-            "required": [
-              "university_name"
-            ]
-          }
+            "height": {
+              "type": "float",
+              "description": "Height in meters."
+            }
+          },
+          "required": [
+            "weight",
+            "height"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_10",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find me a flight from Pennsylvania to Alaska on 2025-07-12. Also, Tell me about Tsinghua University."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_11",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Show me the latest basketball match results. Also, Tell me which city is the capital city of Spain."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "sports.get_scores",
-          "description": "Get the latest scores for a given sport.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "sport": {
-                "type": "string",
-                "description": "Sport type (e.g., football, basketball)."
-              }
+    ],
+    "function": [
+      {
+        "name": "travel.find_flights",
+        "description": "Search for flights between two cities.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string",
+              "description": "Departure city."
             },
-            "required": [
-              "sport"
-            ]
-          }
-        },
-        {
-          "name": "cities.lookup_capital",
-          "description": "Find information about a city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city_name": {
-                "type": "string",
-                "description": "Name of the city."
-              }
+            "destination": {
+              "type": "string",
+              "description": "Arrival city."
             },
-            "required": [
-              "city_name"
-            ]
-          }
+            "date": {
+              "type": "string",
+              "description": "Travel date in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "origin",
+            "destination",
+            "date"
+          ]
+        }
+      },
+      {
+        "name": "education.lookup_university",
+        "description": "Find information about a university.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "university_name": {
+              "type": "string",
+              "description": "Name of the university."
+            }
+          },
+          "required": [
+            "university_name"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "music.get_album",
+        "description": "Retrieve album details by artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artist": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "artist"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_11",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Show me the latest basketball match results. Also, Tell me which city is the capital city of Spain."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_12",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Calculate the elasticity of a product with price $100 and quantity 200. Also, What are the average points scored by Lebron James in the 2025 season?"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "sports.get_scores",
+        "description": "Get the latest scores for a given sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type (e.g., football, basketball)."
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "countries.lookup_capital",
+        "description": "Find the capital city of a given country.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city_name": {
+              "type": "string",
+              "description": "Name of the country."
+            }
+          },
+          "required": [
+            "city_name"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_12",
+    "question": [
+      [
         {
-          "name": "economics.calculate_elasticity",
-          "description": "Calculate the elasticity of a product with price and quantity.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "price": {
-                "type": "float",
-                "description": "Price of the product."
-              },
-              "quantity": {
-                "type": "integer",
-                "description": "Quantity of the product."
-              }
-            },
-            "required": [
-              "price",
-              "quantity"
-            ]
-          }
-        },
-        {
-          "name": "players.get_average_points",
-          "description": "Get the average points scored by a basketball player in a given season.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "player_name": {
-                "type": "string",
-                "description": "Name of the player."
-              },
-              "season": {
-                "type": "string",
-                "description": "Season of the player."
-              }
-            },
-            "required": [
-              "player_name",
-              "season"
-            ]
-          }
+          "role": "user",
+          "content": "Calculate the elasticity of a product with price $100 and quantity 200. Also, What are the average points scored by Lebron James in the 2025 season?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_13",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Book a table for 3 at 7:00 PM at the restaurant named 'Wolfgang Steakhouse'. Also, get traffic conditions for Oklahoma City on 2025-07-12."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "restaurants.book_table",
-          "description": "Book a table at a restaurant.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "restaurant_name": {
-                "type": "string",
-                "description": "Name of the restaurant."
-              },
-              "time": {
-                "type": "int",
-                "description": "time of the booking, in time of day."
-              },
-              "number_of_people": {
-                "type": "integer",
-                "description": "Number of people in the booking."
-              }
+    ],
+    "function": [
+      {
+        "name": "economics.calculate_elasticity",
+        "description": "Calculate the elasticity of a product with price and quantity.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "price": {
+              "type": "float",
+              "description": "Price of the product."
             },
-            "required": [
-              "restaurant_name",
-              "time",
-              "number_of_people"
-            ]
-          }
-        },
-        {
-          "name": "traffic.get_conditions",
-          "description": "Get traffic conditions for a given city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city_name": {
-                "type": "string",
-                "description": "Name of the city."
-              },
-              "date": {
-                "type": "string",
-                "description": "Date of the traffic conditions, in YYYY-MM-DD format."
-              }
+            "quantity": {
+              "type": "integer",
+              "description": "Quantity of the product."
+            }
+          },
+          "required": [
+            "price",
+            "quantity"
+          ]
+        }
+      },
+      {
+        "name": "players.get_average_points",
+        "description": "Get the average points scored by a basketball player in a given season.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "player_name": {
+              "type": "string",
+              "description": "Name of the player."
             },
-            "required": [
-              "city_name",
-              "date"
-            ]
-          }
+            "season": {
+              "type": "integer",
+              "description": "Season of the player."
+            }
+          },
+          "required": [
+            "player_name",
+            "season"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_13",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Book a table for 3 at 7:00 PM at the restaurant named 'Wolfgang Steakhouse'. Also, get traffic conditions for Oklahoma City on 2025-07-12."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_14",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Set up a reminder for me at tomorrow 10AM to go to the dentist, then make a psychiatrist appointment at 2PM."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "reminders.set_reminder",
-          "description": "Set up a reminder for a given time and given event.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "event": {
-                "type": "string",
-                "description": "The event to set up a reminder for."
-              },
-              "time": {
-                "type": "int",
-                "description": "The time to set up a reminder for."
-              }
+    ],
+    "function": [
+      {
+        "name": "restaurants.book_table",
+        "description": "Book a table at a restaurant.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "restaurant_name": {
+              "type": "string",
+              "description": "Name of the restaurant."
             },
-            "required": [
-              "event",
-              "time"
-            ]
-          }
-        },
-        {
-          "name": "appointments.make_appointment",
-          "description": "Make an appointment for a given time and given event.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "event": {
-                "type": "string",
-                "description": "The event to make an appointment for."
-              },
-              "time": {
-                "type": "int",
-                "description": "The time to make an appointment for."
-              }
+            "time": {
+              "type": "int",
+              "description": "time of the booking, in time of day."
             },
-            "required": [
-              "event",
-              "time"
-            ]
-          }
+            "number_of_people": {
+              "type": "integer",
+              "description": "Number of people in the booking."
+            }
+          },
+          "required": [
+            "restaurant_name",
+            "time",
+            "number_of_people"
+          ]
+        }
+      },
+      {
+        "name": "traffic.get_conditions",
+        "description": "Get traffic conditions for a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city_name": {
+              "type": "string",
+              "description": "Name of the city."
+            },
+            "date": {
+              "type": "string",
+              "description": "Date of the traffic conditions, in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "city_name",
+            "date"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_14",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Set up a reminder for me at tomorrow 10AM to go to the dentist, then make a psychiatrist appointment at 2PM."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_15",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Search the headline news for Arizona, California, and New York. Also, tell me how tall is the Mount Everest ?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "news.search_headlines",
-          "description": "Search the headline news for a given city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "cities": {
-                "type": "array",
-                "description": "List of cities to search for."
-              }
+    ],
+    "function": [
+      {
+        "name": "reminders.set_reminder",
+        "description": "Set up a reminder for a given time and given event.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "event": {
+              "type": "string",
+              "description": "The event to set up a reminder for, in one word. For example, 'dentist', 'gym', 'doctor'."
             },
-            "required": [
-              "cities"
-            ]
-          }
-        },
-        {
-          "name": "mountains.get_height",
-          "description": "Get the height of a given mountain.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mountain_name": {
-                "type": "string",
-                "description": "Name of the mountain."
-              }
+            "time": {
+              "type": "int",
+              "description": "The time to set up a reminder for, in time of day."
+            }
+          },
+          "required": [
+            "event",
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "appointments.make_appointment",
+        "description": "Make an appointment for a given time and given event.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "event": {
+              "type": "string",
+              "description": "The event to make an appointment for, in one word. For example, 'dentist', 'gym', 'doctor'."
             },
-            "required": [
-              "mountain_name"
-            ]
-          }
+            "time": {
+              "type": "int",
+              "description": "The time to make an appointment for, in time of day."
+            }
+          },
+          "required": [
+            "event",
+            "time"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_15",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Search the headline news for Arizona, California, and New York. Also, tell me how tall is the Mount Everest ?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_16",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "What is the population of France? Also, Can you show me the recipe for lasagna?"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "news.search_headlines",
+        "description": "Search the headline news for a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "cities": {
+              "type": "array",
+              "description": "List of cities to search for."
+            }
+          },
+          "required": [
+            "cities"
+          ]
+        }
+      },
+      {
+        "name": "mountains.get_height",
+        "description": "Get the height of a given mountain.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mountain_name": {
+              "type": "string",
+              "description": "Name of the mountain."
+            }
+          },
+          "required": [
+            "mountain_name"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_16",
+    "question": [
+      [
         {
-          "name": "countries.get_population",
-          "description": "Get the population of a given country.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "country_name": {
-                "type": "string",
-                "description": "Name of the country."
-              }
-            },
-            "required": [
-              "country_name"
-            ]
-          }
-        },
-        {
-          "name": "recipes.get_recipe",
-          "description": "Retrieve a cooking recipe based on a dish name.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "dish": {
-                "type": "string",
-                "description": "Name of the dish."
-              }
-            },
-            "required": [
-              "dish"
-            ]
-          }
+          "role": "user",
+          "content": "What is the population of France? Also, Can you show me the recipe for lasagna?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_17",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Play 'Shake it off' by Taylor Swift. Also, send an email to 'furby@gmail.com` with the subject 'Hello' and the body 'How are you?'"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "countries.get_population",
+        "description": "Get the population of a given country.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "country_name": {
+              "type": "string",
+              "description": "Name of the country."
+            }
+          },
+          "required": [
+            "country_name"
+          ]
+        }
+      },
+      {
+        "name": "recipes.get_recipe",
+        "description": "Retrieve a cooking recipe based on a dish name.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "dish": {
+              "type": "string",
+              "description": "Name of the dish."
+            }
+          },
+          "required": [
+            "dish"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_17",
+    "question": [
+      [
         {
-          "name": "music.play_song",
-          "description": "Play a song by a given artist.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "song_name": {
-                "type": "string",
-                "description": "Name of the song."
-              },
-              "artist_name": {
-                "type": "string",
-                "description": "Name of the artist."
-              }
-            },
-            "required": [
-              "song_name",
-              "artist_name"
-            ]
-          }
-        },
-        {
-          "name": "emails.send_email",
-          "description": "Send an email to a given email address with a given subject and body.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "email_address": {
-                "type": "string",
-                "description": "Email address to send the email to."
-              },
-              "subject": {
-                "type": "string",
-                "description": "Subject of the email."
-              },
-              "body": {
-                "type": "string",
-                "description": "Body of the email."
-              }
-            },
-            "required": [
-              "email_address",
-              "subject",
-              "body"
-            ]
-          }
+          "role": "user",
+          "content": "Play 'Shake it off' by Taylor Swift. Also, send an email to 'furby@gmail.com` with the subject 'Hello' and the body 'How are you?'"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_18",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Search for the best Chinese Restaurant in Ferg Avenue. Also, generate a 6 letter password for me."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "restaurants.search_restaurant",
-          "description": "Search for a restaurant for a given cuisine in a given street.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "cuisine": {
-                "type": "string",
-                "description": "Cuisine type."
-              },
-              "street": {
-                "type": "string",
-                "description": "Street name."
-              }
+    ],
+    "function": [
+      {
+        "name": "music.play_song",
+        "description": "Play a song by a given artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "song_name": {
+              "type": "string",
+              "description": "Name of the song."
             },
-            "required": [
-              "cuisine",
-              "street"
-            ]
-          }
-        },
-        {
-          "name": "passwords.generate_password",
-          "description": "Generate a password for a given length.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "int",
-                "description": "Length of the password."
-              }
+            "artist_name": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "song_name",
+            "artist_name"
+          ]
+        }
+      },
+      {
+        "name": "emails.send_email",
+        "description": "Send an email to a given email address with a given subject and body.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "email_address": {
+              "type": "string",
+              "description": "Email address to send the email to."
             },
-            "required": [
-              "length"
-            ]
-          }
+            "subject": {
+              "type": "string",
+              "description": "Subject of the email."
+            },
+            "body": {
+              "type": "string",
+              "description": "Body of the email."
+            }
+          },
+          "required": [
+            "email_address",
+            "subject",
+            "body"
+          ]
+        }
+      },
+      {
+        "name": "music.get_album",
+        "description": "Retrieve album details by artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artist": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "artist"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_18",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Search for the best Chinese Restaurant in Ferg Avenue. Also, generate a 6 letter password for me."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_19",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "How much money should I invest in Amazon? Also, show me the current weather in Tokyo."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "investments.get_investment_advice",
-          "description": "Get investment advice for a given company.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "company_name": {
-                "type": "string",
-                "description": "Name of the company."
-              }
+    ],
+    "function": [
+      {
+        "name": "restaurants.search_restaurant",
+        "description": "Search for a restaurant for a given cuisine in a given street.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "cuisine": {
+              "type": "string",
+              "description": "Cuisine type."
             },
-            "required": [
-              "company_name"
-            ]
-          }
-        },
+            "street": {
+              "type": "string",
+              "description": "Street name."
+            }
+          },
+          "required": [
+            "cuisine",
+            "street"
+          ]
+        }
+      },
+      {
+        "name": "passwords.generate_password",
+        "description": "Generate a password for a given length.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "length": {
+              "type": "int",
+              "description": "Length of the password."
+            }
+          },
+          "required": [
+            "length"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_19",
+    "question": [
+      [
         {
-          "name": "weather.get_weather",
-          "description": "Get the current weather for a given city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city_name": {
-                "type": "string",
-                "description": "Name of the city."
-              }
-            },
-            "required": [
-              "city_name"
-            ]
-          }
+          "role": "user",
+          "content": "How much money should I invest in Amazon? Also, show me the current weather in Tokyo."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_20",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Check the flight status for Delta 456. Also, how do I renew my driver's license?"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "investments.get_investment_advice",
+        "description": "Get investment advice for a given company.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "company_name": {
+              "type": "string",
+              "description": "Name of the company."
+            }
+          },
+          "required": [
+            "company_name"
+          ]
+        }
+      },
+      {
+        "name": "weather.get_weather",
+        "description": "Get the current weather for a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city_name": {
+              "type": "string",
+              "description": "Name of the city."
+            }
+          },
+          "required": [
+            "city_name"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_20",
+    "question": [
+      [
         {
-          "name": "travel.check_flight_status",
-          "description": "Check the status of a flight.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "airline": {
-                "type": "string",
-                "description": "Name of the airline."
-              },
-              "flight_number": {
-                "type": "string",
-                "description": "Flight number."
-              }
-            },
-            "required": [
-              "airline",
-              "flight_number"
-            ]
-          }
-        },
-        {
-          "name": "government.license_renewal_info",
-          "description": "Get information about renewing a driver's license.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "state": {
-                "type": "string",
-                "description": "State where the license is issued."
-              }
-            },
-            "required": [
-              "state"
-            ]
-          }
+          "role": "user",
+          "content": "Check the flight status for Delta 456. Also, how do I renew my driver's license?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_21",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find a recipe for lasagna. Also, how many calories are in a banana?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "cooking.search_recipe",
-          "description": "Find a cooking recipe by keyword.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "dish_name": {
-                "type": "string",
-                "description": "Name of the dish to search for."
-              }
+    ],
+    "function": [
+      {
+        "name": "travel.check_flight_status",
+        "description": "Check the status of a flight.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "airline": {
+              "type": "string",
+              "description": "Name of the airline."
             },
-            "required": [
-              "dish_name"
-            ]
-          }
-        },
+            "flight_number": {
+              "type": "string",
+              "description": "Flight number."
+            }
+          },
+          "required": [
+            "airline",
+            "flight_number"
+          ]
+        }
+      },
+      {
+        "name": "government.license_renewal_info",
+        "description": "Get information about renewing a driver's license.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "type": "string",
+              "description": "State where the license is issued."
+            }
+          },
+          "required": [
+            "state"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_21",
+    "question": [
+      [
         {
-          "name": "nutrition.lookup_food_info",
-          "description": "Get nutritional data about a food item.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "food_name": {
-                "type": "string",
-                "description": "Name of the food item."
-              }
-            },
-            "required": [
-              "food_name"
-            ]
-          }
+          "role": "user",
+          "content": "Find a recipe for lasagna. Also, how many calories are in a banana?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_22",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "What's the exchange rate between Euro and Canadian Dollar? Also, when is the next full moon?"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "cooking.search_recipe",
+        "description": "Find a cooking recipe by keyword.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "dish_name": {
+              "type": "string",
+              "description": "Name of the dish to search for."
+            }
+          },
+          "required": [
+            "dish_name"
+          ]
+        }
+      },
+      {
+        "name": "nutrition.lookup_food_info",
+        "description": "Get nutritional data about a food item.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "food_name": {
+              "type": "string",
+              "description": "Name of the food item."
+            }
+          },
+          "required": [
+            "food_name"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_22",
+    "question": [
+      [
         {
-          "name": "finance.get_exchange_rate",
-          "description": "Retrieve the exchange rate between two currencies.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "from_currency": {
-                "type": "string",
-                "description": "Source currency code."
-              },
-              "to_currency": {
-                "type": "string",
-                "description": "Target currency code."
-              }
-            },
-            "required": [
-              "from_currency",
-              "to_currency"
-            ]
-          }
-        },
-        {
-          "name": "astronomy.get_moon_phase",
-          "description": "Get the date of the next moon phase.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "phase": {
-                "type": "string",
-                "description": "Moon phase to look for."
-              }
-            },
-            "required": [
-              "phase"
-            ]
-          }
+          "role": "user",
+          "content": "What's the exchange rate between Euro and Canadian Dollar? Also, when is the next full moon?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_23",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get a joke about cats. Also, tell me when the next bus arrives at Main Street station."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "entertainment.get_joke",
-          "description": "Fetch a joke related to a given topic.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "topic": {
-                "type": "string",
-                "description": "Topic for the joke."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.get_exchange_rate",
+        "description": "Retrieve the exchange rate between two currencies.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "from_currency": {
+              "type": "string",
+              "description": "Source currency code."
             },
-            "required": [
-              "topic"
-            ]
-          }
-        },
+            "to_currency": {
+              "type": "string",
+              "description": "Target currency code."
+            }
+          },
+          "required": [
+            "from_currency",
+            "to_currency"
+          ]
+        }
+      },
+      {
+        "name": "astronomy.get_moon_phase",
+        "description": "Get the date of the next moon phase.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "phase": {
+              "type": "string",
+              "description": "Moon phase to look for."
+            }
+          },
+          "required": [
+            "phase"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_23",
+    "question": [
+      [
         {
-          "name": "transit.next_bus_arrival",
-          "description": "Get the arrival time for the next bus at a station.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "station_name": {
-                "type": "string",
-                "description": "Name of the bus station."
-              }
-            },
-            "required": [
-              "station_name"
-            ]
-          }
+          "role": "user",
+          "content": "Get a joke about cats. Also, tell me when the next bus arrives at Main Street station."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_24",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find a job for a software engineer in New York. Also, summarize the article from this URL."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "entertainment.get_joke",
+        "description": "Fetch a joke related to a given topic.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "Topic for the joke."
+            }
+          },
+          "required": [
+            "topic"
+          ]
+        }
+      },
+      {
+        "name": "transit.next_bus_arrival",
+        "description": "Get the arrival time for the next bus at a station.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "station_name": {
+              "type": "string",
+              "description": "Name of the bus station."
+            }
+          },
+          "required": [
+            "station_name"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_24",
+    "question": [
+      [
         {
-          "name": "jobs.search_openings",
-          "description": "Search for job openings by title and location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "job_title": {
-                "type": "string",
-                "description": "Title of the job position."
-              },
-              "location": {
-                "type": "string",
-                "description": "Location for the job search."
-              }
-            },
-            "required": [
-              "job_title",
-              "location"
-            ]
-          }
-        },
-        {
-          "name": "web.summarize_url",
-          "description": "Summarize the contents of a webpage.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "url": {
-                "type": "string",
-                "description": "URL of the webpage to summarize."
-              }
-            },
-            "required": [
-              "url"
-            ]
-          }
+          "role": "user",
+          "content": "Find a job for a software engineer in New York. Also, summarize the article from this URL."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_25",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Record my weight as 68.5 kg today. Also, what's my average weight over the past 7 days?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "health.log_weight",
-          "description": "Log today's body weight.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "weight": {
-                "type": "float",
-                "description": "Weight in kilograms."
-              },
-              "date": {
-                "type": "string",
-                "description": "Date in YYYY-MM-DD format."
-              }
+    ],
+    "function": [
+      {
+        "name": "jobs.search_openings",
+        "description": "Search for job openings by title and location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "job_title": {
+              "type": "string",
+              "description": "Title of the job position."
             },
-            "required": [
-              "weight",
-              "date"
-            ]
-          }
-        },
+            "location": {
+              "type": "string",
+              "description": "Location for the job search."
+            }
+          },
+          "required": [
+            "job_title",
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "web.summarize_url",
+        "description": "Summarize the contents of a webpage.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "URL of the webpage to summarize."
+            }
+          },
+          "required": [
+            "url"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_25",
+    "question": [
+      [
         {
-          "name": "health.get_weight_average",
-          "description": "Get average weight over a period.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "days": {
-                "type": "integer",
-                "description": "Number of days to calculate average for."
-              }
-            },
-            "required": [
-              "days"
-            ]
-          }
+          "role": "user",
+          "content": "Record my weight as 68.5 kg today. Also, what's my average weight over the past 7 days?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_26",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Turn off the kitchen lights. Also, set the thermostat to 22 degrees Celsius."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "home.lights_control",
-          "description": "Turn lights on or off in a specified room.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "room": {
-                "type": "string",
-                "description": "Name of the room."
-              },
-              "state": {
-                "type": "string",
-                "description": "State of the lights (on/off)."
-              }
+    ],
+    "function": [
+      {
+        "name": "health.log_weight",
+        "description": "Log today's body weight.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weight": {
+              "type": "float",
+              "description": "Weight in kilograms."
             },
-            "required": [
-              "room",
-              "state"
-            ]
-          }
-        },
+            "date": {
+              "type": "string",
+              "description": "Date in YYYY-MM-DD format."
+            }
+          },
+          "required": [
+            "weight",
+            "date"
+          ]
+        }
+      },
+      {
+        "name": "health.get_weight_average",
+        "description": "Get average weight over a period.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "days": {
+              "type": "integer",
+              "description": "Number of days to calculate average for."
+            }
+          },
+          "required": [
+            "days"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_26",
+    "question": [
+      [
         {
-          "name": "home.set_thermostat",
-          "description": "Set the thermostat temperature.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "temperature": {
-                "type": "float",
-                "description": "Temperature in Celsius."
-              }
-            },
-            "required": [
-              "temperature"
-            ]
-          }
+          "role": "user",
+          "content": "Turn off the kitchen lights. Also, set the thermostat to 22 degrees Celsius."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_27",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Create a new contact named Emily with phone number 555-6789. Also, add 'buy groceries' to my todo list?"
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "contacts.add_contact",
-          "description": "Add a new contact to your phonebook.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string",
-                "description": "Name of the contact."
-              },
-              "phone": {
-                "type": "string",
-                "description": "Phone number of the contact."
-              }
+    ],
+    "function": [
+      {
+        "name": "home.lights_control",
+        "description": "Turn lights on or off in a specified room.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "room": {
+              "type": "string",
+              "description": "Name of the room."
             },
-            "required": [
-              "name",
-              "phone"
-            ]
-          }
-        },
+            "state": {
+              "type": "string",
+              "description": "State of the lights (on/off)."
+            }
+          },
+          "required": [
+            "room",
+            "state"
+          ]
+        }
+      },
+      {
+        "name": "home.set_thermostat",
+        "description": "Set the thermostat temperature.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "temperature": {
+              "type": "float",
+              "description": "Temperature in Celsius."
+            }
+          },
+          "required": [
+            "temperature"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_27",
+    "question": [
+      [
         {
-          "name": "tasks.update_todo_list",
-          "description": "Add a new task to the user's to-do list.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "task_name": {
-                "type": "string",
-                "description": "Name of the task."
-              }
-            },
-            "required": [
-              "task_name"
-            ]
-          }
+          "role": "user",
+          "content": "Create a new contact named Emily with phone number 555-6789. Also, add 'buy groceries' to my todo list?"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_28",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "What's the definition of 'entropy'? Also, give me a quote about perseverance."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "dictionary.define_word",
-          "description": "Get the definition of a word.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "word": {
-                "type": "string",
-                "description": "Word to define."
-              }
+    ],
+    "function": [
+      {
+        "name": "contacts.add_contact",
+        "description": "Add a new contact to your phonebook.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the contact."
             },
-            "required": [
-              "word"
-            ]
-          }
-        },
+            "phone": {
+              "type": "string",
+              "description": "Phone number of the contact."
+            }
+          },
+          "required": [
+            "name",
+            "phone"
+          ]
+        }
+      },
+      {
+        "name": "tasks.update_todo_list",
+        "description": "Add a new task to the user's to-do list.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "task_name": {
+              "type": "string",
+              "description": "Name of the task."
+            }
+          },
+          "required": [
+            "task_name"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_28",
+    "question": [
+      [
         {
-          "name": "quotes.get_quote",
-          "description": "Retrieve a quote on a given theme.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "theme": {
-                "type": "string",
-                "description": "Theme for the quote."
-              }
-            },
-            "required": [
-              "theme"
-            ]
-          }
+          "role": "user",
+          "content": "What's the definition of 'entropy'? Also, give me a quote about perseverance."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_29",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find events happening this weekend in Chicago. Also, set a countdown for my vacation in 30 days."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "dictionary.define_word",
+        "description": "Get the definition of a word.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "word": {
+              "type": "string",
+              "description": "Word to define."
+            }
+          },
+          "required": [
+            "word"
+          ]
+        }
+      },
+      {
+        "name": "quotes.get_quote",
+        "description": "Retrieve a quote on a given theme.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "theme": {
+              "type": "string",
+              "description": "Theme for the quote."
+            }
+          },
+          "required": [
+            "theme"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_29",
+    "question": [
+      [
         {
-          "name": "events.search_local_events",
-          "description": "Search for events in a city.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city": {
-                "type": "string",
-                "description": "Name of the city."
-              },
-              "date_range": {
-                "type": "string",
-                "description": "Date range for the search."
-              }
-            },
-            "required": [
-              "city",
-              "date_range"
-            ]
-          }
-        },
-        {
-          "name": "tools.set_countdown_timer",
-          "description": "Set a countdown timer for a future date.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "days_from_now": {
-                "type": "integer",
-                "description": "Number of days from now."
-              }
-            },
-            "required": [
-              "days_from_now"
-            ]
-          }
+          "role": "user",
+          "content": "Find events happening this weekend in Chicago. Also, set a countdown for my vacation in 30 days."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_30",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Check if there are any earthquakes near Japan in the last 24 hours. Also, alert me if another one happens tomorrow."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "geology.get_recent_earthquakes",
-          "description": "Retrieve earthquake data for a region and timeframe.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "region": {
-                "type": "string",
-                "description": "Geographic region to search for earthquakes."
-              },
-              "hours": {
-                "type": "integer",
-                "description": "Number of hours to look back."
-              }
+    ],
+    "function": [
+      {
+        "name": "events.search_local_events",
+        "description": "Search for events in a city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "Name of the city."
             },
-            "required": [
-              "region",
-              "hours"
-            ]
-          }
-        },
+            "date_range": {
+              "type": "string",
+              "description": "Date range for the search."
+            }
+          },
+          "required": [
+            "city",
+            "date_range"
+          ]
+        }
+      },
+      {
+        "name": "tools.set_countdown_timer",
+        "description": "Set a countdown timer for a future date.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "days_from_now": {
+              "type": "integer",
+              "description": "Number of days from now."
+            }
+          },
+          "required": [
+            "days_from_now"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_30",
+    "question": [
+      [
         {
-          "name": "alerts.set_earthquake_alert",
-          "description": "Set an alert for future earthquakes in a region.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "region": {
-                "type": "string",
-                "description": "Geographic region to monitor."
-              },
-              "days_ahead": {
-                "type": "integer",
-                "description": "Number of days ahead to set the alert for."
-              }
-            },
-            "required": [
-              "region",
-              "days_ahead"
-            ]
-          }
+          "role": "user",
+          "content": "Check if there are any earthquakes near Japan in the last 24 hours. Also, alert me if another one happens tomorrow."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_31",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Check the current air quality in Beijing. Also, recommend a face mask suitable for PM2.5 protection."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "environment.get_air_quality",
-          "description": "Get the air quality index for a location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "city": {
-                "type": "string",
-                "description": "Name of the city."
-              }
+    ],
+    "function": [
+      {
+        "name": "geology.get_recent_earthquakes",
+        "description": "Retrieve earthquake data for a region and timeframe.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "region": {
+              "type": "string",
+              "description": "Geographic region to search for earthquakes."
             },
-            "required": [
-              "city"
-            ]
-          }
-        },
-        {
-          "name": "health.recommend_mask",
-          "description": "Recommend a face mask based on air quality level.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "pollutant_type": {
-                "type": "string",
-                "description": "Type of pollutant to protect against."
-              }
+            "hours": {
+              "type": "integer",
+              "description": "Number of hours to look back."
+            }
+          },
+          "required": [
+            "region",
+            "hours"
+          ]
+        }
+      },
+      {
+        "name": "alerts.set_earthquake_alert",
+        "description": "Set an alert for future earthquakes in a region.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "region": {
+              "type": "string",
+              "description": "Geographic region to monitor."
             },
-            "required": [
-              "pollutant_type"
-            ]
-          }
+            "days_ahead": {
+              "type": "integer",
+              "description": "Number of days ahead to set the alert for."
+            }
+          },
+          "required": [
+            "region",
+            "days_ahead"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_31",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Check the current air quality in Beijing. Also, recommend a face mask suitable for PM2.5 protection."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_32",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find the lyrics for 'Bohemian Rhapsody'. Also, create a Spotify playlist with Queen songs."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "environment.get_air_quality",
+        "description": "Get the air quality index for a location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "Name of the city."
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "health.recommend_mask",
+        "description": "Recommend a face mask based on air quality level.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pollutant_type": {
+              "type": "string",
+              "description": "Type of pollutant to protect against."
+            }
+          },
+          "required": [
+            "pollutant_type"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_32",
+    "question": [
+      [
         {
-          "name": "music.get_lyrics",
-          "description": "Retrieve song lyrics by title.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "song_title": {
-                "type": "string",
-                "description": "Title of the song."
-              }
-            },
-            "required": [
-              "song_title"
-            ]
-          }
-        },
-        {
-          "name": "spotify.create_playlist",
-          "description": "Create a Spotify playlist with a list of artists or tracks.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "playlist_name": {
-                "type": "string",
-                "description": "Name for the new playlist."
-              },
-              "artist": {
-                "type": "string",
-                "description": "Artist name to include in the playlist."
-              }
-            },
-            "required": [
-              "playlist_name",
-              "artist"
-            ]
-          }
+          "role": "user",
+          "content": "Find the lyrics for 'Bohemian Rhapsody'. Also, create a Spotify playlist with Queen songs."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_33",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get details on the James Webb Space Telescope. Also, tell me the next visible ISS pass over Tokyo."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "space.lookup_mission",
-          "description": "Retrieve information about a space mission or telescope.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "mission_name": {
-                "type": "string",
-                "description": "Name of the space mission or telescope."
-              }
+    ],
+    "function": [
+      {
+        "name": "music.get_lyrics",
+        "description": "Retrieve song lyrics by title.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "song_title": {
+              "type": "string",
+              "description": "Title of the song."
+            }
+          },
+          "required": [
+            "song_title"
+          ]
+        }
+      },
+      {
+        "name": "spotify.create_playlist",
+        "description": "Create a Spotify playlist with a list of artists or tracks.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "playlist_name": {
+              "type": "string",
+              "description": "Name for the new playlist."
             },
-            "required": [
-              "mission_name"
-            ]
-          }
-        },
+            "artist": {
+              "type": "string",
+              "description": "Artist name to include in the playlist."
+            }
+          },
+          "required": [
+            "playlist_name",
+            "artist"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_33",
+    "question": [
+      [
         {
-          "name": "space.get_iss_pass_time",
-          "description": "Get the next ISS flyover time for a location.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "location": {
-                "type": "string",
-                "description": "Location to check ISS pass for."
-              }
-            },
-            "required": [
-              "location"
-            ]
-          }
+          "role": "user",
+          "content": "Get details on the James Webb Space Telescope. Also, tell me the next visible ISS pass over Tokyo."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_34",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Plot a sine wave for the interval 0 to 1. Also, differentiate the function f(x) = sin(x) * e^x."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "space.lookup_mission",
+        "description": "Retrieve information about a space mission or telescope.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mission_name": {
+              "type": "string",
+              "description": "Name of the space mission or telescope."
+            }
+          },
+          "required": [
+            "mission_name"
+          ]
+        }
+      },
+      {
+        "name": "space.get_iss_pass_time",
+        "description": "Get the next ISS flyover time for a location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "Location to check ISS pass for."
+            }
+          },
+          "required": [
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_34",
+    "question": [
+      [
         {
-          "name": "math.plot_function",
-          "description": "Plot a mathematical function over an interval.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "expression": {
-                "type": "string",
-                "description": "Mathematical expression to plot."
-              },
-              "start": {
-                "type": "float",
-                "description": "Starting value for the x-axis."
-              },
-              "end": {
-                "type": "float",
-                "description": "Ending value for the x-axis."
-              }
-            },
-            "required": [
-              "expression",
-              "start",
-              "end"
-            ]
-          }
-        },
-        {
-          "name": "math.differentiate",
-          "description": "Symbolically differentiate a given expression.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "expression": {
-                "type": "string",
-                "description": "Mathematical expression to differentiate."
-              },
-              "variable": {
-                "type": "string",
-                "description": "Variable to differentiate with respect to."
-              }
-            },
-            "required": [
-              "expression",
-              "variable"
-            ]
-          }
+          "role": "user",
+          "content": "Plot a sine wave for the interval 0 to 1. Also, differentiate the function f(x) = sin(x) * e^x."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_35",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Start a new blog post titled 'My AI Journey'. Also, add a task to finish it by 2025-07-12."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "blog.create_post",
-          "description": "Create a new blog post draft.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": "string",
-                "description": "Title of the blog post."
-              }
+    ],
+    "function": [
+      {
+        "name": "math.plot_function",
+        "description": "Plot a mathematical function over an interval.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "expression": {
+              "type": "string",
+              "description": "Mathematical expression to plot."
             },
-            "required": [
-              "title"
-            ]
-          }
-        },
-        {
-          "name": "tasks.add_task",
-          "description": "Add a new task with a deadline.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "task_name": {
-                "type": "string",
-                "description": "Name of the task."
-              },
-              "due_date": {
-                "type": "string",
-                "description": "Due date for the task."
-              }
+            "start": {
+              "type": "float",
+              "description": "Starting value for the x-axis."
             },
-            "required": [
-              "task_name",
-              "due_date"
-            ]
-          }
+            "end": {
+              "type": "float",
+              "description": "Ending value for the x-axis."
+            }
+          },
+          "required": [
+            "expression",
+            "start",
+            "end"
+          ]
+        }
+      },
+      {
+        "name": "math.differentiate",
+        "description": "Symbolically differentiate a given expression.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "expression": {
+              "type": "string",
+              "description": "Mathematical expression to differentiate."
+            },
+            "variable": {
+              "type": "string",
+              "description": "Variable to differentiate with respect to."
+            }
+          },
+          "required": [
+            "expression",
+            "variable"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_35",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Start a new blog post titled 'My AI Journey'. Also, add a task to finish it by 2025-07-12."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_36",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Analyze this text for sentiment: 'I love how easy this is to use!'. Also, translate it into Spanish."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "nlp.analyze_sentiment",
-          "description": "Perform sentiment analysis on a text.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "description": "Text to analyze for sentiment."
-              }
+    ],
+    "function": [
+      {
+        "name": "blog.create_post",
+        "description": "Create a new blog post draft.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "Title of the blog post."
+            }
+          },
+          "required": [
+            "title"
+          ]
+        }
+      },
+      {
+        "name": "tasks.add_task",
+        "description": "Add a new task with a deadline.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "task_name": {
+              "type": "string",
+              "description": "Name of the task."
             },
-            "required": [
-              "text"
-            ]
-          }
-        },
+            "due_date": {
+              "type": "string",
+              "description": "Due date for the task."
+            }
+          },
+          "required": [
+            "task_name",
+            "due_date"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_36",
+    "question": [
+      [
         {
-          "name": "language.translate_text",
-          "description": "Translate a piece of text into another language.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "description": "Text to translate."
-              },
-              "language": {
-                "type": "string",
-                "description": "Target language for translation."
-              }
-            },
-            "required": [
-              "text",
-              "language"
-            ]
-          }
+          "role": "user",
+          "content": "Analyze this text for sentiment: 'I love how easy this is to use!'. Also, translate it into Spanish."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_37",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Give me a fun fact about octopuses. Also, draw a cartoon octopus in ASCII."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "facts.random_fact",
-          "description": "Return a fun fact about an animal.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "animal": {
-                "type": "string",
-                "description": "Name of the animal."
-              }
+    ],
+    "function": [
+      {
+        "name": "nlp.analyze_sentiment",
+        "description": "Perform sentiment analysis on a text.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Text to analyze for sentiment."
+            }
+          },
+          "required": [
+            "text"
+          ]
+        }
+      },
+      {
+        "name": "language.translate_text",
+        "description": "Translate a piece of text into another language.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Text to translate."
             },
-            "required": [
-              "animal"
-            ]
-          }
-        },
+            "language": {
+              "type": "string",
+              "description": "Target language for translation."
+            }
+          },
+          "required": [
+            "text",
+            "language"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_37",
+    "question": [
+      [
         {
-          "name": "art.draw_ascii",
-          "description": "Draw an object using ASCII art.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "object_name": {
-                "type": "string",
-                "description": "Name of the object to draw."
-              }
-            },
-            "required": [
-              "object_name"
-            ]
-          }
+          "role": "user",
+          "content": "Give me a fun fact about octopuses. Also, draw a cartoon octopus in ASCII."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_38",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find me a Wikipedia summary of the Industrial Revolution. Also, calculate how many hours are in 3.5 weeks."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "facts.random_fact",
+        "description": "Return a fun fact about an animal.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "animal": {
+              "type": "string",
+              "description": "Name of the animal."
+            }
+          },
+          "required": [
+            "animal"
+          ]
+        }
+      },
+      {
+        "name": "art.draw_ascii",
+        "description": "Draw an object using ASCII art.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "object_name": {
+              "type": "string",
+              "description": "Name of the object to draw."
+            }
+          },
+          "required": [
+            "object_name"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_38",
+    "question": [
+      [
         {
-          "name": "wikipedia.get_summary",
-          "description": "Return a summary from Wikipedia.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "topic": {
-                "type": "string",
-                "description": "Topic to search for on Wikipedia."
-              }
-            },
-            "required": [
-              "topic"
-            ]
-          }
-        },
-        {
-          "name": "unit_conversion.weeks_to_hours",
-          "description": "Convert weeks into hours.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "weeks": {
-                "type": "float",
-                "description": "Number of weeks to convert."
-              }
-            },
-            "required": [
-              "weeks"
-            ]
-          }
+          "role": "user",
+          "content": "Find me a Wikipedia summary of the Industrial Revolution. Also, calculate how many hours are in 3.5 weeks."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_39",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Tell me how to prepare green tea. Also, log my water intake as 500ml."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "wikipedia.get_summary",
+        "description": "Return a summary from Wikipedia.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "Topic to search for on Wikipedia."
+            }
+          },
+          "required": [
+            "topic"
+          ]
+        }
+      },
+      {
+        "name": "unit_conversion.weeks_to_hours",
+        "description": "Convert weeks into hours.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "weeks": {
+              "type": "float",
+              "description": "Number of weeks to convert."
+            }
+          },
+          "required": [
+            "weeks"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_39",
+    "question": [
+      [
         {
-          "name": "cooking.get_recipe_instructions",
-          "description": "Return step-by-step instructions for preparing a drink or dish.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "item": {
-                "type": "string",
-                "description": "Name of the drink or dish."
-              }
-            },
-            "required": [
-              "item"
-            ]
-          }
-        },
-        {
-          "name": "health.log_water_intake",
-          "description": "Record water intake in milliliters.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "amount_ml": {
-                "type": "integer",
-                "description": "Amount of water consumed in milliliters."
-              }
-            },
-            "required": [
-              "amount_ml"
-            ]
-          }
+          "role": "user",
+          "content": "Tell me how to prepare green tea. Also, log my water intake as 500ml."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_40",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Check the status of my package with tracking number 1Z999. Also, send a message to my Slack team saying 'Running 10 minutes late.'"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "cooking.get_recipe_instructions",
+        "description": "Return step-by-step instructions for preparing a drink or dish.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": "Name of the drink or dish."
+            }
+          },
+          "required": [
+            "item"
+          ]
+        }
+      },
+      {
+        "name": "health.log_water_intake",
+        "description": "Record water intake in milliliters.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "amount_ml": {
+              "type": "integer",
+              "description": "Amount of water consumed in milliliters."
+            }
+          },
+          "required": [
+            "amount_ml"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_40",
+    "question": [
+      [
         {
-          "name": "logistics.track_package",
-          "description": "Track the delivery status of a package.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "tracking_number": {
-                "type": "string",
-                "description": "Package tracking number."
-              }
-            },
-            "required": [
-              "tracking_number"
-            ]
-          }
-        },
-        {
-          "name": "communication.send_slack_message",
-          "description": "Send a message to a Slack channel or user.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "channel": {
-                "type": "string",
-                "description": "Slack channel or user to send message to."
-              },
-              "message": {
-                "type": "string",
-                "description": "Message content to send."
-              }
-            },
-            "required": [
-              "channel",
-              "message"
-            ]
-          }
+          "role": "user",
+          "content": "Check the status of my package with tracking number 1Z999. Also, send a message to my Slack team saying 'Running 10 minutes late.'"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_41",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Get an overview of Python as a programming language. Also, schedule a 30-minute focus session starting now."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "knowledge.describe_topic",
-          "description": "Return an explanation of a given concept or topic.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "topic": {
-                "type": "string",
-                "description": "Topic to get an overview of."
-              }
+    ],
+    "function": [
+      {
+        "name": "logistics.track_package",
+        "description": "Track the delivery status of a package.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tracking_number": {
+              "type": "string",
+              "description": "Package tracking number."
+            }
+          },
+          "required": [
+            "tracking_number"
+          ]
+        }
+      },
+      {
+        "name": "communication.send_slack_message",
+        "description": "Send a message to a Slack channel or user.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "channel": {
+              "type": "string",
+              "description": "Slack channel or user to send message to."
             },
-            "required": [
-              "topic"
-            ]
-          }
-        },
+            "message": {
+              "type": "string",
+              "description": "Message content to send."
+            }
+          },
+          "required": [
+            "channel",
+            "message"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_41",
+    "question": [
+      [
         {
-          "name": "productivity.start_focus_timer",
-          "description": "Start a focus session timer.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "duration_minutes": {
-                "type": "integer",
-                "description": "Duration of the focus session in minutes."
-              }
-            },
-            "required": [
-              "duration_minutes"
-            ]
-          }
+          "role": "user",
+          "content": "Get an overview of Python as a programming language. Also, schedule a 30-minute focus session starting now."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_42",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Scan the text 'This is a test document.' for plagiarism. Also, compress the image https://example.com/image.jpg to under 2MB."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "knowledge.describe_topic",
+        "description": "Return an explanation of a given concept or topic.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "Topic to get an overview of."
+            }
+          },
+          "required": [
+            "topic"
+          ]
+        }
+      },
+      {
+        "name": "productivity.start_focus_timer",
+        "description": "Start a focus session timer.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "duration_minutes": {
+              "type": "integer",
+              "description": "Duration of the focus session in minutes."
+            }
+          },
+          "required": [
+            "duration_minutes"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      },
+      {
+        "name": "music.get_album",
+        "description": "Retrieve album details by artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artist": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "artist"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_42",
+    "question": [
+      [
         {
-          "name": "documents.check_plagiarism",
-          "description": "Check a document for plagiarism content.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "description": "Text content to check for plagiarism."
-              }
-            },
-            "required": [
-              "text"
-            ]
-          }
-        },
-        {
-          "name": "media.compress_image",
-          "description": "Compress an image file to a target size.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "image_url": {
-                "type": "string",
-                "description": "URL or path to the image file."
-              },
-              "max_size_mb": {
-                "type": "float",
-                "description": "Maximum file size in megabytes."
-              }
-            },
-            "required": [
-              "image_url",
-              "max_size_mb"
-            ]
-          }
+          "role": "user",
+          "content": "Scan the text 'This is a test document.' for plagiarism. Also, compress the image https://example.com/image.jpg to under 2MB."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_43",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Log my blood pressure as 120/80. Also, remind me to check it again in 6 hours."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "health.log_blood_pressure",
-          "description": "Record a blood pressure reading.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "systolic": {
-                "type": "integer",
-                "description": "Systolic blood pressure reading."
-              },
-              "diastolic": {
-                "type": "integer",
-                "description": "Diastolic blood pressure reading."
-              }
+    ],
+    "function": [
+      {
+        "name": "documents.check_plagiarism",
+        "description": "Check a document for plagiarism content.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Text content to check for plagiarism."
+            }
+          },
+          "required": [
+            "text"
+          ]
+        }
+      },
+      {
+        "name": "media.compress_image",
+        "description": "Compress an image file to a target size.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "image_url": {
+              "type": "string",
+              "description": "URL or path to the image file."
             },
-            "required": [
-              "systolic",
-              "diastolic"
-            ]
-          }
-        },
+            "max_size_mb": {
+              "type": "float",
+              "description": "Maximum file size in megabytes."
+            }
+          },
+          "required": [
+            "image_url",
+            "max_size_mb"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      },
+      {
+        "name": "music.get_album",
+        "description": "Retrieve album details by artist.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artist": {
+              "type": "string",
+              "description": "Name of the artist."
+            }
+          },
+          "required": [
+            "artist"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_43",
+    "question": [
+      [
         {
-          "name": "reminders.schedule_reminder",
-          "description": "Schedule a reminder message.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "message": {
-                "type": "string",
-                "description": "Reminder message content."
-              },
-              "delay_hours": {
-                "type": "integer",
-                "description": "Number of hours to delay the reminder."
-              }
-            },
-            "required": [
-              "message",
-              "delay_hours"
-            ]
-          }
+          "role": "user",
+          "content": "Log my blood pressure as 120/80. Also, remind me to check it again in 6 hours."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_44",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Find historical exchange rates from 2015 between GBP and USD. Also, calculate the compound interest on $1,000 over 5 years at 4%."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "finance.get_historical_rate",
-          "description": "Retrieve historical exchange rate data.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "from_currency": {
-                "type": "string",
-                "description": "Source currency code."
-              },
-              "to_currency": {
-                "type": "string",
-                "description": "Target currency code."
-              },
-              "year": {
-                "type": "integer",
-                "description": "Year to get historical data for."
-              }
+    ],
+    "function": [
+      {
+        "name": "health.log_blood_pressure",
+        "description": "Record a blood pressure reading.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "systolic": {
+              "type": "integer",
+              "description": "Systolic blood pressure reading."
             },
-            "required": [
-              "from_currency",
-              "to_currency",
-              "year"
-            ]
-          }
-        },
-        {
-          "name": "finance.calculate_compound_interest",
-          "description": "Compute compound interest over time.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "principal": {
-                "type": "float",
-                "description": "Initial principal amount."
-              },
-              "rate_percent": {
-                "type": "float",
-                "description": "Annual interest rate as a percentage."
-              },
-              "years": {
-                "type": "integer",
-                "description": "Number of years to calculate interest for."
-              }
+            "diastolic": {
+              "type": "integer",
+              "description": "Diastolic blood pressure reading."
+            }
+          },
+          "required": [
+            "systolic",
+            "diastolic"
+          ]
+        }
+      },
+      {
+        "name": "reminders.schedule_reminder",
+        "description": "Schedule a reminder message.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "description": "Reminder message content."
             },
-            "required": [
-              "principal",
-              "rate_percent",
-              "years"
-            ]
-          }
+            "delay_hours": {
+              "type": "integer",
+              "description": "Number of hours to delay the reminder."
+            }
+          },
+          "required": [
+            "message",
+            "delay_hours"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_44",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Find historical exchange rates from 2015 between GBP and USD. Also, calculate the compound interest on $1,000 over 5 years at 4%."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_45",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Check my GitHub notifications for mentions. Also, generate a QR code for the link https://openai.com. And also, check my GitHub notifications for mentions."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "github.fetch_notifications",
-          "description": "Retrieve GitHub notification items.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "notification_type": {
-                "type": "string",
-                "description": "Type of notification to fetch."
-              }
+    ],
+    "function": [
+      {
+        "name": "finance.get_historical_rate",
+        "description": "Retrieve historical exchange rate data.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "from_currency": {
+              "type": "string",
+              "description": "Source currency code."
             },
-            "required": [
-              "notification_type"
-            ]
-          }
-        },
-        {
-          "name": "tools.generate_qr_code",
-          "description": "Create a QR code from a URL.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "url": {
-                "type": "string",
-                "description": "URL to encode in the QR code."
-              }
+            "to_currency": {
+              "type": "string",
+              "description": "Target currency code."
             },
-            "required": [
-              "url"
-            ]
-          }
+            "year": {
+              "type": "integer",
+              "description": "Year to get historical data for."
+            }
+          },
+          "required": [
+            "from_currency",
+            "to_currency",
+            "year"
+          ]
+        }
+      },
+      {
+        "name": "finance.calculate_compound_interest",
+        "description": "Compute compound interest over time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "float",
+              "description": "Initial principal amount."
+            },
+            "rate_percent": {
+              "type": "float",
+              "description": "Annual interest rate as a percentage."
+            },
+            "years": {
+              "type": "integer",
+              "description": "Number of years to calculate interest for."
+            }
+          },
+          "required": [
+            "principal",
+            "rate_percent",
+            "years"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_45",
+    "question": [
+      [
+        {
+          "role": "user",
+          "content": "Check my GitHub notifications for mentions. Also, generate a QR code for the link https://openai.com. And also, check my GitHub notifications for mentions."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_46",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Add 'milk' to my shopping list. Also, estimate how many bricks I need to build a 10x10 wall."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "github.fetch_notifications",
+        "description": "Retrieve GitHub notification items.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "notification_type": {
+              "type": "string",
+              "description": "Type of notification to fetch."
+            }
+          },
+          "required": [
+            "notification_type"
+          ]
+        }
+      },
+      {
+        "name": "tools.generate_qr_code",
+        "description": "Create a QR code from a URL.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "URL to encode in the QR code."
+            }
+          },
+          "required": [
+            "url"
+          ]
+        }
+      },
+      {
+        "name": "sports.get_schedule",
+        "description": "Get upcoming game schedule for a sport.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sport": {
+              "type": "string",
+              "description": "Sport type"
+            }
+          },
+          "required": [
+            "sport"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_46",
+    "question": [
+      [
         {
-          "name": "lists.add_shopping_item",
-          "description": "Add an item to the shopping list.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "item": {
-                "type": "string",
-                "description": "Item to add to the shopping list."
-              }
-            },
-            "required": [
-              "item"
-            ]
-          }
-        },
-        {
-          "name": "construction.estimate_brick_count",
-          "description": "Estimate number of bricks required for a wall.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "width_meters": {
-                "type": "float",
-                "description": "Width of the wall in meters."
-              },
-              "height_meters": {
-                "type": "float",
-                "description": "Height of the wall in meters."
-              }
-            },
-            "required": [
-              "width_meters",
-              "height_meters"
-            ]
-          }
+          "role": "user",
+          "content": "Add 'milk' to my shopping list. Also, estimate how many bricks I need to build a 10x10 wall."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_47",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Tell me the probability of `rolling a sum of 8 with two dice`. Also, simulate a coin toss 10 times."
-          }
-        ]
-      ],
-      "function": [
-        {
-          "name": "math.calculate_probability",
-          "description": "Compute the probability of a specific outcome.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "event": {
-                "type": "string",
-                "description": "Description of the event to calculate probability for."
-              }
+    ],
+    "function": [
+      {
+        "name": "lists.add_shopping_item",
+        "description": "Add an item to the shopping list.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": "Item to add to the shopping list."
+            }
+          },
+          "required": [
+            "item"
+          ]
+        }
+      },
+      {
+        "name": "construction.estimate_brick_count",
+        "description": "Estimate number of bricks required for a wall.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "width_meters": {
+              "type": "float",
+              "description": "Width of the wall in meters."
             },
-            "required": [
-              "event"
-            ]
-          }
-        },
+            "height_meters": {
+              "type": "float",
+              "description": "Height of the wall in meters."
+            }
+          },
+          "required": [
+            "width_meters",
+            "height_meters"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_47",
+    "question": [
+      [
         {
-          "name": "simulation.flip_coin",
-          "description": "Simulate a coin toss.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "number_of_flips": {
-                "type": "integer",
-                "description": "Number of times to flip the coin."
-              }
-            },
-            "required": [
-              "number_of_flips"
-            ]
-          }
+          "role": "user",
+          "content": "Tell me the probability of `rolling a sum of 8 with two dice`. Also, simulate a coin toss 10 times."
         }
       ]
-    },
-    {
-      "id": "multiple_unique_48",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "Draft a tweet that includes 'I'm going to the gym today!'. Also, upload a new profile picture to my account with url https://example.com/image.jpg"
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "math.calculate_probability",
+        "description": "Compute the probability of a specific outcome.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "event": {
+              "type": "string",
+              "description": "Description of the event to calculate probability for."
+            }
+          },
+          "required": [
+            "event"
+          ]
+        }
+      },
+      {
+        "name": "simulation.flip_coin",
+        "description": "Simulate a coin toss.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "number_of_flips": {
+              "type": "integer",
+              "description": "Number of times to flip the coin."
+            }
+          },
+          "required": [
+            "number_of_flips"
+          ]
+        }
+      },
+      {
+        "name": "news.get_trending",
+        "description": "Get trending news headlines globally.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_48",
+    "question": [
+      [
         {
-          "name": "social.create_tweet",
-          "description": "Create a tweet with given content.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "content": {
-                "type": "string",
-                "description": "Content for the tweet."
-              }
-            },
-            "required": [
-              "content"
-            ]
-          }
-        },
-        {
-          "name": "social.upload_profile_picture",
-          "description": "Change the user's profile picture.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "image_url": {
-                "type": "string",
-                "description": "URL of the new profile picture."
-              }
-            },
-            "required": [
-              "image_url"
-            ]
-          }
+          "role": "user",
+          "content": "Draft a tweet that includes 'I'm going to the gym today!'. Also, upload a new profile picture to my account with url https://example.com/image.jpg"
         }
       ]
-    },
-    {
-      "id": "multiple_unique_49",
-      "question": [
-        [
-          {
-            "role": "user",
-            "content": "What's the GDP of India in 2022? Also, visualize it as a bar chart with value 2.5."
-          }
-        ]
-      ],
-      "function": [
+    ],
+    "function": [
+      {
+        "name": "social.create_tweet",
+        "description": "Create a tweet with given content.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string",
+              "description": "Content for the tweet."
+            }
+          },
+          "required": [
+            "content"
+          ]
+        }
+      },
+      {
+        "name": "social.upload_profile_picture",
+        "description": "Change the user's profile picture.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "image_url": {
+              "type": "string",
+              "description": "URL of the new profile picture."
+            }
+          },
+          "required": [
+            "image_url"
+          ]
+        }
+      },
+      {
+        "name": "health.check_symptoms",
+        "description": "Check potential conditions based on symptoms.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symptoms": {
+              "type": "string",
+              "description": "Comma-separated list of symptoms."
+            }
+          },
+          "required": [
+            "symptoms"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "multiple_unique_49",
+    "question": [
+      [
         {
-          "name": "economics.get_gdp_data",
-          "description": "Retrieve GDP data by country and year.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "country": {
-                "type": "string",
-                "description": "Name of the country."
-              },
-              "year": {
-                "type": "integer",
-                "description": "Year to get GDP data for."
-              }
-            },
-            "required": [
-              "country",
-              "year"
-            ]
-          }
-        },
-        {
-          "name": "charts.generate_bar_chart",
-          "description": "Generate a bar chart from data points.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "label": {
-                "type": "string",
-                "description": "Label for the data point."
-              },
-              "value": {
-                "type": "float",
-                "description": "Value for the data point."
-              }
-            },
-            "required": [
-              "label",
-              "value"
-            ]
-          }
+          "role": "user",
+          "content": "What's the GDP of India in 2022? Also, visualize it as a bar chart with value 2.5."
         }
       ]
-    }
-  ]
-
-  
+    ],
+    "function": [
+      {
+        "name": "economics.get_gdp_data",
+        "description": "Retrieve GDP data by country and year.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "country": {
+              "type": "string",
+              "description": "Name of the country."
+            },
+            "year": {
+              "type": "integer",
+              "description": "Year to get GDP data for."
+            }
+          },
+          "required": [
+            "country",
+            "year"
+          ]
+        }
+      },
+      {
+        "name": "charts.generate_bar_chart",
+        "description": "Generate a bar chart from data points.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Label for the data point, usually the country name."
+            },
+            "value": {
+              "type": "float",
+              "description": "Value for the data point, usually the GDP value."
+            }
+          },
+          "required": [
+            "label",
+            "value"
+          ]
+        }
+      },
+      {
+        "name": "travel.find_hotels",
+        "description": "Find hotels in a given city.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      },
+      {
+        "name": "books.get_reviews",
+        "description": "Get user reviews for a given book.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "book_title": {
+              "type": "string",
+              "description": "Title of the book."
+            }
+          },
+          "required": [
+            "book_title"
+          ]
+        }
+      }
+    ]
+  }
+]
